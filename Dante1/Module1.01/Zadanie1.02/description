@@ -1,0 +1,3 @@
+Napisz program wyświetlający napis, składający się z co najmniej pięciu słów. 
+Każde słowo ma znajdować się w nowej linii i może składać się tylko i wyłącznie z łacińskich liter i cyfr. 
+Program może wykorzystywać dowolną liczbę wywołań funkcji printf.
