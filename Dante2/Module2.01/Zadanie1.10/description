@@ -1,0 +1,29 @@
+Napisz program, który pobierze od użytkownika nazwę pliku źródłowego i docelowego a następnie, dla każdej linii z pliku źródłowego ma obliczy sumę liczb w niej zawartych. Uzyskane wyniki mają być zapisane do pliku docelowego, w osobnych liniach. Jeżeli w danej linii nie będzie żadnej liczby, program powinien ją pominąć.
+
+Jeżeli podany przez użytkownika plik nie istnieje to program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość kod błędu 4.
+W przypadku kiedy nie uda się utworzyć plik wyjściowego komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+Jeżeli w pliku nie będzie żadnych wartości liczbowych program powinien wyświetlić komunikat File corrupted i zakończyć działanie z kodem błędu 6.
+Ostatecznie, jeżeli udało się wykonać wszystkie obliczenia program powinien wyświetlić na ekranie komunikat File saved i zakończyć pracę z kodem błędu 0.
+
+Przykładowa interakcja z programem - sukces (dla pliku wejściowego text.txt, plik wyjściowy out.txt ):
+
+Podaj sciezke do pliku:⏎
+text.txt⏎
+Podaj sciezke do pliku:⏎
+out.txt⏎
+File saved
+Przykładowa interakcja z programem - błąd wejścia/wyjścia:
+
+Podaj sciezke do pliku:⏎
+lie.txt⏎
+Couldn't open file⏎
+Podaj sciezke do pliku:⏎
+reach.txt⏎
+Podaj sciezke do pliku:⏎
+experience.bin⏎
+Couldn't create file⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
+W plikach mogą się znajdować również inne symbole oprócz liczb, symbole te mają być pominięte w trakcie przetwarzania danych z pliku.
