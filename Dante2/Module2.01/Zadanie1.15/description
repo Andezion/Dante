@@ -1,0 +1,28 @@
+Napisz program, który odczytuje i wyświetla teksty z pliku utworzonego w ramach poprzedniego zadania. Poszczególne teksty są oddzielone znakami nowej linii. Ścieżkę do pliku program powinien pobrać od użytkownika.
+
+Każdy tekst ma zostać wyświetlony w oddzielnej linii i musi być poprzedzony liczbą porządkową, zaczynając od 1. Po wyświetleniu wierszy program ma wyświetlić ich liczbę i zakończyć się, zwracając kod błędu 0.
+
+Jeżeli operacje otwarcia pliku nie powiodą się, program powinien wyświetlić komunikat Couldn't open file i zakończyć działanie z kodem błędu 4.
+Przykładowa interakcja z programem -- sukces (input.txt):
+
+Podaj sciezke do pliku:⏎
+input.txt⏎
+1. "To see what is right and not do it is a lack of courage."- Confucious⏎
+2. Wise men speak because they have something to say; fools because they have to say something. - Plato⏎
+3. Information technology is at the core of how you do your business and how your business model itself evolves. - Satya Nadella⏎
+4. Go to heaven for the climate and hell for the company. - Benjamin Franklin Wade⏎
+4
+Przykładowa interakcja z programem -- sukces (plik jest pusty - 0 bajtów):
+
+Podaj sciezke do pliku:⏎
+course.txt⏎
+0
+Przykładowa interakcja z programem -- brak pliku:
+
+Podaj sciezke do pliku:⏎
+wrong.txt⏎
+Couldn't open file
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
