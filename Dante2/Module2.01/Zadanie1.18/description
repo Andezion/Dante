@@ -1,0 +1,23 @@
+Napisz program, który pobierze od użytkownika nazwę pliku, a następnie wyświetli jego zawartość, zamieniając wszystkie małe litery na duże (a-z → A-Z).
+
+Jeżeli plik jest pusty, program powinien wyświetlić komunikat NOTHING TO SHOW i zakończyć działanie z kodem błędu 0.
+W przypadku, kiedy plik o podanej nazwie nie istnieje, program powinien wyświetlić komunikat COULDN'T OPEN FILE i zwrócić wartość 4.
+Przykładowa interakcja z programem -- sukces (input.txt):
+
+Podaj sciezke do pliku:⏎
+input.txt⏎
+I SOLEMNLY SWEAR THAT I AM UP TO NO GOOD. - J.K. ROWLING⏎
+"ALWAYS CODE AS IF THE GUY WHO ENDS UP MAINTAINING YOUR CODE WILL BE A VIOLENT PSYCHOPATH WHO KNOWS WHERE YOU LIVE." - MARTIN GOLDING⏎
+TECHNOLOGY IS THE CAMPFIRE AROUND WHICH WE TELL OUR STORIES.-LAURIE ANDERSON
+Przykład interakcji z programem - błędy we/wy:
+
+Podaj sciezke do pliku:⏎
+went.txt⏎
+NOTHING TO SHOW
+Podaj sciezke do pliku:⏎
+consonant.txt⏎
+COULDN'T OPEN FILE⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
