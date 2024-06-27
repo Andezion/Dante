@@ -1,0 +1,34 @@
+Napisz program, który wykona następujące operacje:
+
+Pobierze od użytkownika nazwę pliku źródłowego oraz docelowego (pliki są w formacie binarnym).
+Odczyta 100 liczb zmiennoprzecinkowych pojedynczej precyzji z pliku źródłowego.
+Wyznaczy sumę i wartość średnią wczytanych liczb.
+Zapisać je, w tej kolejności, do pliku docelowego.
+W przypadku braku pliku program powinien wyświetlić komunikat Couldn't open file i zakończyć się z kodem błędu 4.
+Jeżeli nie uda się utworzyć pliku to program powinien wyświetlić komunikat Couldn't create file i zwrócić kod błędu 5.
+W przypadku błędnych danych w pliku źródłowym program ma wyświetlić komunikat File corrupted i zwrócić kod błędu 6.
+Ostatecznie, jeżeli udało się wykonać wszystkie obliczenia to program powinien wyświetlić na ekranie komunikat File saved i zakończyć pracę z kodem błędu 0.
+
+Przykład interakcji z programem -- sukces (input.bin, out.bin):
+
+Podaj nazwe pliku:⏎
+input.bin⏎
+Podaj nazwe 2 pliku:⏎
+out.bin⏎
+File saved
+Przykład interakcji z programem -- błędy we/wy oraz danych:
+
+Podaj sciezke do pliku:⏎
+sudden.bin⏎
+Podaj sciezke do pliku wyjściowego:⏎
+school.bin⏎
+Couldn't create file⏎
+Podaj sciezke do pliku:⏎
+before.bin⏎
+Couldn't open file⏎
+Podaj sciezke do pliku:⏎
+happen.bin⏎
+File corrupted
+Uwagi
+W przypadku wystąpienia jakiegokolwiek błędu program powinien niezwłocznie zakończyć pracę.
+W programie, poza deklaracją tablicy, nie wolno używać operatora [].
