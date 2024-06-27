@@ -1,0 +1,30 @@
+Napisz program, który pobierze od użytkownika nazwę pliku, a następnie odczyta liczby całkowite w nim zapisane i wyznaczy odpowiednio sumę oraz średnią tych liczb,
+
+Format pliku jest następujący:
+
+w pierwszej linii podana jest liczba danych, dla których należy obliczyć sumę i wartość średnią,
+w następnych liniach dane.
+W przypadku braku pliku program powinien wyświetlić komunikat Couldn't open file i zwrócić kod błędu 4. W przypadku błędnych danych w pliku wyświetlić komunikat File corrupted i zwrócić kod błędu 6.
+
+Przykładem błędnych danych może być:
+
+tekst
+ujemna liczba liczb
+mniejsza liczba liczb (względem nagłówka).
+Jeżeli udało się wykonać wszystkie obliczenia to program powinien wyświetlić na ekranie, w osobnych liniach, sumę oraz wartość średnią z wczytanych liczb. Ponadto w takim przypadku program powinien zakończyć pracę z kodem błędu 0.
+
+Przykładowa interakcja z programem - sukces (dla pliku wejściowego text.txt):
+
+Podaj sciezke do pliku:⏎
+text.txt⏎
+2550⏎
+2.014218⏎
+Przykładowa interakcja z programem - brak pliku:
+
+Podaj sciezke do pliku:⏎
+study.txt⏎
+Couldn't open file⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
