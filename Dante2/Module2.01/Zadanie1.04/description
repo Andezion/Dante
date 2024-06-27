@@ -1,0 +1,14 @@
+Zmodyfikuj program z zadania 1.3 Co dwa pliki, to nie jeden tak, aby kopiowanie odbywało się od końca pliku -- ostatni znak pliku źródłowego powinien być pierwszym znakiem pliku docelowego.
+
+Przykład interakcji z programem -- sukces (dla pliku wejściowego text.txt, plik wyjściowy tuo.txt):
+
+Podaj sciezke do pliku:⏎
+text.txt⏎
+Podaj sciezke do pliku wyjściowego:⏎
+tuo.txt⏎
+File copied⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
+Plik wyjściowy musi mieć taką samą liczbę bajtów co plik wejściowy.
