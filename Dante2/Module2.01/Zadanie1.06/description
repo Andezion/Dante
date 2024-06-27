@@ -1,0 +1,28 @@
+Napisz program, który będzie pobierał od użytkownika liczby całkowite, aż do wprowadzenia liczby 0 i zapisywał je do plików tekstowych, w następujący sposób:
+
+do pliku 2.txt wszystkie liczby podzielne przez 2,
+do pliku 3.txt podzielne przez 3,
+do pliku 5.txt podzielne przez 5,
+a do pliku 0.txt pozostałe.
+Każda liczba ma znajdować się w nowym wierszu.
+
+Jeżeli operacje tworzenia któregoś z plików nie powiedzie się, program powinien wyświetlić komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+W przypadku sukcesu program powinien wyświetlić komunikat Files saved i zwrócić wartość 0.
+Przykład interakcji z programem - sukces:
+
+Podaj liczby:⏎
+0⏎
+Files saved
+Przykład interakcji z programem - sukces:
+
+Podaj liczby:⏎
+1 1 39 93 38 -54 -51 8 34 25 57 37 -87 6 -4 93 -91 34 57 -95 4 -12 -27 33 -51 -48 -50 -71 -45 38 -22 -23 30 1 92 -96 15 -36 14 13 35 -40 -54 -32 51 78 -17 -9 30 97 -77 -71 1 -92 -67 -64 80 88 -9 1 -49 -71 85 -90 17 33 62 1 -84 1 2 65 37 -38 98 -51 58 5 -62 -52 93 -8 -27 -100 -31 34 18 -7 -61 -68 1 85 -85 -84 55 -45 71 -4 7 70 -17 21 -49 95 -60 -93 63 94 74 -38 -9 -72 97 -26 -74 -23 -85 -84 0⏎
+Files saved
+Pliki wyjściowe: 0.txt 2.txt 3.txt 5.txt
+
+Przykład interakcji z programem - brak możliwości zapisu na dysk:
+
+Couldn't create file⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie nie wolno używać operatora [].
