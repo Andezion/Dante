@@ -1,0 +1,37 @@
+Napisz program, który pobierze od użytkownika nazwę pliku, a następnie odkoduje wiadomość w nim zapisaną.
+
+W pierwszej linii pliku będą znajdowały się indeksy liter, a w kolejnych tekst. Program ma wyświetlić wszystkie znaki znajdujące się pod indeksami z pierwszego wiersza; indeks liczony jest względem początku pliku wejściowego. Wiersze w plikach wejściowych będą zakończone symbolem nowej linii, zgodnym z systemami Unix.
+
+Znaki należy wyświetlać w jednej linii, w takiej kolejności w jakiej podano ich indeksy.
+
+W przypadku plików niespełniających warunków zadania program powinien wyświetlić komunikat File corrupted i zakończyć działanie z kodem błędu 6. W przypadku podania ścieżki do pliku, który nie istnieje, program powinien wyświetlić komunikat Couldn't open file i zakończyć działanie z kodem błędu 4.
+
+Plik należy uznać za uszkodzony, gdy:
+
+nie posiada przynajmniej jednej linii (z liczbami)
+indeks nie wskazuje na znaki w kolejnych liniach, np. jest zbyt duży, bądź wskazuje w obszar liczb,
+itp...
+Przykład interakcji z programem -- sukces (chance.txt):
+
+Podaj sciezke do pliku:⏎
+chance.txt⏎
+I think that novels that leave out technology misrepresent life as badly as Victorians misrepresented life by leaving out sex.-Kurt Vonnegut
+Przykład interakcji z programem -- brak pliku wejściowego:
+
+Podaj sciezke do pliku:⏎
+as.txt⏎
+Couldn't open file⏎
+Przykład interakcji z programem -- błąd danych w pliku wejściowym:
+
+Podaj sciezke do pliku:⏎
+much.txt⏎
+File corrupted
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
+Pamiętaj, że w plikach tekstowych systemu Windows symbol nowej linii to dwa bajty (\r\n) a w systemach Unixowych tylko jeden ('\n').
+Podpowiedzi:
+
+Cytat z http://www.cplusplus.com dla funkcji ftell: For text streams, the numerical value may not be meaningful but can still be used to restore the position to the same position later using fseek (if there are characters put back using ungetc still pending of being read, the behavior is undefined).
+W trybie odczytu bez wyłączności jeden plik można otwierać wielokrotnie.
