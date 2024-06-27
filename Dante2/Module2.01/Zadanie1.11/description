@@ -1,0 +1,19 @@
+Napisz program, który generuje tablicę 100 liczb losowych typu float z zakresu < -100; 100>. Program powinien pobrać od użytkownika nazwę pliku (nie więcej niż 30 znaków), a następnie zapisać w nim przygotowaną wcześniej tablicę liczb. Plik ma być zapisany w trybie oraz formacie binarnym.
+
+Jeżeli operacje zapisu danych do pliku nie powiodą się, program powinien wyświetlić komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+
+W przypadku sukcesu program powinien wyświetlić komunikat File saved i zwrócić wartość 0
+
+Przykładowa interakcja z programem -- sukces (out.bin)
+
+Podaj sciezke do pliku:⏎
+out.bin⏎
+File saved⏎
+Przykładowa interakcja z programem - brak możliwości utworzenia pliku:
+
+Podaj sciezke do pliku:⏎
+glad.bin⏎
+Couldn't create file⏎
+Uwagi
+W programie, poza deklaracją tablic, nie wolno używać operatora [].
+Podpowiedź: ile bajtów waży float?
