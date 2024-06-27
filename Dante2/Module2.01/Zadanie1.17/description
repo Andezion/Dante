@@ -1,0 +1,30 @@
+Napisz program do kopiowania plików w formacie BMP (plik musi posiadać rozszerzenie .bmp). Program ma przyjąć od użytkownika nazwę pliku do skopiowania (np. filename.bmp), długość nazwy nie przekroczy 30 znaków. Następnie program ma utworzyć kopię tego pliku, dodając przedrostek copy_ (np. copy_filename.bmp).
+
+W przypadku niewłaściwej nazwy pliku program powinien wyświetlić komunikat Unsupported File Format i zwrócić kod błędu 7.
+W przypadku kiedy plik nie istnieje, program ma wyświetlić komunikat Couldn't open file i zwrócić kod błędu 4.
+W przypadku, kiedy utworzenie nowego pliku jest niemożliwe, program ma wyświetlić komunikat Couldn't create file i zwrócić wartość 5.
+Ostatecznie, jeżeli operacja zakończy się sukcesem program powinien wyświetlić komunikat File saved i zakończyć działanie z kodem błędu 0.
+
+Przykładowa interakcja z programem -- brak możliwości utworzenia pliku docelowego:
+
+Podaj sciezke do pliku:⏎
+sense.bmp⏎
+Couldn't create file⏎
+Przykładowa interakcja z programem -- błąd nazwy pliku:
+
+dawajta sciezke do pliku:⏎
+girlrealprintfoundbringtraincat.bmp⏎
+Unsupported File Format
+dawajta sciezke do pliku:⏎
+decimal.jpg⏎
+Unsupported File Format
+Przykładowa interakcja z programem -- sukces (amazing-animal-beautiful-beautifull.bmp, copy_amazing-animal-beautiful-beautifull.bmp)
+
+Podaj sciezke do pliku:⏎
+amazing-animal-beautiful-beautifull.bmp⏎
+File saved
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 50 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: 'nazwa_zmiennej[51];'.
+W programie nie wolno używać operatora [].
+Skopiowany plik musi być binarnie identyczny ze źródłowym.
