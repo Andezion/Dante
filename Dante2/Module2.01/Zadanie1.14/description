@@ -1,0 +1,27 @@
+Napisz program, który będzie dodawał wiersze tekstu na końcu nowego bądź istniejącego pliku tekstowego.
+
+Program ma pobrać ścieżkę do pliku tekstowego od użytkownika, a następnie go otworzyć (jeśli istnieje) lub utworzyć (jeśli nie). Dalej program ma pobierać od użytkownika teksty, zatwierdzane klawiszem Enter, aż do momentu wpisania pustego ciągu znaków. Teksty te mają zostać dodane do pliku podanego przez użytkownika.
+
+Jeżeli operacje otwierania/tworzenia pliku nie powiodą się to program powinien wyświetlić komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+W przypadku sukcesu program powinien wyświetlić komunikat File saved i zwrócić wartość 0
+
+Przykładowa interakcja z programem -- sukces (input.txt):
+
+Podaj sciezke do pliku:⏎
+input.txt⏎
+Podaj tekst:⏎
+'One of the lessons that I grew up with was to always stay true to yourself and never let what somebody else says distract you from your goals.' Michelle Obama⏎
+'The way get started is to quit talking and begin doing.' -Walt Disney⏎
+Today, billions of mobile devices with extraordinary power are uniting with advancements in robotics artificial intelligence, nanotechnology, and so much more. - Steve Mollenkopf⏎
+'Don't let yesterday take up too much of today.' -Will Rogers⏎
+⏎
+File saved⏎
+Przykładowa interakcja z programem -- błędy wy/wy:
+
+Podaj sciezke do pliku:⏎
+govern.txt⏎
+Couldn't create file⏎
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+W programie można zadeklarować tylko tablice na 30 znaków (do przechowywania nazw plików). Deklaracja musi wyglądać następująco: nazwa_zmiennej[31];.
+W programie nie wolno używać operatora [].
