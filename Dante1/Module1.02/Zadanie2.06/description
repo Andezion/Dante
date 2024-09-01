@@ -1,0 +1,23 @@
+Napisz program, który pobierze od użytkownika dwie liczby całkowite a następnie sprawdzi, czy pierwsza jest podzielna przez drugą.
+
+W przypadku podania błędnych danych przez użytkownika program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Jeżeli niemożliwe będzie wykonanie operacji to program powinien wyświetlić komunikat Operation not permitted i zakończyć działanie z kodem błędu 1.
+Jeżeli pierwsza liczba będzie podzielna przez drugą to program powinien poinformować o tym użytkownika komunikatem pierwsza_liczba is divisible by druga_liczba.
+W przeciwnym razie program powinien wyświetlić komunikat pierwsza_liczba is not divisible by druga_liczba.
+Przykłady
+Podaj pierwszą liczbę całkowitą: 89⏎
+Podaj pierwszą liczbę całkowitą: 0⏎
+Operation not permitted
+Podaj pierwszą liczbę całkowitą: 143⏎
+Podaj pierwszą liczbę całkowitą: 11⏎
+143 is divisible by 11
+podaj liczbe: 73⏎
+podaj liczbe: 5⏎
+73 is not divisible by 5
+Podaj pierwszą liczbę całkowitą: 68⏎
+Podaj pierwszą liczbę całkowitą: v⏎
+Incorrect input
+Podaj pierwszą liczbę całkowitą: i⏎
+Incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
