@@ -1,0 +1,9 @@
+Napisz program, pobierający od użytkownika 5 liczb zmiennoprzecinkowych, a następnie wyznaczający i wyświetlający średnią arytmetyczną z pobranych liczb. 
+Średnią wyświetl z dokładnością do 4 miejsc po przecinku.
+
+Przykłady
+Wprowadz 5 liczb:⏎
+-152.315033 -196.998642 131.445679 -72.967667 217.918213⏎
+Wynik: -14.5835⏎
+Uwagi
+Nie używaj pętli.
