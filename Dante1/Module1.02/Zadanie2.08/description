@@ -1,0 +1,20 @@
+
+Napisz program, który pobierze od użytkownika pozycję pola na szachownicy (np. A2), a następnie wyświetli komunikat:
+
+white jeżeli pole jest białe lub
+black jeżeli kolor pola jest czarny.
+Ponasto:
+
+W przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykłady
+Podaj pole: a2
+white
+podaj pole: d4⏎
+black
+podja pole: `7⏎
+Incorrect input
+podja pole: 5g⏎
+Incorrect input
+Uwagi
+Pozycję na planszy podajemy, zaczynając od litery (kolumny, tutaj zawsze małej) dodając po niej cyfrę (wiersz).
+W programie nie wolno korzystać z instrukcji switch.
