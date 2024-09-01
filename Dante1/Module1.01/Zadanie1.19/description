@@ -1,0 +1,6 @@
+Napisz program, który poprosi użytkownika o podanie liczby zmiennoprzecinkowej x. Następnie program wyznaczy i wyświetli wartość następującego wielomianu:
+
+y=2x3−4x2+3x−7
+Przykłady
+podaj liczbę: 1.071212⏎
+wartosc funkcji y=-5.917923
