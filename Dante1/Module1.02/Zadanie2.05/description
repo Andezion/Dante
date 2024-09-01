@@ -1,0 +1,13 @@
+Napisz program, który pobierze od użytkownika liczbę całkowitą, a następnie wyświetli komunikat:
+
+Equal to zero jeżeli pobrana liczba będzie równa 0 lub
+Not equal to zero w przeciwnym przypadku.
+W przypadku podania błędnych danych przez użytkownika program powinien wyświetlić komunikat Incorrect input i zwrócić wartość 1.
+
+Przykłady
+Podaj liczbe: 0⏎
+Equal to zero
+Podaj liczbe: -22⏎
+Not equal to zero
+Uwagi
+W programie nie wolno korzystać z operatorów porównania oraz instrukcji switch.
