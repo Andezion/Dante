@@ -1,0 +1,10 @@
+Napisz program, który dla podanej przez użytkownika temperatury w stopniach Celsjusza, wyświetli w osobnych wierszach temperaturę: 
+w Kelwinach i stopniach Fahrenheita. Kolejność wyników musi być zgodna z podaną.
+
+Przykłady
+Podaj temperature w stopniach Celsjusza: 1.000000⏎
+274.15⏎
+33.80⏎
+Podaj temperature w stopniach Celsjusza: -41.169956⏎
+231.98⏎
+-42.11⏎
