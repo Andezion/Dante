@@ -1,0 +1,9 @@
+Wyświetl długość wektora R3 o wartości (a, b, c). Wartości zmiennych a, b, c typu całkowitego należy wczytać z klawiatury. Wynik ma być wyświetlony z dokładnością do dwóch miejsc po przecinku.
+
+Przykłady
+Podaj wartości a: 18⏎
+Podaj wartości b: -819⏎
+Podaj wartości c: -721⏎
+1091.30⏎
+Podpowiedzi
+Do wyznaczania pierwiastka służy funkcja sqrt, której prototyp znajduje się w pliku nagłówkowym math.h.
