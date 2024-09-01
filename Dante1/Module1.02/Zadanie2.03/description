@@ -1,0 +1,14 @@
+Napisz program, który pobierze od użytkownika datę w formacie dd-mm-yyyy, a następnie wyświetli komunikat:
+
+Incorrect input - w przypadku podania błędnych danych, program powinien zakończyć działanie z kodem błędu 1,
+Incorrect - w przypadku, kiedy podana data nie jest poprawną datą,
+Correct - w przypadku, kiedy podana data jest poprawna.
+Przykłady
+Podaj date (w formacie dd-mm-yyyy): 29-02-2016
+Correct
+Podaj date (w formacie dd-mm-yyyy): -9-02-2016
+Incorrect
+Podaj date (w formacie dd-mm-yyyy): 27\5\1916⏎
+Incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
