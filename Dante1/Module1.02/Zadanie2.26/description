@@ -1,0 +1,12 @@
+Napisz program, który pobierze od użytkownika 1 znak, a następnie wyświetli komunikat postaci:
+
+consonant w przypadku, gdy litera będzie spółgłoską;
+vowel w przypadku, gdy litera będzie samogłoską.
+Program ma też wyświetlić Incorrect input w przypadku, gdy podany znak nie będzie literą.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien zakończyć się kodem błędu 1.
+Uwagi
+W programie nie używaj instrukcji warunkowej if.
+W programie można użyć maksymalnie 14 case’ów.
+Nie można korzystać z gotowych funkcji.
+W programie nie używaj operatora trójargumentowego ?:.
