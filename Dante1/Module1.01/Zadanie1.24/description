@@ -1,0 +1,14 @@
+Napisz program, który wyświetli na ekranie prostokąt, złożony ze znaków | oraz _. Prostokąt powinien mieć wysokość 7 wierszy i szerokość 12 kolumn. Zwróć uwagę, aby wizualne formatowanie prostokąta było identyczne z przykładem.
+
+Przykładowe wyjście:
+
+ __________⏎
+|          |⏎
+|          |⏎
+|          |⏎
+|          |⏎
+|          |⏎
+|__________|⏎
+Uwagi
+W programie można znaleźć się tylko jedno wywołanie funkcji printf.
+Nie wolno używać innych funkcji wyświetlających dane na ekranie oraz pętli.
