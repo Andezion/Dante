@@ -1,0 +1,16 @@
+Napisz program, który wyznaczy ocenę na podstawie punktów zdobytych za kolokwium według następujących reguł:
+
+0−10 pkt, ocena 2
+11−13 pkt, ocena 3
+14−16 pkt, ocena 4
+17−20 pkt, ocena 5
+Program powinien przyjmować z konsoli liczbę punktów w formie liczby całkowitej, a następnie wyświetlać ocenę.
+
+W przypadku błędnego wejścia program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykłady
+prosze podac liczbe punktow: 13⏎
+ocena 3
+prosze podac liczbe punktow: -1⏎
+incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
