@@ -1,0 +1,9 @@
+Napisz program, pobierający od użytkownika 10 liczb całkowitych, a następnie wyznaczający i wyświetlający średnią arytmetyczną z pobranych liczb.
+Średnią wyświetl z dokładnością do 4 miejsc po przecinku.
+
+Przykłady
+Podaj dziesiec liczb:⏎
+5 8 5 1 2 4 9 9 10 10 ⏎
+Srednia arytmetyczna= 6.3000⏎
+Uwagi
+Nie używaj pętli.
