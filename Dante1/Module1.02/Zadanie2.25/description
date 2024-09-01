@@ -1,0 +1,13 @@
+Napisz program, który pobierze od użytkownika liczbę całkowitą X, a następnie wyświetli komunikat w postaci:
+
+X is positive w przypadku, gdy liczba będzie większa od zera;
+X is negative w przypadku, gdy liczba będzie mniejsza od zera;
+oraz X is equal to 0 w przypadku gdy wpisana liczba będzie zerem.
+Program ma tez wyświetlić Incorrect input w przypadku podania błędnych danych przez użytkownika. Zamiast X należy podstawić wartość wprowadzonej liczby.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien zakończyć się kodem błędu 1.
+
+Uwagi
+W programie nie używaj instrukcji warunkowej if.
+W programie wolno użyć tylko jednej instrukcji switch.
+W programie nie używaj operatora trójargumentowego ?:.
