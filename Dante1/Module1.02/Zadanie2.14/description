@@ -1,0 +1,18 @@
+Rozbuduj zadanie 2.13 Min, max, średnia (5) tak, aby wprowadzenie wartości -1 przez użytkownika przerywało pobieranie wartości. Podobnie jak w zadaniu 2.13 Min, max, średnia (5) maksymalna liczba pobranych wartości to 5.
+
+Dla podanych do tej pory liczb (wyłączając -1) znajdź wartość maksymalną, minimalną oraz średnią, a następnie, w kolejnych wierszach, wyświetl wartość najmniejszą, największą oraz wartość średnią (z dokładnością do dwóch miejsc po przecinku).
+
+Przykłady
+Podaj 5 licz zmiennoprzecinkowych⏎
+Podaj liczbe: 30.541829 33.607309 -112.751633 -189.704965 -1.000000⏎
+-189.70 ⏎
+33.61 ⏎
+-59.58
+Podaj 5 licz zmiennoprzecinkowych⏎
+Podaj liczbe: 33.607309 101.082693 -1.000000⏎
+33.61 ⏎
+101.08 ⏎
+67.35
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
+W programie nie wolno używać pętli.
