@@ -1,0 +1,10 @@
+Napisz program, który pobierze od użytkownika numer telefonu (w formacie ddd-dd-dd) oraz numer kierunkowy (w formacie dd). 
+Następnie program ma wyświetlić go w postaci (dd) ddd-dd-dd. Wyświetlany wynik ma przedstawiać wyłącznie sformatowany numer telefonu.
+
+Przykłady
+Podaj numer telefonu: 431-04-21⏎
+Podaj numer kierunkowy: 82⏎
+(82) 431-04-21
+Uwagi
+W programie należy wykorzystać trzy wywołania funkcji printf oraz dwa funkcji scanf.
+W programie nie wolno używać słowa kluczowego char.
