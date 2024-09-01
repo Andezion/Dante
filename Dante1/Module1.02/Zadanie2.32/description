@@ -1,0 +1,30 @@
+
+Napisz program menu, który będzie pozwalał użytkownikowi na wprowadzenie dwóch liczb całkowitych oraz symbolu op operacji do wykonania:
+
+suma (+),
+różnica (-),
+iloczyn (*),
+iloraz (/).
+Wynikiem działania programu ma być wynik operacji pierwsza_liczba op druga_liczba. W przypadku dzielenia wynik ma być zaokrąglony do dwóch miejsc po przecinku.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1
+W przypadku kiedy żądana operacja nie może zostać wykonana, program powinien poinformować o tym użytkownika komunikatem Illegal operation i zakończyć działanie z kodem błędu 2.
+Przykładowe wejście:
+
+Podaj liczby: -325 -140
+Podaj symbol operacji: -
+Przykładowe wyjście:
+
+-185
+Uwagi
+W programie nie używaj instrukcji warunkowej if, pętli oraz operatora ?:
+Przykłady interakcji z programem, zakończonych błędem:
+
+Podaj liczby: -407 -176⏎
+Podaj symbol operacji: j⏎
+Incorrect input
+Podaj liczby: 389 I⏎
+Incorrect input
+Podaj liczby: 76 0⏎
+Podaj symbol operacji: /⏎
+Illegal operation
