@@ -1,0 +1,11 @@
+Napisz prosty kalkulator dla liczb całkowitych. Program ma pobierać od użytkownika dwie wartości liczbowe (przyjmij, że użytkownik poda liczby z zakresu 
+<−32767;32767>), a następnie ma wyświetlać ich sumę, iloczyn, iloraz oraz różnicę.
+
+Program powinien prosić o każdą liczbę indywidualnie. Wyniki należy wyświetlić w osobnych wierszach, w następującej kolejności:
+
+suma,
+różnica,
+iloczyn,
+iloraz.
+
+Operacje oraz typy danych należy przyjąć całkowite.
