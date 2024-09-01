@@ -1,0 +1,5 @@
+Zdefiniuj dwie zmienne typu int i przypisz do nich dowolne wartości. Wyświetl zawartości tych zmiennych w jednej linii, oddzielone spacjami. Następnie dla obu tych zmiennych wyświetl, w nowych liniach: iloczyn, iloraz, sumę oraz różnicę ich wartości (wszystkie wartości, poza dzieleniem, wyświetl jako liczby całkowite). Iloraz wyświetl z dokładnością do dwóch miejsc po przecinku.
+
+Uwagi
+Kolejność argumentów funkcji prezentującej wyniki zachowaj zgodną z wyświetlaną.
+Kolejność wyników (ich wartości) ma być dokładnie taka jak podana wyżej.
