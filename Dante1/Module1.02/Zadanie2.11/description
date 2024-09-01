@@ -1,0 +1,16 @@
+Napisz program, który dla wartości z zakresu 0-10, podanych przez użytkownika, wyświetli jej słowną reprezentację (np. zero), bez polskich znaków.
+
+W przypadku wartości spoza zakresu, program ma wyświetlić komunikat o błędzie Incorrect input data i zakończyć działanie z kodem błędu 2.
+W przypadku wprowadzenia przez użytkownika nieprawidłowych znaków komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykłady
+Podaj liczbe z zakresu 0-10: 0⏎
+zero
+Podaj liczbe z zakresu 0-10: 10⏎
+dziesiec
+Podaj liczbe z zakresu 0-10: -2⏎
+Incorrect input data
+Podaj liczbe z zakresu 0-10: QUnyffL⏎
+Incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
+Nie używaj polskich znaków narodowych; pisz piec zamiast pięć.
