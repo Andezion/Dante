@@ -1,0 +1,6 @@
+Zdefiniuj dwie zmienne typu float i przypisz do nich dowolne wartości. Wyświetl te liczby w jednej linii oddzielone spacjami. 
+Dla wszystkich zmiennych wyświetl: iloczyn, iloraz, sumę oraz różnicę ich wartości (wszystkie wartości wyświetl jako zmiennoprzecinkowe). 
+Iloraz wyświetl z dokładnością do dwóch miejsc po przecinku.
+
+Uwagi
+Kolejność wyświetlanych wartości ma być dokładnie taka jak podana wyżej.
