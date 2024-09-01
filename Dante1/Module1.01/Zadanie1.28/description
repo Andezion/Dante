@@ -1,0 +1,16 @@
+Napisz program, który pobierze od użytkownika trzy liczby całkowite (a, b, c), a następnie wyświetli wartość:
+
+2 jeżeli pierwsza liczba jest równa maksimum ze wszystkich trzech,
+1 jeżeli któraś z pozostałych liczb jest większa od pierwszej lub
+0 w przypadku, kiedy obie pozostałe liczby są większe od pierwszej.
+Przykłady
+Podaj liczby: 8 0 -3⏎
+Wynik: 2
+Podaj liczby: 5 5 5⏎
+Wynik: 2
+Podaj liczby: 9 17 -6⏎
+1
+Podaj liczby: 5 17 20⏎
+0
+Uwagi
+W programie nie używaj instrukcji warunkowych, operatorów trójargumentowych ani funkcji z biblioteki math.h.
