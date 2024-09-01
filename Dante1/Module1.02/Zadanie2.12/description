@@ -1,0 +1,22 @@
+Napisz program wyznaczający pierwiastki równania kwadratowego. Program ma oczekiwać od użytkownika podania współczynników a, b i c. 
+Następnie program ma wyświetlić informację słowną o liczbie pierwiastków rzeczywistych (brak, jeden, dwa lub nieskonczonosc). 
+Ostatecznie, po opisie słownym, program ma wyświetlić ich położenie w dziedzinie zmiennej x równania.
+
+Przykłady
+Program rozwiązujący równanie kwadratowe postaci 0 = ax^2 + bx + c ⏎
+Podaj a: -8.949717⏎
+Podaj b: 8.595487⏎
+Podaj c: 7.198842⏎
+dwa pierwiastki: -0.537123 1.497543⏎
+prosze podac a:⏎
+0.000000⏎
+prosze podac b:4.575523⏎
+prosze podac c:-7.864840⏎
+jeden pierwiastek 1.718894
+prosze podac a:⏎
+0.000000⏎
+prosze podac b:0.000000⏎
+prosze podac c:-8.325117⏎
+brak
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
