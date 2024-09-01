@@ -1,0 +1,28 @@
+Rozbuduj kalkulator z zadania 1.13 Prosty kalkulator na liczbach całkowitych tak, aby program nie pozwalał dzielić przez zero. 
+W przypadku gdy dzielnik będzie równy 0, program ma pominąć wyznaczanie ilorazu, a zamiast tego wyświetlić komunikat o błędzie w fromie tekstu Operation not permitted.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykłady
+Wprowadz x⏎
+3⏎
+Wprowadz y⏎
+-5⏎
+suma = -2⏎
+roznica = 8⏎
+iloczyn = -15⏎
+iloraz = 0
+Wprowadz x⏎
+602⏎
+Wprowadz y⏎
+0⏎
+suma = 602⏎
+roznica = 602⏎
+iloczyn = 0⏎
+Operation not permitted
+Wprowadz x: e⏎
+incorrect input
+Wprowadz x: 28397⏎
+Wprowadz y: L⏎
+incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
