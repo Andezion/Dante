@@ -1,0 +1,18 @@
+Napisz program, który pobierze od użytkownika liczbę całkowitą X, a następnie wyświetli komunikat postaci:
+
+X is odd w przypadku, gdy liczba będzie nieparzysta;
+X is even w przypadku, gdy liczba będzie parzysta lub
+Incorrect input w przypadku podania błędnych danych przez użytkownika.
+Zamiast X należy podstawić wartość wprowadzonej liczby.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input zakończyć się kodem błędu 1.
+Przykłady
+Podaj liczbe calkowita: 4⏎
+4 is even⏎
+Podaj liczbe calkowita: T⏎
+Incorrect input⏎
+Uwagi
+W programie nie wolno używać operatora trójargumentowego ?:
+W programie nie używaj instrukcji warunkowej if.
+W programie wolno użyć tylko jednej instrukcji switch.
+W programie nie używaj operatora trójargumentowego ?:.
