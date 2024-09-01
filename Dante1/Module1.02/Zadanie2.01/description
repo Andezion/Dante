@@ -1,0 +1,12 @@
+Napisz program, który pobierze od użytkownika dwie liczby całkowite, oddzielone spacją, a następnie wyświetli na ekranie ich sumę. 
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć pracę z kodem błędu 1.
+
+Przykłady:
+Podaj dwie liczby całkowite oddzielone spacją: -8 10⏎
+2
+Podaj dwie liczby całkowite oddzielone spacją: B -55⏎
+Incorrect input
+Podaj dwie liczby całkowite oddzielone spacją: 61 n⏎
+Incorrect input
+Uwagi
+W programie nie wolno korzystać z instrukcji switch.
