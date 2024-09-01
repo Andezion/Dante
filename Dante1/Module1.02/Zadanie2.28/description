@@ -1,0 +1,19 @@
+Napisz program, który pozwoli użytkownikowi wybrać plan posiłków w hotelu:
+
+A - Breakfast, Lunch and Dinner,
+B - Lunch and Dinner only,
+C - Dinner only.
+Na koniec program powinien wyświetlić pełnym zdaniem wybór dokonany przez użytkownika: You chose (Breakfast, Lunch and Dinner | Lunch and Dinner | Dinner) as your meal plan.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input zakończyć się kodem błędu 1.
+Przykłady
+Your choice: B⏎
+You chose Lunch and Dinner as your meal plan.
+wybierz wariant posilku: A⏎
+You chose Breakfast, Lunch and Dinner as your meal plan.
+wybierz wariant posilku: T⏎
+incorrect input⏎
+Uwagi
+W programie nie używaj instrukcji warunkowej if, break, exit i goto.
+W programie mogą się znaleźć co najwyżej dwa słowa kluczowe return.
+W programie nie używaj operatora trójargumentowego ?:.
