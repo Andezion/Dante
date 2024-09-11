@@ -1,0 +1,5 @@
+
+Napisz program wyświetlający liczby zmiennoprzecinkowe z przedziału <min;max> z krokiem 0.25. Granice przedziału podawane są przez użytkownika z klawiatury.
+
+W przypadku podania błędnych granic przedziału program powinien wyświetlić komunikat Incorrect range i zakończyć działanie z kodem błędu 2.
+W przypadku wprowadzenia błędnych znaków program powinien niezwłocznie wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
