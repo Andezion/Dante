@@ -1,0 +1,19 @@
+
+Napisz program, który wyznacza obwód i powierzchnię koła o promieniu podanym przez użytkownika. Użytkownik może podać wartość niecałkowitą.
+
+W przypadku, gdy użytkownik poda wartość ujemną, należy wyświetlić komunikat o błędzie Incorrect input i ponowić pytanie o promień, aż będzie możliwe obliczenie obwodu i powierzchni koła, 
+wtedy program powinien zakończyć działanie.
+
+Przykłady
+Podaj promień koła:
+0
+incorrect input
+Podaj promień koła:
+8.756475091315654
+Obwód koła: 55.019
+Pole koła: 240.884
+Podaj liczbe: Q⏎
+incorrect input⏎
+Podaj liczbe: 1.32948080197835⏎
+Obwod kola: 8.353374⏎
+Pole kola: 5.552825
