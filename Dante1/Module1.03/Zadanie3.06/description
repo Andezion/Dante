@@ -1,0 +1,9 @@
+Napisz program, który wyświetla na ekranie kolejne wartości liczby 10 podniesionej do potęgi. Wartości wykładnika przyjmij od 0 do 19 włącznie.
+
+Wyznaczone wartości potęgi mają być wyświetlane w jednej linii, po spacji:
+
+1 10 100 (...)
+Uwagi
+Wartości wyświetlane na ekranie mają być wynikiem operacji potęgowania, a nie znakami 1 uzupełnionymi odpowiednimi ilościami 0.
+W programie nie wolno używać gotowych funkcji do obliczania potęgi liczby 10.
+Nawiasy klamrowe, jak i funkcja printf mogą pojawić się tylko raz w kodzie.
