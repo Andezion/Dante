@@ -1,0 +1,25 @@
+Napisz program, który będzie wyznaczał i wyświetlał różnicę dwóch ostatnio wprowadzonych liczb rzeczywistych, aż do momentu wprowadzenia przez użytkownika liczby 0. Pomiń pierwszą wprowadzoną liczbę (jako że brakuje jej poprzednika).
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykładowa interakcja z programem:
+
+Podaj kolejną liczbę: 2.767984
+Podaj kolejną liczbę: 2.856381
+0.088397
+Podaj kolejną liczbę: -0.299652
+-3.156033
+Podaj kolejną liczbę: -6.178677
+-5.879025
+Podaj kolejną liczbę: 7.802321
+13.980998
+Podaj kolejną liczbę: 1.175952
+-6.626369
+Podaj kolejną liczbę: -0.792805
+-1.968757
+Podaj kolejną liczbę: -8.112681
+-7.319876
+Podaj kolejną liczbę: -3.536403
+4.576279
+Podaj kolejną liczbę: -8.565641
+-5.029239
+Podaj kolejną liczbę: 0.000000
