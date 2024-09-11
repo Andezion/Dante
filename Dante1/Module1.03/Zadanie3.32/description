@@ -1,0 +1,3 @@
+Wylosuj 100 liczb całkowitych z zakresu < -1000,1000>. Policz, ile z nich ma wartość bezwzględną mniejszą bądż równą 100. Wynik tych obliczeń wypisz na konsoli.
+
+Wydruk w konsoli musi być zakończony znakiem nowej linii. Użyj operatora modulo % aby uzyskać odpowiedni zakres.
