@@ -1,0 +1,18 @@
+Napisz program, który wyznacza sumę 10 liczb rzeczywistych, podanych przez użytkownika.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykładowe wejście:
+
+Podaj 1 liczbe: 198.3011460733726⏎
+Podaj 2 liczbe: -146.6640085893598⏎
+Podaj 3 liczbe: 600.9087215732002⏎
+Podaj 4 liczbe: -999.2975324929407⏎
+Podaj 5 liczbe: -353.74903062339524⏎
+Podaj 6 liczbe: 380.2095666861378⏎
+Podaj 7 liczbe: 310.6980873304087⏎
+Podaj 8 liczbe: -656.3985409359669⏎
+Podaj 9 liczbe: 355.8524340289646⏎
+Podaj 10 liczbe: -262.19414689114376⏎
+Przykładowe wyjście:
+
+-572.333374
