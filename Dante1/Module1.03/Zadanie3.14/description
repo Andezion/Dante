@@ -1,0 +1,5 @@
+
+Napisz program, który pobiera od użytkownika 100 liczb zmiennoprzecinkowych. Na początku program powinien poprosić użytkownika o wprowadzenie liczb. 
+Dla podanych liczb znajdź wartość maksymalną, minimalną oraz średnią, a następnie, w kolejnych wierszach, wyświetl wartość najmniejszą, największą oraz wartość średnią (z dokładnością do dwóch miejsc po przecinku).
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
