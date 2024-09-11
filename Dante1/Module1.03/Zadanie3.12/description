@@ -1,0 +1,11 @@
+Napisz program, który wyznacza silnię dla dowolnej liczby naturalnej n, mniejszej od 21, wpisywanej z klawiatury. Zastosuj metodę iteracyjną, daną wzorem:
+
+n!=1∗2∗3∗...∗n
+W przypadku podania przez użytkownika nieprawidłowych danych program ma wyświetlić komunikat Incorrect input i zwrócić kod błędu 1.
+Przykłady
+Podaj liczbe20⏎
+2432902008176640000
+Podaj liczbe: 62⏎
+Incorrect input
+Podaj liczbe: P⏎
+Incorrect input
