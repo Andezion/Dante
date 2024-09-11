@@ -1,0 +1,38 @@
+Napisz grę w zgadywanie liczby całkowitej z zakresu [0,100] wybranej przez generator pseudolosowy w programie C. Zgadywanie polega na wpisywaniu przez użytkownika kolejnych typów szukanej liczby przy pomocy klawiatury, ale nie więcej niż 10 razy.
+
+Po wpisaniu każdej liczby na konsoli wyświetlana ma być informacja: za duzo lub za malo w zależności do relacji między liczbą wpisaną przez użytkownika a liczbą wcześniej wylosowaną.
+
+W przypadku trafienia należy wyświetlić komunikat wygrales i zakończyć program. Po 10 nieudanych próbach program także się zakończy, jednak wcześniej wyświetli napis przegrales.
+
+Przykłady
+Zgadnij: 64⏎
+za duzo⏎
+Zgadnij: 32⏎
+za duzo⏎
+Zgadnij: 16⏎
+za malo⏎
+Zgadnij: 24⏎
+za duzo⏎
+Zgadnij: 20⏎
+wygrales
+Zgadnij: 64⏎
+za malo⏎
+Zgadnij: 72⏎
+za malo⏎
+Zgadnij: 76⏎
+za malo⏎
+Zgadnij: 78⏎
+za malo⏎
+Zgadnij: 79⏎
+za malo⏎
+Zgadnij: 80⏎
+za malo⏎
+Zgadnij: 81⏎
+za malo⏎
+Zgadnij: 82⏎
+za malo⏎
+Zgadnij: 83⏎
+za malo⏎
+Zgadnij: 84⏎
+za malo⏎
+przegrales
