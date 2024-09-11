@@ -1,0 +1,3 @@
+
+Napisz program wyświetlający w kolejnych liniach liczby całkowite od 0 do 100 włącznie, przy czym liczby z zakresów <10;15), <40;60> oraz (70;80) mają być poprzedzone gwiazdką (*).
+
