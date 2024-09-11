@@ -1,0 +1,9 @@
+
+Napisz program, który będzie pobierał od użytkownika liczby całkowite i wyznaczał dwie sumy: liczb parzystych oraz nieparzystych (z wyłączeniem -1). Program ma zakończyć działanie po wpisaniu przez użytkownika liczby -1. Na koniec ma zostać wyświetlona suma wszystkich liczb parzystych, podanych przez użytkownika. W kolejnej linii wyświetl sumę liczb nieparzystych.
+
+W przypadku podania przez użytkownika nieprawidłowych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Przykłady
+podaj liczby:
+1 -3 -8 -17 -10 19 -4 20 -20 19 19 6 -2 -1
+Suma liczb parzystych: -18
+Suma liczb nieparzystych: 38
