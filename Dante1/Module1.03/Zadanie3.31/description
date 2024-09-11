@@ -1,0 +1,8 @@
+
+Napisz program, który wylicza sumę S dla kolejnych wyrazów szeregu, których wartości są większe bądź równe stałej 
+eps=10−4
+Suma szeregu dana jest następującym wyrażeniem:
+S=∞∑n=1 1n(n+1)
+W konsoli jednym wywołaniem funkcji wyświetlającej wyświetl (w jednej linii): najpierw liczbę wyrazów szeregu, a następnie wartość S z dokładnością przynajmniej 4 miejsc po przecinku. 
+Użyj liczb zmiennoprzecinkowych podwójnej precyzji.
+
