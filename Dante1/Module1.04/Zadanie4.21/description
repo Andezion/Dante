@@ -1,0 +1,5 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 100), a następnie wypisze wszystkie elementy ciągu znajdujące się w komórkach, których indeks jest liczbą pierwszą począwszy od końca ciągu (indeks liczony jest od początku tablicy, ale wartości mają być wypisywane począwszy od końca). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Jeżeli nie wystąpi żaden taki wyraz program ma wypisać komunikat Nothing to show. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście: podaj liczby: -2 5 -3 8 1 0
+
+Przykładowe wyjście: 8 -3
