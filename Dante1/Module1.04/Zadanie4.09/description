@@ -1,0 +1,21 @@
+Napisz program, który wczyta dowolną liczbę liczb całkowitych od użytkownika (nie mniej niż jedną, nie więcej niż 100), 
+jako jeden ciąg liczb oddzielonych spacjami od siebie. Załóż, że wartość -1 nie jest daną, a określeniem końca danych (terminatorem). 
+Następnie wyznacz i wypisz (jako liczby, każda w nowej linii) następujące informacje:
+
+liczbę elementów tablicy,
+najmniejszą i największą wartość,
+średnią
+oraz sumę wszystkich elementów.
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+Podaj dane:
+84 22 37 169 69 126 -1⏎
+Przykładowe wyjście:
+
+6⏎
+22⏎
+169⏎
+84.500000⏎
+507⏎
