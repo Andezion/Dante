@@ -1,0 +1,25 @@
+Napisz program, który policzy i wyświetli liczby liczb mniejych oraz większych od zadanej wartości referencyjnej. Liczb wejściowych będzie nie więcej niż 100.
+
+W tym celu program musi pobrać od użytkownika liczby (nie więcej niż 100) podane w jednym wierszu. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu liczb wejściowych.
+
+Po zakończeniu wprowadzania ciągu zostanie podana dodatkowa liczba.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+Program ma wyświetlić w osobnych liniach dwie wartości:
+
+liczbę elementów ciągu, które są mniejsze od podanej na końcu wartości,
+liczbę elementów ciągu, które są większe od podanej na końcu wartości.
+Przykładowa interakcja z programem:
+
+Podaj liczby: 4 -55 2 15 36 -64 9 6 -6 56 0 ⏎
+Podaj dodatkową liczbę: 72⏎
+10
+0
+Podaj liczby: 0 ⏎
+not enough data available
+Użytkownik będzie podawał liczby w formie jednego wiersza, np.:
+
+podaj liczby: -86 -29 21 -69 -10 -66 -90 -88 -15 3 -37 -17 -57 -78 99 -93 -81 75 42 68 -62 67 -15 53 91 10 -96 -11 18 -71 -46 64 82 -15 86 -94 -26 56 -82 -36 24 -100 -42 22 17 48 39 29 -22 -61 -55 29 79 -28 -92 -34 -86 -66 41 -73 -52 19 -11 -60 9 64 45 8 93 -3 9 77 74 13 -27 -15 -89 -44 91 -17 70 60 -94 -29 -57 -63 -8 -18 29 44 -36 93 -6 58 8 21 -35 79 -65 -18 0⏎
+Należy przewidzieć sytuację, iż poda on tych liczb więcej niż 100 (jak powyżej). W takim przypadku należy pozostałe liczby (aż do 0) zignorować.
+
