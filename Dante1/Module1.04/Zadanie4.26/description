@@ -1,0 +1,12 @@
+Napisz program, który pobierze od użytkownika dwa ciągi liczb (pierwszy ma nie więcej niż 100 elementów, drugi dokładnie dwa elementy). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Program ma wyświetlić ile razy w pierwszym ciągu wystąpił drugi ciąg. A następnie w kolejnych liniach indeksy z pierwszego ciągu, w których pojawił się drugi. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście:
+
+podaj liczby: 
+-6 -3 -7 9 -10 1 -9 10 0
+podaj liczby: 
+-3 -7 0
+Przykładowe wyjście:
+
+1
+1
