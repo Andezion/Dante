@@ -1,0 +1,7 @@
+Zmodyfikuj program z zadania 4.27 Indeksy 1 w taki sposób, aby indeksem wypisywanej wartości był całkowita średnia wszystkich indeksów komórek, w których pojawiła się wartość minimalna i maksymalna.
+
+Przykładowe wejście:
+
+podaj liczby: 
+10 6 -6 -4 -2 4 4 1 2 3 -10 -4 2 -1 -10 -6 5 9 1 10 -9 0
+Przykładowe wyjście: -10
