@@ -1,0 +1,6 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 100), a następnie wypisze wartość elementu ciągu znajdującego się pod indeksem, będącym całkowitą średnią indeksów z minimalną i maksymalną wartością ciągu. Jeżeli jedna z tych wartości pojawiła się w ciągu więcej niż raz do wyznaczania średniej ma być wykorzystany niższy indeks. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście: podaj liczby: -5 9 -10 1 9 -9 -3 8 0
+
+Przykładowe wyjście: 9
+
