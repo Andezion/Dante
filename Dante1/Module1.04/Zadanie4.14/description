@@ -1,0 +1,18 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 1000), a następnie znajdzie najdłuższy podciąg niemonotoniczny. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+
+Program ma wyświetlić, w osobnych liniach:
+
+liczbę elementów należących do najdłuższego podciągu,
+liczbę znalezionych takich podciągów
+Następnie dla każdego znalezionego podciągu program ma wyświetlić:
+
+indeks pierwszego elementu i po spacji i myślniku wartości wszystkich elementów do niego należących.
+Przykładowe wejście:
+
+podaj liczby: -20 44 -78 -41 -84 20 100 9 59 16 100 26 -30 42 0
+Przykładowe wyjście:
+
+7
+1
+5 - 20 100 9 59 16 100 26
+Podpowiedź: minimalna długość ciągu, przy jakiej można stwierdzić niemonotoniczność, to 3 elementy.
