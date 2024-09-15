@@ -1,0 +1,9 @@
+Napisz program, który pobierze od użytkownika dwa ciągi liczb (nie więcej niż 100 elementów w każdym). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Dla każdego elementu pierwszego ciągu program ma wyświetlić (po spacjach) ile elementów w drugim ciągu ma wartość większą od niego. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście:
+
+podaj liczby: 
+6 -2 1 4 -2 5 5 -9 0
+-6 2 8 4 -2 -9 2 -7 8 -5 -1 4 0
+Przykładowe wyjście: 2 7 6 2 7 2 2 11
+
