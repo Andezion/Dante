@@ -1,0 +1,2 @@
+Napisz program wypełniający tablicę kolejnymi wartościami całkowitymi od 0 do 10 i wyświetl zawartość tablicy na ekranie, w jednej linii. Wypełnianie oraz wyświetlanie musi odbywać się w osobnych pętlach. 
+Wydruk w konsoli powinien kończyć się znakiem nowej linii.
