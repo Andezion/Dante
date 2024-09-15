@@ -1,0 +1,10 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 100), a następnie wypisze wszystkie elementy ciągu bez duplikujących się wartości. Program nie może zmieniać kolejności wartości.
+
+Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+Przykładowa interakcja z programem:
+
+podaj liczby: 5 -5 1 5 8 1 3 0⏎
+5 -5 1 8 3 ⏎
