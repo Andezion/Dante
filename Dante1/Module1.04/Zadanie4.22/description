@@ -1,0 +1,8 @@
+Napisz program, który pobierze od użytkownika dwa ciągi liczb (nie więcej niż 100 elementów w każdym). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie danego ciągu. Program ma obliczyć i wyświetlić po spacjach ciąg będący różnicą dwóch wprowadzonych ciągów (od wartości poszczególnych elementów pierwszego ciągu należy odjąć odpowiadające im wartości z drugiego ciągu). Jeżeli ciągi wejściowe będą miały różną długość, to długość ciągu wyjściowego ma być taka jak krótszego z wprowadzonych ciągów. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście: podaj liczby:
+
+-8 -10 -6 5 -2 -7 8 10 9 -3 1 -4 3 -4 -3 0
+1 7 1 -8 -3 -9 1 -9 1 4 -1 -7 0
+Przykładowe wyjście:
+-9 -17 -7 13 1 2 7 19 8 -7 2 3 
