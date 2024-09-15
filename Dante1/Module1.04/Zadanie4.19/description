@@ -1,0 +1,6 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 100), a następnie wypisze tylko te elementy ciągu, które pojawiły się w ciągu więcej niż raz. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Jeżeli nie wystąpi żaden taki wyraz program ma wypisać komunikat Nothing to show. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście:
+
+podaj liczby: -10 4 2 -5 -7 3 9 4 4 6 -10 6 -2 -5 -1 0
+Przykładowe wyjście: -10 4 -5 6
