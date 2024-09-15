@@ -1,0 +1,10 @@
+Napisz program pobierający od użytkownika 10 liczb całkowitych, po dwie naraz, który zapisuje je do kolejnych elementów tablicy. Po pobraniu tych liczb wyświetl na ekranie po kolei:
+
+ich wartość średnią, z dokładnością 4 miejsc,
+wartość maksymalną
+minimalną.
+Wszystkie trzy wiersze zakończ znakami nowej linii.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat: Input data type error i zakończyć działanie z kodem błędu 1.
+
+W programie należy wykorzystać dokładnie jedno wywołanie funkcji scanf.
