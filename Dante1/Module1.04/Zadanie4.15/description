@@ -1,0 +1,5 @@
+Napisz program, który pobierze od użytkownika liczby (nie więcej niż 1000), a następnie zastosuje na nim filtr uśredniający - każdy element ciągu wyjściowego ma być średnią dwóch sąsiadujących elementów ciągu wejściowego. Program ma wyświetlić wszystkie elementy ciągu wyjściowego oddzielone spacjami, z dokładnością do dwóch miejsc po przecinku. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
+
+Przykładowe wejście: podaj liczby: -92 4 -22 -72 -84 63 65 0
+
+Przykładowe wyjście: -44.00 -9.00 -47.00 -78.00 -10.50 64.00
