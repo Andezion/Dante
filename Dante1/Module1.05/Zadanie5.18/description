@@ -1,0 +1,20 @@
+Napisz program, który pobierze od użytkownika wyrażenie nawiasowe, np.: (()(())). Program ma sprawdzić czy podane wyrażenie jest poprawne czy nie. Przyjmij, że długość wprowadzonego wyrażenia nie przekroczy 50 znaków. Program ma wypisać napis Poprawny jeżeli uzna, że wprowadzone wyrażenie jest poprawne lub Niepoprawny w przeciwnym przypadku.
+
+Przykład 1
+
+Przykładowe wejście:
+
+Podaj wyrazenie nawiasowe:
+()()()
+Przykładowe wyjście:
+
+Poprawny 
+Przykład 2
+
+Przykładowe wejście:
+
+Podaj wyrazenie nawiasowe:
+(()))((())
+Przykładowe wyjście:
+
+Niepoprawny  
