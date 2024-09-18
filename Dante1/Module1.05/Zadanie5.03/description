@@ -1,0 +1,4 @@
+Napisz program, który pyta użytkownika o jego imię, a następnie wyświetla tekst powitalny
+
+Witaj (...)!
+gdzie zamiast (...) program wyświetla pobrane imię. Załóż, że długość imienia nie przekroczy 30 znaków.
