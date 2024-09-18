@@ -1,0 +1,9 @@
+Napisz program, który pobierze od użytkownika łańcuch tekstowy, a następnie policzy ile wyrazów znalazło się w podanym przez użytkownika tekście (wyrazy mogą składać się wyłącznie z liter, oddzielone mogą być dowolnymi znakami, nie będącymi literami). Przyjmij, że długość ciągu wejściowego nie przekroczy 1000 znaków.
+
+Przykładowe wejście:
+
+Podaj tekst:
+Przykladowy tekst
+Przykładowe wyjście:
+
+2
