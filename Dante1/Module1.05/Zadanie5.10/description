@@ -1,0 +1,16 @@
+Napisz program, który pobierze od użytkownika łańcuch tekstowy zawierający wyłącznie małe i wielkie litery łacińskie. Przyjmij, że długość ciągu wejściowego nie przekroczy 1000 znaków (w przypadku podania przez użytkownika dłuższych ciągów program powinien zignorować nadmiarowe litery). Program ma zwrócić po spacji liczbę najdłuższych słów w przekazanym napisie, długość tych słów, następnie w kolejnych liniach mają zostać wypisane znalezione słowa o tej długości rozpoczynając od ostatniego.
+
+W przypadku wprowadzenia przez użytkownika innych znaków program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+Podpowiedź: zakładamy, że przekazany napis zawiera co najmniej 1 słowo (czyli nie jest pusty ani nie zawiera np. wyłącznie spacji).
+
+Przykładowe wejście:
+
+Podaj tekst:
+krokodyl waran i aligator to gady
+Przykładowe wyjście:
+
+2 8
+aligator
+krokodyl
+Uwagi
+Program powinien wyświetlać słowa bez żadnych dodatkowych białych znaków, mogą one spowodować odrzucenie przez testy maszynowe rozwiązania.
