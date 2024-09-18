@@ -1,0 +1,11 @@
+Napisz program, który pobierze od użytkownika łańcuch tekstowy składający się wyłącznie z liter i białych znaków oraz przesunięcie kodowe. Program ma zaszyfrować pobrany tekst wykorzystując szyfr Cezara ([https://pl.wikipedia.org/wiki/Szyfr_Cezara]) i wypisać go na konsoli. Długość ciągu wejściowego nie przekroczy 1000 znaków.
+
+Przykładowe wejście:
+
+Podaj tekst: 
+Przykladowy tekst do zakodowania
+Podaj znak kodowy:
+1
+Przykładowe wyjście:
+
+Qsazlmbepxz ufltu ep ablpepxbojb
