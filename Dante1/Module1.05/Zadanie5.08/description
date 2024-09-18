@@ -1,0 +1,23 @@
+Napisz program, który pobierze od użytkownika łańcuch tekstowy zawierający wyłącznie małe litery łacińskie oraz cyfry 1..9 a następnie, na jego podstawie, generuje łańcuch wynikowy.
+
+W łancuchu wynikowym znaki mają być zapisane w odwrotnej kolejności, niż w wejściowym. Jeżeli w łańcuchu wejściowym pojawi się cyfra, to musi poprzedzać literę i oznacza liczbę powtórzeń tej litery w łańcuchu wynikowym. Samotna litera w łańcuchu wejściowym zostnie dodana do łańcucha wyjściowego bez powtórzeń.
+
+Przyjmij, że długość ciągu wejściowego nie przekroczy 100 znaków, a długość ciągu wynikowego nie przekroczy 200 znaków.
+
+W przypadku niespełnienia tego warunku program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+W przypadku wprowadzenia przez użytkownika dłuższego ciągu program powinien wyświetlić komunikat Input is too long i zakończyć działanie z kodem błędu 2.
+W przypadku, kiedy nie będzie możliwe zapisanie ciągu wyjściowego w przygotowanej tablicy program powinien poinformować o tym użytkownika komunikatem Output is too long i zwrócić wartość 3.
+Przykłady
+
+Podaj tekst; a3b1aaabzdury5z3y⏎
+yyyzzzzzyrudzbaaabbba⏎
+Podaj tekst: nrqx8fxb8ajrzj⏎
+jzrjaaaaaaaabxffffffffxqrn⏎
+Podaj tekst: txq5g6kvguiowjwx4cw6dm3t4wupf8ft6eb8yz9vcolv7z9xh3qjm6fl3lzmm9y9mc7f3id7t9mrhl8kjebr3t5xco9eln⏎
+nleeeeeeeeeocxxxxxtttrbejkkkkkkkklhrmmmmmmmmmtttttttdiiifffffffcmmmmmmmmmyyyyyyyyymmzllllffffffmjqqqhxxxxxxxxxzzzzzzzvlocvvvvvvvvvzyyyyyyyybeeeeeetfffffffffpuwwwwtttmddddddwccccxwjwoiugvkkkkkkgggggqxt⏎
+Podaj tekst: kmrvklrhaotpkxsdcpsazbxvdgozkprxjxulftgwhiplbroeyzrvzgnoyqdrqttomzcootswcbmzljivrxeqebozpxjncnumbcztvwqpjlzrkwftssodompzeidsxvcfnpkmsppmjymmz⏎
+Input is too long⏎
+Podaj tekst: x3dfhe6w5p6t5eoej9uffu4c5jk7tdw6d3fys9nq6c8t3mj7mmy4yyy9ma9rg4ufn5s6haug4htxxn8n7ml5m9z9a⏎
+Output is too long
+Podaj tekst: hbd8d4x8k9p9⏎
+Incorrect input⏎
