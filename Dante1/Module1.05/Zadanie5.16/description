@@ -1,0 +1,9 @@
+Napisz program, który policzy ile we wprowadzonym przez użytkownika tekście jest słów z co najmniej 2 samogłoskami występującymi koło siebie. Przyjmij, że długość ciągu wejściowego nie przekroczy 1000 znaków.
+
+Przykładowe wejście:
+
+Podaj tekst:
+wiem jak powinien dzialac poprawnie moj program
+Przykładowe wyjście:
+
+4
