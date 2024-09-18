@@ -1,0 +1,10 @@
+Napisz program, który dla podanego tekstu wyświetla liczbę różnych samogłosek, które wystąpiły w tekście. Pamiętaj, że litera A oraz a to dwa różne symbole. 
+Przyjmij że długość wprowadzanego tekstu nie przekroczy 1000 znaków.
+
+Przykładowe wejście:
+
+Podaj tekst:
+Testowy tekst. A.
+Przykładowe wyjście:
+
+Wynik: 4
