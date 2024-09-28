@@ -1,0 +1,37 @@
+Napisz program, który wczyta od użytkownika tablicę o wymiarze 15x15, wypełnioną wartościami z zakresu <0, 30), a następnie utworzy tablicę wynikową, w której wartości z tablicy wejściowej zostaną zastąpione liczbą ich wystąpień. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1, a w przypadku wprowadzenia liczby spoza zakresu komunikat value out of range i zwrócić wartość 2.
+
+Przykładowe wejście:
+
+podaj liczby: 
+29 15 9 13 17 17 24 16 8 22 5 15 29 4 4 
+2 20 27 27 27 14 17 1 22 7 25 17 3 19 0 
+8 7 20 8 2 28 17 28 2 15 23 6 1 8 4 
+7 18 15 26 8 14 23 22 28 23 3 29 18 3 7 
+17 5 10 25 25 29 6 11 3 14 22 4 24 19 10 
+5 22 16 12 10 17 23 22 25 24 24 18 1 10 6 
+29 13 23 16 11 16 21 18 3 15 25 14 15 15 26 
+27 0 14 1 8 18 16 8 1 28 29 13 19 16 14 
+6 8 15 24 8 14 20 6 7 15 12 24 21 20 25 
+17 8 22 2 4 11 20 0 5 4 20 4 17 0 20 
+20 12 12 0 8 4 19 14 8 13 16 9 14 14 25 
+23 27 15 5 23 17 3 16 21 7 1 20 16 27 5 
+1 9 17 0 23 20 18 0 8 17 3 6 12 16 25 
+7 13 19 26 23 15 29 8 0 29 26 7 26 8 20 
+16 4 27 3 5 2 27 17 9 15 11 10 28 19 14 
+Przykładowe wyjście:
+
+ 8 12  4  5 13 13  6 11 15  7  7 12  8  9  9 
+ 5 11  8  8  8 11 13  7  7  8  8 13  8  6  8 
+15  8 11 15  5  5 13  5  5 12  9  6  7 15  9 
+ 8  6 12  5 15 11  9  7  5  9  8  8  6  8  8 
+13  7  5  8  8  8  6  4  8 11  7  9  6  6  5 
+ 7  7 11  5  5 13  9  7  8  6  6  6  7  5  6 
+ 8  5  9 11  4 11  3  6  8 12  8 11 12 12  5 
+ 8  8 11  7 15  6 11 15  7  5  8  5  6 11 11 
+ 6 15 12  6 15 11 11  6  8 12  5  6  3 11  8 
+13 15  7  5  9  4 11  8  7  9 11  9 13  8 11 
+11  5  5  8 15  9  6 11 15  5 11  4 11 11  8 
+ 9  8 12  7  9 13  8 11  3  8  7 11 11  8  7 
+ 7  4 13  8  9 11  6  8 15 13  8  6  5 11  8 
+ 8  5  6  5  9 12  8 15  8  8  5  8  5 15 11 
+11  9  8  8  7  5  8 13  4 12  4  5  5  6 11
