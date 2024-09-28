@@ -1,0 +1,20 @@
+Napisz program, który wczyta od użytkownika macierz o wymiarze 10x10 i odnajdzie w niej wszystkie komórki, których wartość jest mniejsza od jej 8 sąsiadów. Wyświetl na ekranie liczbę znalezionych minimów lokalnych oraz w kolejnych liniach adresy komórek, w których się one znajdują (w postaci numer wiersza, numer kolumny). W przypadku, kiedy nie będzie takiej komórki w tablicy program ma wyświetlić napis Nothing to show. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: 
+-13 4 -9 12 -14 10 -11 12 -11 1 
+-10 -5 9 -4 6 -2 1 -13 19 -10 
+3 13 -10 1 -11 -8 5 -12 -14 13 
+-5 -15 -2 13 10 4 -9 -18 14 15 
+5 -14 -20 -4 -8 6 13 -5 -15 0 
+7 14 -20 6 4 -15 11 4 17 15 
+14 2 8 19 -19 -17 13 13 19 13 
+-3 5 -11 -19 1 -14 -9 -12 -5 20 
+5 -12 -1 8 -9 0 1 20 -17 15 
+0 -13 -5 -10 -16 18 16 -1 -10 -18 
+Przykładowe wyjście:
+
+2
+3 7
+2 4
