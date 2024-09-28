@@ -1,0 +1,31 @@
+Rozbuduj program z zadania 6.4 Trzy losowe macierze o obliczanie sumy elementów w poszczególnych wierszach i kolumnach dla wszystkich macierzy. Program ma najpierw wypisać macierze A, B i C, a następnie w kolejnch wierszach wypisać:
+
+sumę elementów dla poszczególnych wierszy macierzy A,
+sumę elementów dla poszczególnych kolumn macierzy A,
+sumę elementów dla poszczególnych wierszy macierzy B,
+sumę elementów dla poszczególnych kolumn macierzy B,
+sumę elementów dla poszczególnych wierszy macierzy C,
+sumę elementów dla poszczególnych kolumn macierzy C.
+Przykładowe wyjście:
+
+  7   4   6   9 
+  1   1   5   8 
+  7   2   3   1 
+  9   9   5   7 
+
+  0   3   5   1 
+  1   7   9   4 
+  3   5   2   0 
+  3   2   7   2 
+  
+  1   0   0   0 
+  0   1   0   0 
+  0   0   1   0 
+  0   0   0   1 
+
+ 26  15  13  30 
+ 24  16  19  25 
+  9  21  10  14 
+  7  17  23   7 
+  1   1   1   1 
+  1   1   1   1 
