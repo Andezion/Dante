@@ -1,0 +1,13 @@
+Napisz program, który wczyta od użytkownika macierz o wymiarze 5x5. Napisz program, który wyznaczy i wyświetli sumę wartości wszystkich elementów znajdujących się na głównej przekątnej i nad nią. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: 
+1 1 0 -3 10 
+-10 9 7 -9 9 
+-5 -1 -2 -3 0 
+-2 -10 -4 -8 -8 
+-5 -5 -7 7 -1 
+Przykładowe wyjście:
+
+3
