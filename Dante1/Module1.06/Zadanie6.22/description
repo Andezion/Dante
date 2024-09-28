@@ -1,0 +1,14 @@
+
+Napisz program, który wczyta od użytkownika macierz o wymiarze 5x5. Wyświetl na ekranie wartości elementów z kolumny, w której różnica pomiędzy elementem największym a najmniejszym jest największa (wartości mają być wyświetlone w jednej linii, oddzielone spacjami). Jeżeli w kilku kolumnach różnica pomiędzy największym i najmniejszym elementem jest taka sama, to należy wyświetlić wartości tych kolumn w osobnych liniach. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i niezwłocznie zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: 
+-100 21 -59 13 50 
+32 -28 -8 -32 -17 
+99 -81 39 42 22 
+-57 95 -4 1 -61 
+7 -36 -55 -83 -82 
+Przykładowe wyjście:
+
+-100 32 99 -57 7 
