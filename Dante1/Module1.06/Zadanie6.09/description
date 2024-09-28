@@ -1,0 +1,18 @@
+Napisz program, który wczyta od użytkownika tablicę o wymiarach 10x10. Program ma obliczyć wartość następującego wyrażenia - suma elementów znajdujących się w komórkach, których suma indeksów jest liczbą parzystą minus suma elementów, które znajdują się w komórkach, których suma indeksów jest liczbą nieparzystą. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: 
+-4 0 -2 5 5 -1 -1 -3 -1 5 
+-5 1 4 -4 5 -1 -5 -4 -4 3 
+-5 -2 2 3 -1 3 5 -2 2 -4 
+5 -5 -3 -2 0 -2 0 3 1 -3 
+0 3 -5 3 -4 -4 2 3 0 -4 
+-4 3 3 0 -4 -2 -2 0 -2 1 
+-5 4 -1 3 2 2 -2 0 -3 -4 
+-3 -4 5 -3 -4 3 0 -1 2 -3 
+-4 -1 -5 -4 -1 -2 -1 3 -2 -1 
+1 -5 4 0 4 -3 -2 -2 4 5 
+Przykładowe wyjście:
+
+-59
