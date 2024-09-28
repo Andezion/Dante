@@ -1,0 +1,22 @@
+Napisz program, który wczyta od użytkownika macierz o wymiarze 5x10 i wyznaczy i wypisze macierz transponowaną do wczytanej macierzy. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+Podaj dane:
+24 11 1 19 22 7 21 4 8 13
+10 5 25 15 14 20 3 9 23 16 
+12 6 2 18 17 24 11 1 19 22  
+7 21 4 8 13 10 5 25 15 14  
+20 3 9 23 16 12 6 2 18 17
+Przykładowe wyjście:
+
+24 10 12 7 20
+11 5 6 21 3 
+1 25 2 4 9 
+19 15 18 8 23
+22 14 17 13 16
+7 20 24 10 12 
+21 3 11 25 2 
+4 9 1 19 22
+8 23 19 15 18 
+13 16 22 14 17 
