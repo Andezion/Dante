@@ -1,0 +1,23 @@
+Napisz program, który wczyta od użytkownika dwie macierze (A i B) o wymiarach 5x5 każda. Program ma wyznaczyć i wyświetlić macierz C, zawierającą w każdej komórce większą z wartości odpowiedniej komórki w macierzach A i B. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i niezwłocznie zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: ⏎
+-36 -32 -1 -20 40 ⏎
+50 4 -95 -36 -8 ⏎
+-2 7 24 -13 39 ⏎
+-42 74 -40 -54 41 ⏎
+75 -98 -65 -24 -73 ⏎
+podaj liczby: ⏎
+59 15 11 19 73 ⏎
+22 26 37 -99 -82 ⏎
+-98 65 13 47 82 ⏎
+-39 -21 -87 87 -37 ⏎
+84 -77 -48 80 71 ⏎
+Przykładowe wyjście:
+
+59 15 11 19 73 ⏎
+50 26 37 -36 -8 ⏎
+-2 65 24 47 82 ⏎
+-39 74 -40 87 41 ⏎
+84 -77 -48 80 71 ⏎
