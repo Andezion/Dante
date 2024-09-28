@@ -1,0 +1,14 @@
+Napisz program, który wczyta od użytkownika macierz o wymiarze 5x5 i odnajdzie w niej dwa elementy, których suma będzie największą wartością. Wyświetl na ekranie maksymalną wartość sumy dwóch elementów, liczbę znalezionych takich par. Następnie w każdej linii mają zostać wypisane współrzędne elementów (bez powtórzeń, to znaczy wartość sumy elementów z komórki 1 1 i 2 2, to to samo co wartość elementów z komórki 2 2 i 1 1, więc wypisujemy tylko jedną parę współrzędnych), których wartości tworzą największą sumę (po spacjach numer wiersza numer kolumny pierwszej wartości numer wiersza numer kolumny drugiej wartości). W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
+
+Przykładowe wejście:
+
+podaj liczby: 
+-18 24 35 46 37 
+98 88 -22 76 11 
+-95 79 63 25 100 
+84 -49 -80 -79 100 
+-11 -77 -44 97 90 
+Przykładowe wyjście:
+
+200 1
+2 4 3 4
