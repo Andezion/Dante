@@ -1,0 +1,124 @@
+Rozszerz program z 2.2 Ech, Ci Studenci o dodatkowe informacje, pobierane od użytkownika.
+
+W tym celu rozszerz strukturę z poprzedniego zadania 2.2 Ech, Ci Studenci o pola, pozwalające przechować następujące dane:
+
+kierunek studiów;
+wydział;
+rok studiów.
+Nowa struktura student_t powinna wyglądać następująco:
+
+struct student_t {
+    char name[20];
+    char surname[40];
+    int index;
+    char field[50];
+    char faculty[80];
+    int year;
+};
+Napisz funkcje umożliwiające:
+
+pobieranie danych od użytkownika,
+wypełnianie wszystkich pól struktury równocześnie,
+wyświetlanie wszystkich pól struktury równocześnie, oraz
+wyświetlanie wybranych pól.
+Funkcja read:
+
+struct student_t* read(struct student_t* p, int *err_code);
+Funkcja ma wczytywać dane, podawana przez użytkownika po przecinku, zgodnie ze wzorcem:
+
+imię, nazwisko, numer indeksu, kierunek, wydział oraz rok studiów,
+Po wczytaniu należy umieścic je w odpowiednich polach struktury p. Wczytując dane, pamiętaj o usunięciu zbędnych spacji na początku i końcu.
+
+Przykładowy wiersz, podawany przez użytkownika:
+
+Jan, Kowalski, 112233, Sustainable Energy, Faculty of Biotechnology and Food Sciences, 2017
+W przypadku błędnie wprowadzonych danych, funkcja powinna zapisać kod błędu w zmiennej, danej wskaźnikiem err_code (o ile będzie to możliwe). Wprowadzaną daną uznajemy za poprawną, jeżeli jest ona zakończona przecinkiem lub znakiem nowej linii (w przypadku roku).
+
+Wartość zwracana:
+
+Funkcja zwraca wskaźnik p w przypadku sukcesu lub
+NULL w przypadku błędu.
+Kody błędów:
+
+0 - wszystkie dane wczytane poprawnie,
+1 - brak poprawnie wczytanych danych do struktury (na przykład brak przecinków we wprowadzonym tekście) lub brak wskaźnika na strukturę student_t,
+2 - poprawnie wczytane imię,
+3 - poprawnie wczytane imię i nazwisko,
+4 - poprawnie wczytane imię, nazwisko i numer indeksu,
+5 - poprawnie wczytane imię, nazwisko, numer indeksu i kierunek studiów,
+6 - poprawnie wczytane imię, nazwisko, numer indeksu, kierunek studiów i wydział.
+Funkcja set:
+
+struct student_t* set(struct student_t* student, const char * name,
+                      const char * surname, int index,
+                      const char * field, const char * faculty,
+                      int year, int *err_code);
+Funkcja wypełnia wszystkie pola struktury student_t na podstawie podanych parametrów.
+
+Wartość zwracana:
+
+Funkcja zwraca otrzymany wskaźnik student w przypadku sukcesu lub
+NULL w przypadku błędu.
+Kody błędów:
+
+Jeśli jest to możliwe, to w przypadku sukcesu funkcja powinna ustawić kod błędu na 0
+lub na 1 w przypadku dowolnego błędu, np. brak danych, zły rozmiar tych danych.
+void display(const struct student_t* p);
+Funkcja wyświetla dane zawarte ze struktury student_t. Dane powinny być wyświetlane w następującej formie:
+
+Jan Kowalski, index number: 112233, was a Sustainable Energy student at the Faculty of Biotechnology and Food Sciences in 2017.
+Generowany tekst musi być zgodny z gramatyką języka angielskiego -- jeśli kierunek kierunek studiów zaczyna się samogłoską to, zamiast a przed kierunkiem, należy wpisać an. Każdy przecinek i kropka jest istotna!
+
+Jeśli wyświetlenie danych nie jest możliwe, funkcja ma natychmiast zakończyć swoje działanie.
+
+void display_name(const struct student_t* student);
+void display_surname(const struct student_t* student);
+void display_index(const struct student_t* student);
+void display_field(const struct student_t* student);
+void display_faculty(const struct student_t* student);
+void display_year(const struct student_t* student);
+Funkcje display_* wyświetlają zawartość poszczególnych pól struktury student_t. Dane powinny być wyświetlane w formie:
+
+Student name: Jan
+Student surname: Kowalski
+Index: 112233
+Field: Sustainable Energy
+Faculty: Faculty of Biotechnology and Food Sciences
+Year: 2017
+Jeśli wyświetlenie danych nie jest możliwe, funkcje mają natychmiast zakończyć swoje działanie.
+
+Przygotuj dwie zmienne do przechowywania informacji o studentach (dwóch różnych). Pierwsza z nich ma zostać wypełniona danymi podanymi przez użytkownika z klawiatury, a druga danymi Studenta (autora przesłanego programu), ustawionymi za pomocą funkcji set.
+
+Następnie program powinien wyświetlić informacje o obu studentach, wykorzystując funkcję display, w kolejności:
+
+Student podany przez użytkownika, lub Incorrect input jeżeli nie udało się pobrać danych,
+Student rzeczywisty - autor programu.
+Po wyświetleniu powyższych informacji należy wyświetlić ponownie dane o studencie podanym przez użytkownika za pomocą funkcji display_* w następującej kolejności: imię, nazwisko, nr albumu, kierunek studiów, wydział, rok.
+
+Program powinien zakończyć działanie z kodem błędu zwróconym przez funkcję read- w przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input oraz zwrócić wartość kodu błędu, wygenerowanego przez funkcję read.
+
+Przykładowa interakcja z programem -- sukces (autorem programu jest Jan Kowalski):
+
+Podaj dane: Brenda, Fricker, 208396, Genetics Genomics and Development, Faculty of Mechanical Engineering, 1995⏎
+Brenda Fricker, index number: 208396, was a Genetics Genomics and Development student at the Faculty of Mechanical Engineering in 1995.⏎
+Jan Kowalski, index number: 112233, was an informatyka student at the weiia in 2017.⏎
+Student name: Brenda⏎
+Student surname: Fricker⏎
+Index: 208396⏎
+Field: Genetics Genomics and Development⏎
+Faculty: Faculty of Mechanical Engineering⏎
+Year: 1995⏎
+Przykładowa interakcja z programem -- błędy danych wejściowych:
+
+Podaj dane: William Powell 211347⏎
+Incorrect input⏎
+Jan Kowalski, index number: 112233, was an informatyka student at the weiia in 2017.⏎
+Podaj dane: Anna, , 201489, Biochemistry Molecular and Cell Biology, Faculty of Mechanical Engineering, 2002⏎
+Incorrect input⏎
+Jan Kowalski, index number: 112233, was an informatyka student at the weiia in 2017.⏎
+Podaj dane: Colin, Firth, 219278, Civil and Environmental Engineering⏎
+Incorrect input⏎
+Jan Kowalski, index number: 112233, was an informatyka student at the weiia in 2017.⏎
+Uwagi
+W programie nie wolno używać operatora [] (za wyjątkiem deklaracji tablic, przyjmij, że długość wprowadzanych danych przez użytkownika będzie mniejsza niż 1000 znaków),
+W programie nie wolno dynamicznie alokować pamięci.
