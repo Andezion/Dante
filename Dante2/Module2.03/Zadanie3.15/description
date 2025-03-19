@@ -1,0 +1,103 @@
+Napisz program do wyznaczania statystyk lotów przewozowych oraz transportowych na podstawie danych, zawartych w plikach binarnych.
+
+W tym celu przygotuj strukturę, która będzie przechowywała typ danych oraz liczbę zmiennoprzecinkową pojedynczej precyzji, liczbę całkowitą lub znak. Struktura powinna wyglądać następująco:
+
+enum flight_t {
+  PASSENGER,
+  CARGO
+};
+
+struct flight {
+  int flight_number;
+  enum flight_t type;
+  union {
+    unsigned short npassengers;
+    double tonnages;
+  };
+};
+
+Napisz funkcje do wczytywania informacji o lotach z pliku oraz od zapisywania informacji o lotach do pliku. Prototypy funkcji powinny wyglądać następująco:
+
+int save_flights(const struct flight *flights, int size, const char *filename);
+int load_flights(struct flight *flights, int size, const char *filename);
+Funkcja save_flights zapisuje tablicę lotów flights o size elementach do pliku filename.
+
+Wartość zwracana:
+
+0 w przypadku sukcesu,
+1 w przypadku przekazania do funkcji błędnych danych,
+2 w przypadku niemożliwości utworzenia pliku lub
+3 jeżeli zapis danych do pliku się nie powiódł.
+Dane należy zapisać do pliku binarnego w następującym formacie:
+
+4 bajty - liczba n typu int określająca liczbę elementów flight znajdujących się po niej.
+n * 16 bajtów - n struktur flight. Struktra musi mieć dokładnie 16 bajtów. Ułożenie pól w strukturze zgodnie ze standardowymi zasadami (bez pakowania).
+Funkcja load_flights wczytuje loty z pliku filename do tablicy flights o pojemności size. Jeżeli wpisów w pliku jest więcej niż size, to funkcja wczytuje jedynie size pierwszych wpisów.
+
+Wartość zwracana:
+
+> 0 - liczba wczytanych wpisów w przypadku sukcesu,
+-1 w przypadku przekazania do funkcji błędnych danych,
+-2 w przypadku niemożliwości otworzenia pliku lub
+-3 jeżeli dane w pliku są uszkodzone. Absolutne minimum to nagłówek (int) oraz minimum jeden lot.
+Przygotuj funkcje do wyznaczania informacji o najlepszym locie best_flight oraz ogólne statystyki lotów statistics_flight. Prototypy funkcji powinny wyglądać następująco:
+
+int statistics_flight(const struct flight *flights, int size, struct flight *f, enum flight_t type);
+Funkcja statistics_flight zapisuje dane o łącznej liczbie przewiezionych pasażerów / towarów do struktury f.
+
+Schemat liczenia statystyk jest następujący:
+
+Do wyznaczania wybierane są tylko te loty, których typ (pole type) jest zgodne z wartością argumentu type, przekazanej do funkcji.
+Pole flight_number wyniku f zawiera liczbę lotów uwzględnionych podczas wyznaczania statystyki.
+Pole type wyniku f musi być zgodne z żądanym typem lotu type przy wywołaniu funkcji.
+Pola npassengers oraz tonnages wyniku f mają przechowywać sumę swoich odpowiedników z przetwarzanych lotów pod warunkiem, że dany lot ma odpowiedni typ type.
+Wartość zwracana:
+
+Funkcja zwraca liczbę lotów, dla których została policzona statystyka,
+-1 w przypadku przekazania do funkcji błędnych danych lub jeżeli dane w strukturach są nieprawidłowe (np. nieoczekiwana wartość type).
+int best_flight(const struct flight *flights, int size, struct flight *f, enum flight_t type);
+Funkcja best_flight zapisuje dane o locie z największą liczbą przewiezionych pasażerów lub towarów do struktury f. Za wybór typu przewozu odpowiada wartość argumentu type
+
+Wartość zwracana:
+
+0 w przypadku sukcesu,
+1 w przypadku przekazania do funkcji błędnych danych lub jeżeli dane w strukturach są nieprawidłowe,
+2 jeżeli w tablicy nie ma żadnej informacji o lotach zadanego typu.
+W przypadku dwóch takich samych lotów, zwracany powinien być lot o wyższym numerze lotu (pole flight_number).
+
+Napisz program, który pobierze od użytkownika nazwę pliku (nie więcej niż 39 znaków), z którego wczyta dane o lotach (nie więcej niż 100 pierwszych lotów).
+
+Następnie program zapisze do niego po kolei:
+
+łączną liczbę przewiezionych
+pasażerów,
+towarów,
+lot z największą liczbą przewiezionych
+pasażerów
+towarów.
+Powyższe informacje należy zapisywać jako kolejne struktury flight. Ich maksymalna liczba w pliku to 4 a minimalna to 1. Brak informacji do zapisu oznacza brak możliwości utworzenia pliku danych lotów - plik nie moze być pusty.
+
+W przypadku, kiedy którejkolwiek z tych informacji nie będzie można wyznaczyć program powinien zapisać tylko pozostałe.
+
+W przypadku kiedy niemożliwe będzie odczytanie pliku wejściowego program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość 4.
+Jeżeli niemożliwe będzie utworzenie pliku wyjściowego to program ma wypisać na ekranie komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+W przypadku, kiedy dane w pliku wejściowym nie będą poprawne, program powinien poinformować o tym użytkownika wyświetlając komunikat File corrupted i zakończyć pracę z kodem błędu 6.
+W przypadku, kiedy dane w strukturach wczytanych z pliku będą niepoprawne program powinien wyświetlić komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+Typy danych enum flight_t i struct flight oraz prototypy funkcji save_flights, load_flights, statistics_flight i best_flight należy umieścić w pliku nagłówkowym flights.h i z niego skorzystać.
+
+Przykładowa interakcja z programem -- sukces
+
+Podaj nazwę pliku: noun.bin⏎
+File saved
+Plik wejściowy 1, wyjściowy 1 oraz wejściowy 2, wyjściowy 2.
+
+Przykładowa interakcja z programem -- plik uszkodzony
+
+Podaj nazwę pliku: though.bin⏎
+File corrupted
+Przykładowa interakcja z programem -- błąd wejścia/wyjścia
+
+Podaj nazwę pliku: cry.bin⏎
+Couldn't open file
+Podaj nazwę pliku: ran.bin⏎
+Couldn't create file⏎
