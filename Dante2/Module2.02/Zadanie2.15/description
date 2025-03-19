@@ -1,0 +1,90 @@
+Napisz program do wczytywania książki kontaktów z dysku, wyszukiwania wybranego kontaktu i wyświetlania go na ekranie.
+
+W tym celu przygotuj strukturę entry_t do przechowywania informacji kontaktowych. Struktura powinna wyglądać następująco:
+
+struct entry_t {
+    char name[20];
+    char last_name[40];
+    int number;
+};
+W strukturze entry_t pole name przechowuje imie osoby, pole last_name nazwisko a pole number numer telefoniczny.
+
+Przygotuj funkcje do: odczytywania bazy kontaktów z dysku, do wyświetlania informacji o pojedynczym rekordzie entry_t oraz do wyszukiwania w bazie rekordu, po nazwisku. Funkcje te powinny mieć następujące prototypy:
+
+void display(const struct entry_t* p);
+Funkcja wyświetla informacje kontaktowe, przekazane wskaźnikiem w parametrze p. Dane mają być wyświetlone w następujący sposób:
+
+Name: Jan⏎
+Last name: Kowalski⏎
+Phone number: 451227189
+W przypadku błędu danych wejściowych funkcja nie powinna podejmować żadnych działań.
+
+int load_phonebook_t(const char *filename, struct entry_t* p, int size);
+Funkcja wczytuje tablicę kontanktów z dysku, z pliku tekstowego.
+
+Parametry:
+
+filename - nazwa pliku, z którego ma zostać odczytana baza kontaktów,
+p - tablica struktur, do której mają zostać zapisane dane,
+size - zadeklarowana pojemność tablicy.
+Wartość zwracana:
+
+-1 - w przypadku przekazania błędnych parametrów,
+-2 - przy braku możliwości otwarcia pliku,
+0 - w pliku brak poprawnych rekordów,
+> 0 - liczba poprawnych rekordów, wczytanych z pliku filename
+Fromat pliku file_name:
+
+Każdy rekord (kontakt - zawartość struktury entry_t) będzie zapisany w jednej linii
+Elementy rekordu będą rozdzielone symbolem |
+Jeżeli dane w danym wierszu będą niepełne/niezgodne ze wzorcem, należy pominąć taki wpis i kontynuować wczytywanie danych.
+Przykładowy plik (7 rekordów poprawnych, 3 wiersze pominięte przez funkcję load_phonebook_t):
+
+Ava | Gardner
+Paul | Lukas | 580461249
+Bruce | Dern | 342825716
+Forest | Whitaker | 358097320
+George | Clooney | 465777607
+Mary | Tyler Moore | 312217125
+Patrick | Swayze | 675291106
+
+Ellen | 
+Liam | Neeson | 674082200
+const struct entry_t* find_by_last_name(const struct entry_t* p, int size, const char *last_name);
+Funkcja wyszukuje w bazie kontaktów p o wielkości size elementów wpis o podanym nazwisku last_name.
+
+Wartość zwracana:
+
+Jeżeli poszukiwany kontakt istnieje, to funkcja zwraca wskaźnik do niego.
+W razie braku funkcja zwraca NULL.
+Napisz program, który pobierze od użytkownika nazwę pliku tekstowego (nie dłuższą niż 100 znaków) z ksiązką telefoniczną. Z podanego pliku program powinien wczytać nie więcej niż 10 pierwszych kontaktków.
+
+Jeżeli nie uda się odczytać bazy danych z dysku program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość 4 lub w przypadku braku w bazie danych rekordów, komunikat File corrupted i zakończyć działanie z kodem błędu 6.
+
+Po wczytaniu bazy danych do pamięci program ma zapytać użytkownika o podanie nazwiska osoby, której informacje kontaktowe mają zostać wyświetlone.
+
+W przypadku braku w bazie osoby o podanym nazwisku, program powinien wyświetlić komunikat Couldn't find name. Jeżeli udało się odnaleźć osobę o zadanych danych w bazie to program powinien wyświetlić jej informacje na ekranie.
+
+Przykładowa interakcja z programem -- sukces (wejście: 2415test.txt):
+
+Enter file name: 2415test.txt⏎
+Enter last name: Kowalski⏎
+Name: Jan⏎
+Last name: Kowalski⏎
+Phone number: 451227189⏎
+Przykładowa interakcja z programem -- sukces, brak poszukiwanego kontaktu:
+
+Enter file name: king.txt⏎
+Enter last name: Redford⏎
+Couldn't find name
+Przykładowa interakcja z programem -- błąd wejścia/wyjścia:
+
+Enter file name: correct.txt⏎
+Couldn't open file
+Przykładowa interakcja z programem -- brak poprawnych danych w pliku:
+
+Enter file name: milk.txt⏎
+File corrupted
+Uwagi
+W programie nie wolno używać funkcji alokujących pamięć.
+Wszystkie operacje na tablicach powinny być wykonywane za pomocą wskaźników, a nie operatora [].
