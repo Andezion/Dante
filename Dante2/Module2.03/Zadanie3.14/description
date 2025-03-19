@@ -1,0 +1,59 @@
+Napisz program, który pobierze od użytkownika, przechowa, posortuje i wyświetli ciąg wartości. Każda z tych wartości może być: 1) liczbą całkowitą ze znakiem, 2) liczbą zmiennoprzecinkową podwójnej precyzji oraz 3) znakiem.
+
+W tym celu przygotuj strukturę, która będzie przechowywała typ danych oraz wartość w formie: liczby zmiennoprzecinkowej podwójnej precyzji, liczby całkowitej lub znaku. Struktura powinna wyglądać następująco:
+
+enum type_t{
+  INTEGER,
+  DOUBLE,
+  CHARACTER
+};
+
+struct data_t
+{
+  enum type_t type;
+  union {
+    int i;
+    double d;
+    char c;
+  };
+};
+Napisz funkcje sort , która będzie sortowała elementy tablicy wskaźników na struktury data_t malejąco. Prototyp funkcji sortującej ma wyglądać następująco:
+
+int sort(struct data_t *data[], int size);
+Jako kryterium przyjmij liczbową wartość danego elementu. Dla przykładu 'A' będzie po z ale przed liczbą 3.1415926.
+
+W przypadku, kiedy kilka elementów będzie miało przypisaną tą samą wartość, elementy powinny zostać posortowane w kolejności:
+
+znak,
+liczba zmiennoprzecinkowa podwójnej precyzji (zapisanej jako ciąg cyfr z kropką w środku i opcjonalnym znakiem - przed),
+liczba całkowita ze znakiem.
+Wartość zwracana:
+
+Funkcja zwraca 0 w przypadku sukcesu,
+bądź 1 w przypadku przekazania do funkcji błędnych danych.
+Napisz funkcje display, która będzie wyświetlała elementy tablicy danej wskaźnikiem data na ekranie. Prototyp funkcji wyświetlającej ma wyglądać następująco:
+
+void display(struct data_t *data[], int size);
+Funkcja wyświetla zawartość tablicy wskaźników na struktury data_t tak, że poszczególne elementy są oddzielone spacjami. W przypadku przekazania błędnych danych funkcja nie podejmuje żadnych akcji.
+
+Napisz program, który pobierze od użytkownika ciąg elementów składający się z liczb całkowitych ze znakiem, liczb zmiennoprzecinkowych oraz pojedynczych znaków. Program ma pobrać maksymalnie 100 elementów. Każdy element będzie oddzielony spacją.
+
+Następnie program posortuje elementy malejąco i wyświetli wynik sortowania.
+
+W przypadku wprowadzenia przez użytkownika błędnych danych, np. ciągi sąsiadujących ze sobą znaków, błędnie zapisane liczby itp.) program powinien wyświetlić komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+
+Przykładowa interakcja z programe -- sukces
+
+Enter elements (single characters, signed integers and doubles):⏎
+G u J 40.86962407167107 5 f -86.45349757696108 e d -43 54.11560027486692 Z 88 -30.846223502133682 -46 84 -3 80 16.41998686789705⏎
+u f e d Z 88 84 80 J G 54.115600 40.869624 16.419987 5 -3 -30.846224 -43 -46 -86.453498 
+Enter elements (single characters, signed integers and doubles):⏎
+-27 83.05656880399408 e z 47 K M j -58⏎
+z j e 83.056569 M K 47 -27 -58 
+Przykładowa interakcja z programe -- błąd danych
+
+Enter elements (single characters, signed integers and doubles):⏎
+4 48.14411024521539 s 2 u -67.54403500524337 -98.30922155037717 S 26.291645621675514 O 17 23.904836025856852 -36 z 92 n 43. -73.99044124805877 M⏎
+Incorrect input data
+Uwagi
+Wszystkie operacje na tablicach powinny być wykonywane za pomocą wskaźników, a nie operatora [].
