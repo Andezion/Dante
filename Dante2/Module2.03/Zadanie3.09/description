@@ -1,0 +1,70 @@
+Napisz program, który zamienia dane w pliku z postaci dziesiętnej na dwójkową i odwrotnie.
+
+W tym celu przygotuj funkcje do:
+
+zamiany liczb zapisanych w postaci dwójkowej (tylko cyfry 0 oraz 1) na liczby w postaci dziesiętnej (tylko cyfry 0 - 9), zapisane w postaci bajtów (0 - 255) - funkcja decode
+zamiany liczb zapisanych w postaci dziesiętnej do postaci dwójkowej - funkcja encode.
+W plikach danych każda liczba, w zapisie dziesiętnym, ma być przechowywana na trzech znakach (000 - 255) a liczba w zapisie dwójkowym na ośmiu (00000000 - 11111111). W obu przypadkach znaki kolejnych liczb mają być zapisane w sposób ciągły, bez separatrów. Założenie o stałej długości ich postaci znakowej jest wystarczające do poprawnego ich parsowania.
+
+Funkcje te powinny mieć następujące prototypy:
+
+int decode(const char *input, const char *output);
+int encode(const char *input, const char *output);
+Parametry:
+
+input - nazwa pliku, z którego mają zostać odczytane dane do konwersji,
+output - nazwa pliku, do którego mają zostać zapisane dane po konwersji,
+Funkcje zwracają:
+
+0 - w przypadku powodzenia operacji konwersji,
+1 - w przypadku przekazania niepoprawnych danych do funkcji podczas jej wywołania,
+2 - w przypadku, kiedy nie można otworzyć pliku wejściowego,
+3 - w przypadku, kiedy plik wejściowy jest uszkodzony,
+4 - kiedy nie można utworzyć pliku wyjściowego.
+Pamiętaj, że funkcja encode/decode nie ma prawa zmienić zawartości pliku wyjściowego output jeśli operacja konwersji może zakończyć się porażką. Oznacza to, że funkcja musi najpierw sprawdzić dane wejściowe oraz wszystkie konieczne warunki a dopiero potem generować plik wyjściowy.
+
+W przeciwnym razie funkcja pozostawia pusty bądź niedokończony plik (gdyż np. stwierdziła w trakcie, że dane wejściowe są błedne - kod 3).
+
+Napisz program, który pobierze od użytkownika rodzaj operacji do wykonania:
+
+e/E - konwersja zapisu liczb z dziesiętnego na dwójkowy,
+d/D - konwersja zapisu liczb z dwójkowego na dziesiętny
+oraz dwie nazwy plików (nie więcej niż 29 znaków): z danymi do konwersji oraz do którego mają zostać zapisane dane wyjściowe.
+
+W przypadku podania błędnego znaku operacji program powinien wyświetlić komunikat Incorrect input data i bezzwłocznie zakończyć działanie z kodem błędu 2.
+
+W przypadku kiedy niemożliwe będzie otworzenie pliku wejściowego program powinien wyświetlić komunikat Couldn't open file i zakończyć się z kodem błędu 4. Jeżeli niemożliwe będzie utworzenie pliku wyjściowego to program ma wyświetlić komunikat Couldn't create file i zakończyć działanie z kodem błędu 5. W przypadku, kiedy dane w pliku wejściowym nie będą poprawne, program powinien poinformować o tym użytkownika wyświetlając komunikat File corrupted i zakończyć pracę z kodem błędu 6.
+
+W przypadku sukcesu powinien wyświetlić komunikat File saved i zakończyć działanie z kodem błędu 0.
+
+Przykładowa interakcja z programem -- sukces:
+
+Enter operation (D - bin to dec; E - dec to bin): D⏎
+Enter input file name: 2508in.txt⏎
+Enter output file name: 2508out.txt⏎
+File saved
+Pliki: 2508in.txt, 2508out.txt:
+
+Przykładowa interakcja z programem -- błędy wejścia/wyjścia:
+
+Enter operation (D - bin to dec; E - dec to bin): d⏎
+Enter input file name: gave.txt⏎
+Enter output file name: second.txt⏎
+Couldn't open file
+Enter operation (D - bin to dec; E - dec to bin): D⏎
+Enter input file name: wheel.txt⏎
+Enter output file name: page⏎
+Couldn't create file⏎
+Przykładowa interakcja z programem -- zawartość pliku jest uszkodzona:
+
+Enter operation (D - bin to dec; E - dec to bin): E⏎
+Enter input file name: fish.txt⏎
+Enter output file name: hurry.txt⏎
+File corrupted
+Przykładowa interakcja z programem -- zły typ operacji:
+
+Enter operation (D - bin to dec; E - dec to bin): A⏎
+Incorrect input data
+Uwagi
+W programie nie można korzystać z tablic, wyjątek stanowią tablice znakowe do przechowywania nazw plików.
+Używanie operatorów bitowych jest niedozwolone.
