@@ -1,0 +1,74 @@
+Napisz program do wyznaczania odległości euklidesowej między dwoma punktami na płaszczyźnie. W tym celu przygotuj strukturę point_t do przechowywania współrzędnych punktu w przestrzeni 2D. Struktura ta ma reprezentować punkt na płaszczyźnie.
+
+Struktura powinna wyglądać następująco:
+
+struct point_t {
+    int x;
+    int y;
+};
+Przygotuj funkcje do wypełniania pól struktury, do wyświetlania pól struktury, do wczytywania danych do struktury oraz do obliczania odległości pomiędzy dwoma punktami (reprezentowanymi przez struktury point_t).
+
+Prototypy funkcji powinny wyglądać następująco:
+
+struct point_t* set(struct point_t* p, int x, int y);
+void show(const struct point_t* p);
+struct point_t* read(struct point_t* p);
+float distance(const struct point_t* p1, const struct point_t* p2, int *err_code);
+Funkcja set:
+
+struct point_t* set(struct point_t* p, int x, int y);
+Funkcja zapisuje wartości przekazane w parametrach x i y do odpowiednich pól struktury (x i y).
+
+Parametry:
+
+p - wskaźnik na strukturę typu point_t, do której mają zostać zapisane współrzędne punktu,
+x, y - współrzędne punktu, które mają zostać zapisane do struktury p.
+Wartość zwracana:
+
+Funkcja powinna zwrócić wskaźnik do wypełnionej struktury, a w przypadku niepowodzenia NULL.
+Funkcja read:
+
+struct point_t* read(struct point_t* p);
+Funkcja pobiera od użytkownika dwie współrzędne punktu (x i y) i przypisuje je do odpowiednich pól struktury.
+
+Parametry:
+
+p - wskaźnik na strukturę typu point_t, do której mają zostać zapisane współrzędne punktu pobrane od użytkownika.
+Wartość zwracana:
+
+Funkcja powinna zwrócić wskaźnik do wypełnionej struktur, a w przypadku niepowodzenia NULL.
+void show(const struct point_t* p);
+Funkcja wyświetla na ekranie zawartość struktury p, najpierw współrzędną x, a następnie współrzędną y, w tej samej linii. W przypadku błędych danych funkcja nie podajmuje żadnych czynności.
+
+float distance(const struct point_t* p1, const struct point_t* p2, int *err_code);
+Funkcja oblicza odległość euklidesową pomiędzy dwoma punktami, przekazanymi w parametrach.
+
+Parametry:
+
+p1, p2 - wskaźniki na struktury typu point_t, przechowujące współrzędne punktów, pomiędzy którymi ma zostać obliczona odległość,
+err_code - wskaźnik na zmienną, do której ma zostać zapisany kod błędu. Wskaźnik może przyjmować wartość NULL. Oznacza to jedynie, że programista nie jest zainteresowany poznaniem kodu błędu). Dostępne kody błędów:
+0 - jeżeli odległość została obliczona,
+1 - w przeciwnym przypadku.
+Wartość zwracana:
+
+Funkcja powinna zwrócić obliczoną odległość lub -1, jeżeli jej obliczenie nie było możliwe.
+Napisz program pozwalający na wczytanie od użytkownika współrzędnych pierwszego punktu do struktury oraz losujący współrzędne drugiego punktu. Następnie, korzystając z funkcji do wyświetlania pól struktur, program powinien wypisać na ekranie, w oddzielnych liniach, współrzędne pierwszego oraz drugiego punktu.
+
+Na koniec, w oddzielnej linii program powinien wyświetlić odległość, dzielącą oba punkty, z dokładnością dwóch liczb po przecinku.
+
+W przypadku podania przez użytkownika błędnych danych program powinien niezwłocznie wyświetlić komunikat Incorrect input i działanie z kodem błędu 1.
+
+Przykładowa interakcja z programem -- sukces:
+
+Podaj współrzędną x: -8⏎
+Podaj współrzędną y: -4⏎
+x = -8; y = -4⏎
+x = 0; y = -1⏎
+8.54
+Przykładowa interakcja z programem -- błąd danych wejściowych:
+
+Podaj współrzędną x: -3⏎
+Podaj współrzędną y: nHPYk⏎
+Incorrect input
+Podaj współrzędną x: QSDknSVijO⏎
+Incorrect input
