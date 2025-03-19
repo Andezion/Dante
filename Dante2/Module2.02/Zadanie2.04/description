@@ -1,0 +1,89 @@
+Napisz program do zapisywania oraz odczytywania danych ze struktury do oraz z pliku, w postaci tekstowej oraz binarnej.
+
+W tym celu wykorzystaj strukturę point_t oraz funkcje show i set z zadania 2.1 W punkt.
+
+Ponadto przygotuj dodatkowe funkcje do zapisu oraz do odczytu danych struktury point_t, obsługujących format binarny oraz tekstowy przechowywania danych. Funkcje te mają mieć następujące prototypy:
+
+int save_point_b(const char *filename, const struct point_t* p);
+int load_point_b(const char *filename, struct point_t* p);
+int save_point_t(const char *filename, const struct point_t* p);
+int load_point_t(const char *filename, struct point_t* p);
+Przyrostki _t oraz _b oznaczają, że pliki mają być zapisywane (save)/odczytywane (load) w trybie/formacie tekstowym oraz binarnym.
+
+Parametry:
+
+filename - nazwa pliku, do którego dana funkcja ma dane zapisać bądź z którego ma dane odczytać,
+p (const) - wskaźnik na strukturę point_t, z której funkcja ma pobrać dane do zapisu,
+p (non-const) - wskaźnik na strukturę point_t do której funkcja ma zapisać dane po ich odczycie z dysku.
+Wartość zwracana:
+
+1 - w przypadku podania błędnych danych podczas wywołania funkcji,
+2 - w przypadku niemożliwości otworzenia filename,
+3 - w przypadku kiedy nie uda się zapisać danych do pliku lub okażą się one uszkodzone,
+0 - w przypadku gdy operacja wejścia/wyjścia zakończy się sukcesem.
+Format plików
+
+W pliku tekstowym współrzędne powinny być zapisane jako dwie liczby oddzielone od siebie znakiem białym (ang. whitespace).
+W pliku binarnym strukturę należy zapisać jako blok pamięci o wielkości zapisywanej struktury.
+Napisz program, który przypisze do struktury point_t losowe wartości, a następnie wyświetli je. Następnie powinien zapytać użytkownika o nazwę pliku (nie dłuższa niż 30 znaków), do którego zapisana ma zostać utworzona struktura. W zależności od rozszerzenia pliku w podanej nazwie program powinien zapisać strukturę do pliku binarnego (rozszerzenie .bin) lub tekstowego (rozszerzenie .txt).
+
+Jeżeli rozszerzenie będzie błędne to program powinien wyświetlić komunikat Unsupported file format i zwrócić kod błędu 7.
+W przypadku niemożliwości utworzenia pliku program powinien wyświetlić komunikat Couldn't create file i zwrócić wartość 5.
+Jeżeli udało się zapisać dane do pliku, program powinien wyświetlić komunikat File saved i zapytać użytkownika, czy chce odczytać dane z tego samego pliku. Dopuszczalna odpowiedź to duże lub małe litery y (tak) oraz n (nie).
+
+Odpowiedź TAK: Program powinien odczytać dane i wyświetlić je na ekranie.
+
+Jeżeli nie uda się odczytać danych to program powinien wyświetlić komunikat File corrupted i zwrócić wartość 6.
+W przypadku niemożliwości otworzenia pliku program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość 4.
+Odpowiedź NIE: Program kończy swoje działanie z kodem błędu 0.
+
+Podanie innego znaku odpowiedzi powinno spowodować wyświetlenie komunikatu Incorrect input i zakończenie programu z kodem błędu 1.
+
+Przykład interakcji z programem -- sukces:
+
+x = 8; y = 7⏎
+Podaj sciezke do pliku:⏎
+band.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? n⏎
+x = 4; y = 2⏎
+Podaj sciezke do pliku:⏎
+room.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+x = 4; y = 2⏎
+x = 9; y = -4⏎
+Podaj sciezke do pliku:⏎
+second.bin⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+x = 240; y = -353⏎
+Przykładowa interakcja z programem -- błąd danych wejściowych:
+
+x = 8; y = 10⏎
+Podaj sciezke do pliku:⏎
+self.tx⏎
+Unsupported file format
+Przykład interakcji z programem -- błąd wejścia/wyjścia:
+
+x = -7; y = -4⏎
+Podaj sciezke do pliku:⏎
+vary.bin⏎
+Couldn't create file⏎
+x = -3; y = 4⏎
+Podaj sciezke do pliku:⏎
+wave.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+Couldn't open file
+Przykładowa interakcja z programem -- plik został uszkodzony między zapisem a odczytem:
+
+x = 7; y = -10⏎
+Podaj sciezke do pliku:⏎
+mind.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? Y⏎
+File corrupted
+Uwagi
+W programie nie wolno używać operatora [], poza deklaracją tablicy na nazwę pliku na 31 elementów (deklaracja tablicy musi wyglądać następująco: nazwa_zmiennej [31]).
+W programie nie wolno używać funkcji alokujących pamięć.
