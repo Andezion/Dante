@@ -1,0 +1,26 @@
+Zmodyfikuj unię z zadania 3.1 Int jako zbiór bajtów tak, aby wyświetlać starsze i młodsze słowo z liczby typu int. Unię nazwij word_set i umieść w pliku nagłówkowym word_set.h. Rozmiar unii musi być równy rozmiarowi typu int natomiast liczba pól unii word_set nie może przekroczyć dwóch.
+
+Napisz program, który pobierze od użytkownika liczbę całkowitą i od razu zapisze ją do odpowiedniego pola unii, a następnie wyświetli wartości jej młodszego i starszego słowa, również używając odpowiedniego pola unii.
+
+W przypadku wprowadzenia przez użytkownika nieprawidłowych znaków program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+
+W komentarzu na początku kodu programu odpowiedz na następujące pytania:
+
+Jaki typ będzie poprawnie reprezentował słowo?
+Czym jest słowo?
+Przykład interakcji z programem -- sukces:
+
+Podaj liczbę: 255⏎
+255 0 
+Podaj liczbę: -1⏎
+65535 65535 
+Przykład interakcji z programem -- błąd:
+
+Podaj liczbę: wvEnMYUI⏎
+Incorrect input
+Uwagi
+Do pobierania danych od użytkownika wykorzystaj funkcję scanf, a do wyświetlania printf.
+W programie nie wolno korzystać z operatora [], oprócz deklaracji tablicy.
+W programie nie wolno używać struktur.
+W programie nie wolno używać biblioteki stdint.
+W programie nie wolno używać operatorów bitowych <<, >>, | oraz &.
