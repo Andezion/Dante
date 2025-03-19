@@ -1,0 +1,48 @@
+Napisz program, który będzie potrafił ukryć wiadomość w obrazie graficznym. Proces takiego ukrywania/kodowania wiadomości nazywa się steganografią. Jest to nauka o komunikacji w taki sposób, by obecność komunikatu nie mogła zostać wykryta.
+
+Właściwa treść tego zadania została ukryta w obrazie monochromatycznym, w którym wartość jednego bajtu odpowiada poziomowi jasności jednego piksela. Przyjmuje się, że wartośc 0 oznacza kolor czarny, wartość 255 kolor biały a wszystkie pozostałe 254 wartości odpowiadają za poziomy szarości.
+
+Metoda wykorzystana do ukrycia wiadomości to modyfikacja najmniej znaczącego bitu (ang. least significant bit).
+
+Wykorzystując unie napisz program, który pozwoli Ci odczytać treść zadania, a następnie wykonaj je. Program do odczytywania treści zadania nie podlega testowaniu - jeśli możesz odczytać treść to znaczy, że program działa 😃 Powodzenia!
+
+Obraz do wczytania i przetworzenia dostępny jest tutaj.
+Obraz, jedynie dla celów poglądowych, można pobrać tutaj.
+Przykłady do zakodowanego zadnia:
+Przykładowa interakcja z programem -- sukces
+
+Do you want to encode (E/e) or decode (D/d) a message? E⏎
+Enter a message to be encoded:: The biotechnology wave is similar to the information technology wave of the 1980s and 1990s. - Dietmar Hopp⏎
+Enter input file name: 6.bmp.txt⏎
+Enter output file name: dictionary.txt⏎
+File saved
+Do you want to encode (E/e) or decode (D/d) a message? D⏎
+Enter input file name: 1.bmp.txt⏎
+The ultimate promise of technology is to make us master of a world that we command by the push of a button.-Volker Grassmuck
+Plik wejściowy: 1.bmp.txt
+
+Przykładowa interakcja z programem -- błąd wejścia/wyjścia
+
+Do you want to encode (E/e) or decode (D/d) a message? E⏎
+Enter a message to be encoded: "C is quirky, flawed, and an enormous success." - Dennis M. Ritchie.⏎
+Enter input file name: child.txt⏎
+Enter output file name: woman.txt⏎
+Couldn't create file⏎
+Do you want to encode (E/e) or decode (D/d) a message? D⏎
+Enter input file name: nation.txt⏎
+Couldn't open file
+Do you want to encode (E/e) or decode (D/d) a message?e⏎
+Enter a message to be encoded:: The greatest achievement of humanity is not its works of art, science, or technology, but the recognition of its own dysfunction.-Eckhart Tolle⏎
+Enter input file name: mount.txt⏎
+Enter output file name: subject.txt⏎
+Couldn't open file
+Brak pliku mount.txt.
+
+Do you want to encode (E/e) or decode (D/d) a message? d⏎
+Enter input file name: wrong.txt⏎
+File corrupted
+Do you want to encode (E/e) or decode (D/d) a message?o⏎
+Incorrect input data
+Uwagi
+W komentarzu do zadania należy podać w jakiej kolejności wykorzystano (zapisano) bity z kolejnych bajtów wiadomości wraz z uzasadnieniem.
+W programie nie wolno używać operatora [].
