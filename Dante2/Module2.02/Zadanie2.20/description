@@ -1,0 +1,74 @@
+Przygotuj program do ukrywania wiadomości w nieużywanych częściach struktur języka C, przy założeniu, że struktury nie są upakowane.
+
+W tym celu przygotuj strukturę do przechowywania trzech wartości typu char, double i int w podanej kolejności. Struktura powinna wyglądać następująco:
+
+struct message_t
+{
+    char a;
+    double b;
+    int c;
+};
+Domyślnie kompilator języka C optymalizuje kod programu pod kątem szybkości dostępu do pól struktury, a nie pod kątem miejsca przez nią zajmowanego.
+
+Oznacza to, że rozmiar poniższej struktury wynosi 24 bajty, przy czym dane zajmują tylko 13 bajtów. Różnica - 11 bajtów - jest niewykorzystana i można tam ukryć wiadomość.
+
+Przygotuj funkcję do odczytywania wiadomości ukrytej na niewykorzystanych bajtach sekwencji struktur message_t oraz funkcję do wczytywania tablicy struktur message_t z pliku. Przygotowane funkcje powinny mieć następujące prototypy:
+
+int load_data(struct message_t *cp, int size, const char *filename);
+Funkcja ma za zadanie wczytać dane z pliku filename to tablicy struktur cp o pojemności size struktur message_t.
+
+Parametry:
+
+filename - nazwa pliku, z którego mają zostać odczytane dane.
+cp - wskaźnik na tablicę struktur,
+size - rozmiar tablicy struktur.
+Struktura pliku:
+
+Struktura wczytywanego pliku wygląda następująco:
+
+liczba n bajtów danych od odczytania (pole unsigned int), następnie
+n bajtów, które mają tworzyć zawartość struktur message_t.
+Wartość n=24 to jedna struktura message_t, 48 to dwie, itd. Wartość niebędąca wielokrotnością długości struktury jest niedopuszczalna.
+
+Wartość zwracana:
+
+>0 - w przypadku powodzenia - liczba wczytanych struktur,
+-1 - w przypadku przekazania do funkcji błędnych danych,
+-2 - w przypadku niepowodzenia otworzenia pliku lub
+-3 - w przypadku, kiedy w pliku są uszkodzone dane.
+W przypadku, kiedy w pliku znajdzie się więcej danych, niż można zmieścić w tablicy struktur, funkcja powinna wczytać tyle danych, ile jest możliwe.
+
+int decode_message(const struct message_t *cp, int size, char *msg, int text_size);
+Parametry:
+
+cp - wskaźnik na tablicę struktur, w których ukryta jest wiadomość,
+size - rozmiar tablicy struktur,
+msg - wskaźnik na tablicę znaków, do której ma zostać zapisana wiadomość wydobyta z sekwencji struktur message_t,
+text_size - rozmiar tablicy znaków (pojemność w bajtach).
+Wartość zwracana:
+
+1 - w przypadku podanie błędnych danych wejściowych lub
+0 - w przypadku poprawnego odczytania wiadomości.
+Napisz program, który pobierze od użytkownika nazwę pliku (nie więcej niż 30 znaków), a następnie odczyta z niego struktury oraz odczyta ukrytą w nich wiadomość.
+
+W przypadku, kiedy nie można otworzyć pliku program powinien wyświetlić komunikat Couldn't open file i zakończyć działanie z kodem błędu 4. W przypadku kiedy dane w pliku są zapisane niepoprawnie, program powinien wyświetlić komunikat File corrupted i zakończyć działanie z kodem błędu 6.
+
+W przypadku poprawnego odczytania pliku, program powinien wyświetlić na konsoli treść odczytanej wiadomości bez żadnych dodatkowych znaków w wierszu.
+
+Przykładowa interakcja z programem -- sukces:
+
+Pliki: 2420test1.bin, 2420test2.bin
+
+Enter file name: 2420test2.bin⏎
+I'm fascinated by the idea that genetics is digital. A gene is a long sequence of coded letters, like computer information. Modern biology is becoming very much a branch of information technology. - Richard Dawkins
+Enter file name: 2420test1.bin⏎
+Ninety percent of games lose money; 10 percent make a lot of money. And there's a consistency around the competitive advantages you create, so if you can actually learn how to do the art, the design, and the programming, you would be consistently very profitable. - Gabe Newell"Technology presumes there's just one right way to do things and there never is. " - Robert M. PirsigThe opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference. - Elie Wiesel"Technology is ruled by two types of people: those who manage what they do not understand, and those who understand what they do not manage." - Mike TroutNever doubt that a small group of thoughtful, committed, citizens can change the world. Indeed, it is the only thing that ever has. - Margaret MeadEveryday life is like programming, I guess. If you love something you can put beauty into it. - Donald KnuthI absolutely don't think a sentient artificial intelligence is going to wage
+Przykładowa interakcja z programem -- błąd wejścia/wyjścia, uszkodzone dane:
+
+Enter file name: behavior.bin⏎
+Couldn't open file
+Enter file name: open.bin⏎
+File corrupted
+Uwagi
+Wszystkie operacje na tablicach powinny być wykonywane za pomocą wskaźników, a nie operatora [].
+Przygotuj tablicę na 100 struktur message_t. Jak długi tekst może być ukryty w takiej ich liczbie?
