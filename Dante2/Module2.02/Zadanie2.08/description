@@ -1,0 +1,83 @@
+Napisz program do pobierania daty w formacie tekstowym i sprawdzania jej poprawności z zadanym wzorcem.
+
+Do przechowywania daty przygotuj strukturę date_t. Struktura powinna wyglądać następująco:
+
+struct date_t {
+    int day;
+    int month;
+    int year;
+};
+Przygotuj funkcje do: wypełniania i wyświetlania pól struktury, do wczytywania danych do struktury oraz do sprawdzania czy podana data jest poprawna. Prototypy funkcji powinny wyglądać następująco:
+
+struct date_t* set_date(struct date_t* d, int day, int month, int year, int *err_code);
+Funkcja zapisuje wartości przekazane w parametrach day, month i year do odpowiednich pól struktury d.
+
+Parametry:
+
+d - wskaźnik na strukturę typu date_t, do której mają zostać zapisane przekazane w parametrach wartości,
+day, month, year - dzień, miesiąc i rok, które mają zostać zapisane do struktury d,
+err_code - wskaźnik na zmienną, do której ma zostać zapisany, o ile to możliwe, kod błędu:
+0 - w przypadku powodzenia,
+1 - w przypadku podania błędnych danych.
+Wartość zwracana:
+
+Wskaźnik do wypełnionej struktury d lub
+NULL w przypadku niepowodzenia.
+void show(const struct date_t* d);
+Funkcja showwyświetla na ekranie zawartość struktury d w postaci: DD-MM-RRRR. Dla przykładu 7 marca 2020 będzie wyświetlony jako 07-03-2020.
+
+W przypadku przekazania błędnych danych wejściowych funkcja ma niepodejmować żądnej akcji.
+
+struct date_t* read(struct date_t* d, int *err_code);
+Funkcja read pobiera datę od użytkownika, w postaci DD-MM-RRRR (dzień, miesiąc i rok, oddzielone myślnikami).
+
+Parametry:
+
+d - wskaźnik na strukturę typu date_t, do której mają zostać zapisana data, podana przez użytkownika,
+err_code - wskaźnik na zmienną, do której ma zostać zapisany, o ile to możliwe, kod błędu:
+0 - w przypadku powodzenia,
+1 - w przypadku podania błędnych danych wywołania funkcji.
+2 - w przypadku, gdy użytkownik podał wartość niepasującą do wzorca tekstowego daty. Ponadto, w przypadku wprowadzenia przez użytkownika błędnych danych, funkcja nie może modyfikować zawartości struktury danej wskaźnikiem d.
+Wartość zwracana:
+
+Wskaźnik do wypełnionej struktury d lub
+NULL w przypadku niepowodzenia.
+int validate(const struct date_t* d);
+Funkcja ma za zadanie sprawdzić, czy data przekazana w strukturze d jest prawidłowa. Zwróć uwagę na lata przestępne.
+
+Przykład: 29-02-1900 jest niepoprawną datą, podczas gdy 29-02-1904 już jest poprawną.
+
+Wartość zwracana:
+
+-1 w przypadku przekazania błędnych danych,
+0 - kiedy podana data jest nieprawidłowa,
+1 kiedy jest to poprawna data.
+Napisz program pozwalający na pobranie daty od użytkownika daty podana będzie w formacie DD-MM-RRRR. W przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input i zwrócić kod błędu 1.
+
+Następnie należy sprawdzić poprawność liczbową daty funkcją validate i wypisać wynik w konsoli. Jeżeli walidacja daty powiodła się, to program powinien wyświetlić wprowadzoną datę oraz komunikat Correct (w dwóch wierszach). W przypadku złego wyniku walidacji program wyświetla jedynie komunikat Incorrect.
+
+Program powinien zakończyć działanie z kodem błędu 0.
+
+Przykładowa interakcja z programem -- sukces:
+
+Enter a date (formatted as dd-mm-yyyy): 31-10-1987⏎
+Given date: 31-10-1987⏎
+Correct
+Enter a date (formatted as dd-mm-yyyy): 30-9-1987⏎
+Given date: 30-09-1987⏎
+Correct
+Przykładowa interakcja z programem -- błąd walidacji:
+
+Enter a date (formatted as dd-mm-yyyy): 0-8-1978⏎
+Incorrect
+Enter a date (formatted as dd-mm-yyyy): 22--7-1977⏎
+Incorrect
+Przykładowa interakcja z programem -- błąd formatu użytkownika:
+
+Enter a date (formatted as dd-mm-yyyy): 10.3.1922⏎
+Incorrect input
+Enter a date (formatted as dd-mm-yyyy): 10 styczen 1922⏎
+Incorrect input
+Uwagi
+W programie, poza deklaracją tablicy, nie wolno używać operatora [].
+
