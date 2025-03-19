@@ -1,0 +1,27 @@
+Napisz program, który będzie wypełniał strukturę z zadania 2.2 Ech, Ci Studenci losowymi imionami oraz nazwiskami. Dane te muszą być rzeczywiste, np. mogą to być imiona i nazwiska aktorów, autorów książek, polityków itp.
+
+Program musi wczytywać je z dwóch oddzielnych plików tekstowych (odpowiednio z imionami oraz nazwiskami, każde w oddzielnej linii). Pliki te należy dostarczyć wraz z plikiem źródłowym.
+
+W przypadku kiedy nie będzie możliwe otworzenie któregokolwiek z plików program powinien wyświetlić komunikat Couldn't open file i zakończyć działanie z kodem błędu 4. Jeżeli w pliku nie będzie odpowiednich danych, program powinien wyświetlić komunikat Error i zakończyć działanie z kodem błędu 1.
+
+Imię nie powinno być na stałe przypisane do nazwiska, to znaczy, że w zależności od losowania osoba o imieniu A może mieć raz nazwisko B, a raz C.
+
+Przygotuj tablicę, która będzie mogła przechować maksymalnie 100 rekordów (osób). Zaraz po uruchomieniu program powinien zapytać użytkownika o liczbę rekordów do wylosowania i dokonać losowania. Wylosowane dane powinny zostać wyświetlone na ekranie w kolejnych liniach a program powinien zakończyć się sukcesem.
+
+Przykładowa interakcja z programem -- sukces:
+
+Enter a number of students to generate: 5⏎
+Alicja Doe⏎
+Artur Doe⏎
+Maria Nowak⏎
+Artur Kowalski⏎
+Alicja Nowak⏎
+Przykładowa interakcja z programem -- błąd wejścia/wyjścia:
+
+Couldn't open file
+Uwagi
+W programie może znajdować się tylko jedna tablica struktur, o nazwie Students.
+W programie nie wolno używać tablic oprócz tablicy struktur, o nazwie Students.
+Dane, z których będzie dokonywane losowanie, nie mogą być zapisane w kodzie programu.
+W programie nie wolno używać funkcji alokujących pamięć.
+Pamiętaj, że Dante jest systemem działającym pod kontrolą systemu Linux i pod jego kontrolą wczytuje pliki tekstowe. Symbol nowej linii w plikach tekstowych Linuxa ma jeden znak: LF (ang. Line Feed) lub po prostu \n, podczas gdy symbol nowej linii plików tekstowych utworzonych w systemie Windows złożony jest z dwóch znaków: CRLF (ang. Carriage Return, Line Feed) lub \r\n. Przesyłając pliki tekstowe z imionami i nazwiskami pamiętaj o konieczności zapewnienia poprawnego zakończenia linii w środowisku, w którym uruchamiany jest Twój program (Linux). Więcej informacji można znaleźć tutaj.
