@@ -1,0 +1,100 @@
+Rozbuduj program z zadania 2.3 Ech, Ci Studenci 2 o operacje wejścia/wyjścia. W tym celu przygotuj funkcje umożliwiające zapis i odczyt struktury z pliku. Funkcje te powinny mieć następujące prototypy:
+
+int save_student_b(const char *filename, const struct student_t* s);
+int load_student_b(const char *filename, struct student_t* s);
+int save_student_t(const char *filename, const struct student_t* s);
+int load_student_t(const char *filename, struct student_t* s);
+Przyrostki _t oraz _b oznaczają, że pliki mają być zapisywane (save)/odczytywane (load) w trybie/formacie tekstowym oraz binarnym.
+
+Parametry:
+
+filename - nazwa pliku, do którego dana funkcja ma dane zapisać bądź z którego ma dane odczytać,
+p (const) - wskaźnik na strukturę student_t, z której funkcja ma pobrać dane do zapisu,
+p (non-const) - wskaźnik na strukturę student_t do której funkcja ma zapisać dane po ich odczycie z dysku.
+Wartość zwracana:
+
+1 - w przypadku podania błędnych danych podczas wywołania funkcji,
+2 - w przypadku niemożliwości otworzenia filename,
+3 - w przypadku kiedy nie uda się zapisać danych do pliku lub okażą się one uszkodzone,
+0 - w przypadku gdy operacja wejścia/wyjścia zakończy się sukcesem.
+Format plików:
+
+W pliku tekstowym wartości kolejnych elementów struktury student_t muszą być zapisane w jednym wierszu, po przecinku, zgodnie ze wzrocem:
+imię, nazwisko, indeks, kierunek, wydział, rok
+W pliku binarnym strukturę należy zapisać jako blok pamięci o wielkości zapisywanej struktury.
+Napisz program, który na podstawie danych pobranych od studenta wypełni strukturę student_t, a następnie je wyświetli w taki sam sposób jak w zadaniu 2.3 Ech, Ci Studenci 2.
+
+W przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input oraz zwrócić wartość kodu błędu, wygenerowanego przez funkcję read.
+
+Następnie program ma zapisać wprowadzone dane do pliku. W tym celu program powinien zapytać użytkownika o nazwę pliku, do którego ma zostać zapisana utworzona struktura. W zależności od rozszerzenia pliku program powinien zapisać strukturę do pliku binarnego (rozszerzenie .bin) lub tekstowego (rozszerzenie .txt).
+
+Jeżeli rozszerzenie będzie błędne to program powinien wyświetlić komunikat Unsupported file format i zwrócić kod błędu 7.
+W przypadku niemożliwości utworzenia pliku program powinien wyświetlić komunikat Couldn't create file i zwrócić wartość 5.
+Jeżeli udało się zapisać dane do pliku, program powinien wyświetlić komunikat File saved i zapytać użytkownika, czy chce odczytać dane z tego samego pliku. Dopuszczalna odpowiedź to duże lub małe litery y (tak) oraz n (nie).
+
+Odpowiedź TAK: Program powinien odczytać dane i wyświetlić je na ekranie.
+
+Jeżeli nie uda się odczytać danych to program powinien wyświetlić komunikat File corrupted i zwrócić wartość 6.
+W przypadku niemożliwości otworzenia pliku program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość 4.
+Odpowiedź NIE: Program kończy swoje działanie z kodem błędu 0.
+
+Podanie innego znaku odpowiedzi powinno spowodować wyświetlenie komunikatu Incorrect input i zakończenie programu z kodem błędu 1.
+
+Przykład interakcji z programem -- sukces:
+
+Enter student data: Jack, Palance, 173166, Near Eastern Studies, Faculty of Process and Environmental Engineering, 2004⏎
+Jack Palance, index number: 173166, was a Near Eastern Studies student at the Faculty of Process and Environmental Engineering in 2004.⏎
+Enter file name:⏎
+guide.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? n⏎
+Enter student data: Matthew, McConaughey, 190093, Sustainable Energy, Faculty of Material Technologies and Textile Design, 2016⏎
+Matthew McConaughey, index number: 190093, was a Sustainable Energy student at the Faculty of Material Technologies and Textile Design in 2016.⏎
+Enter file name:⏎
+written.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+Matthew McConaughey, index number: 190093, was a Sustainable Energy student at the Faculty of Material Technologies and Textile Design in 1996.⏎
+
+Enter student data: Jan, Kowalski, 112233, Economics, Faculty of Chemistry, 1996⏎
+Jan Kowalski, index number: 112233, was an Economics student at the Faculty of Chemistry in 1996.⏎
+Enter file name:⏎
+both.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+Janusz Haker, index number: 999999, was an Economics student at the Faculty of Chemistry in 2004.⏎
+
+Przykładowa interakcja z programem -- błąd danych wejściowych:
+
+x = 8; y = 10⏎
+Podaj sciezke do pliku:⏎
+self.tx⏎
+Unsupported file format
+Przykład interakcji z programem -- błąd wejścia/wyjścia:
+
+Enter student data: Carol, Burnett, 170685, Near Eastern Studies, Faculty of Management and Production Engineering, 2004⏎
+Carol Burnett, index number: 170685, was a Near Eastern Studies student at the Faculty of Management and Production Engineering in 2004.⏎
+Enter file name:⏎
+describebin⏎
+Unsupported file format
+Enter student data: Cuba, Gooding Jr., 174146, Anthropology, Faculty of Process and Environmental Engineering, 2006⏎
+Cuba Gooding Jr., index number: 174146, was an Anthropology student at the Faculty of Process and Environmental Engineering in 2006.⏎
+Enter file name:⏎
+be.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? Y⏎
+Couldn't open file
+Przykładowa interakcja z programem -- plik został uszkodzony między zapisem a odczytem:
+
+Enter student data: Matthew, McConaughey, 190093, Sustainable Energy, Faculty of Material Technologies and Textile Design, 1996⏎
+Matthew McConaughey, index number: 190093, was a Sustainable Energy student at the Faculty of Material Technologies and Textile Design in 1996.⏎
+Enter file name:⏎
+thought.txt⏎
+File saved⏎
+Do you want to read the file (Y/N)? y⏎
+File corrupted
+Uwagi
+Dane zapisywane do pliku mają być pobierane ze struktur student_t. Podobnie wczytywanie - dane wczytane z pliku mają trafić do pól struktury student_t.
+Funkcje zapisu/odczytu danych można uznać za poprawne wyłącznie w sytuacji, gdy dane zapisane funkcją np. save_student_t można poprawnie wczytać funkcją load_student_t. Tak wczytane dane muszą być identyczne z danymi zapisanymi.
+W programie, poza deklaracją tablicy, nie wolno używać operatora [].
+W programie nie wolno używać funkcji alokujących pamięć.
