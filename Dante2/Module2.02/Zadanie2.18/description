@@ -1,0 +1,81 @@
+Napisz program, który pobierze od użytkownika listę plików tekstowych a następnie będzie pobierał kolejne teksty i dodawał je do tego pliku, w którym aktualnie znajduje się najmniej danych.
+
+W tym celu przygotuj strukturę do przechowywania wskaźnika do pliku oraz jego informacji o jego rozmiarze. Pomoże ona w procesie wyboru pliku o najmniejszej liczbie danych oraz w śledzeniu informacji o ilości tych danych.
+Struktura powinna wyglądać następująco:
+
+struct file_t
+{
+    FILE *f;
+    int size;
+};
+Pole f przechowuje uchwyt otwartego pliku (przez funkcję open_file opisaną dalej). Z kolei pole size przechowuje aktualną wielkość pliku w bajtach. Wartość tego pola powinna być aktualizowana po każdej operacji dodania danych do pliku f.
+
+Przygotuj następujące funkcje: otwierającą plik, zamykającą plik oraz wyszukującą plik o najmniejszym rozmiarze. Prototypy tych funkcji powinny wyglądać następująco:
+
+int open_file(struct file_t* f, const char *filename);
+Funkcja otwiera plik o nazwie filename i przypisuje jego uchwyt do struktury f. Jeśli plik nie istnieje to funkcja powinna spróbować go utworzyć. Pole size struktury powinno zostać uzupełnione rozmiarem pliku.
+
+Wartość zwracana:
+
+0 - w przypadku sukcesu (plik utworzony bądź otworzony, struktura f uzupełniona),
+1 - w przypadku przekazania do funkcji nieprawidłowych danych,
+2 - gdy nie udało się uzyskać dostępu do pliku filename.
+struct file_t* find_min(const struct file_t* files, int size);
+Funkcja ma odnaleźć pierwszy plik w tablicy files o size elementach który posiada najmniejszą ilość zapisanych danych.
+
+Wartość zwracana:
+
+Jeśli znaleziony, to funkcja powinna zwrócić wskaźnik do struktury file_t opisującej taki plik.
+W przypadku podania błędnych danych funkcja powinna zwrócić wartość NULL.
+Zwróć uwagę na modyfikator const.
+
+void close_file(struct file_t* f);
+Funkcja zamyka plik. W przypadku braku możliwości wykonania operacji zamknięcia funkcja nie podejmuje żadnych działań.
+
+Napisz program, który będzie pobierał od użytkownika nazwy plików aż do wprowadzenia pustej linii (przyjmij, że długość nazwy pliku nie przekroczy 999 znaków). Pierwsze 5 istniejących plików powinno zostać otworzone i wykorzystane do dalszej pracy.
+
+Po zakończeniu fazy pobierania nazw plików i ich otwierania program przechodzi do pobierania kolejnych tekstów od użytkownika. Pobierane teksty nie mogą być dłuższe niż 999 znaków a pętla pobierania tekstów kończy się z chwilą podania pustego ciągu znaków.
+
+Każdy pobrany tekst jest dopisywany do pierwszego pliku z wczytanej listy, w którym na chwilę obecną znajduje się najmniejsza ilość danych.
+
+W przypadku kiedy nie uda się otworzyć żadnego pliku program powinien wyświetlić komunikat Couldn't open file i zakończyć się z kodem błędu4.
+Po zakończeniu wprowadzania danych program powinien wyświetlić komunikat Files saved i zwrócić kod błędu 0.
+
+Przykładowa interakcja z programem -- sukces:
+
+Podaj nazwy plikow: ⏎
+lost.txt⏎
+since.txt⏎
+//../city.txt⏎
+⏎
+Podaj teksty: ⏎
+Dolor non labore tempora sed eius quaerat. Quisquam non dolor labore ut ipsum ipsum labore. Magnam etincidunt eius quisquam adipisci eius velit. Velit voluptatem porro magnam adipisci. Ut dolore voluptatem est ipsum non sed quaerat.⏎
+Modi quisquam ut labore. Amet dolorem ipsum tempora quisquam velit magnam. Quisquam adipisci eius labore dolore non voluptatem etincidunt. Amet voluptatem sit neque aliquam adipisci velit amet. Sed quaerat adipisci modi eius non. Consectetur modi dolore porro aliquam. Dolore sit amet dolor. Eius consectetur consectetur quiquia tempora. Magnam non voluptatem aliquam dolore sed etincidunt. Sit ut dolorem modi consectetur magnam.⏎
+Etincidunt labore consectetur sed. Amet adipisci magnam labore. Modi quaerat velit dolor. Dolorem tempora dolore ut porro velit non est. Dolore ipsum neque eius tempora tempora quisquam.⏎
+Aliquam quisquam quisquam eius consectetur quiquia. Ut est neque non. Neque dolore tempora modi velit. Adipisci etincidunt dolor ipsum dolore dolor. Consectetur dolore consectetur dolorem non consectetur dolorem ut. Ut quiquia ut dolorem ipsum aliquam labore neque.⏎
+Est velit neque dolor aliquam numquam est labore. Ut quisquam ipsum quisquam neque dolore velit. Magnam dolorem aliquam est ipsum non. Tempora ipsum sed consectetur. Eius tempora aliquam consectetur dolore quiquia eius consectetur. Sit ut sit est magnam est numquam. Dolorem dolore eius porro.⏎
+Dolor quiquia magnam magnam amet. Dolore quisquam labore adipisci voluptatem sit. Labore quaerat sit voluptatem dolor magnam etincidunt. Sed sit labore magnam porro modi amet amet. Tempora quaerat ut tempora.⏎
+Ut est voluptatem velit sit modi neque. Magnam sit magnam sed quaerat. Dolore labore amet consectetur. Voluptatem dolorem adipisci ipsum porro modi quaerat dolore. Modi dolore quaerat quiquia amet non aliquam. Sed sit dolor quisquam dolor velit. Voluptatem ut ut voluptatem amet etincidunt non. Dolorem etincidunt quisquam labore dolore ipsum dolorem quaerat. Neque quisquam etincidunt quisquam numquam non. Neque etincidunt voluptatem ut.⏎
+⏎
+Files saved
+Zawartość plików przed uruchomieniem programu: since.txt, lost.txt
+
+Zawartość plików po uruchomieniu programu: since.txt, lost.txt
+
+Przykład interakcji z programem -- brak wszystkich plików:
+
+Enter file names: quite.txt⏎
+course.txt⏎
+there.txt⏎
+prove.txt⏎
+sail.txt⏎
+most.txt⏎
+color.txt⏎
+start.txt⏎
+shoe.txt⏎
+⏎
+Couldn't open file⏎
+Przykład interakcji z programem -- pusta lista plików:
+
+Enter file names: ⏎
+couldn't open file
