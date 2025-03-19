@@ -1,0 +1,94 @@
+Napisz program sprawdzający, czy pary prostokątów wczytanych z pliku są w relacji nachodzenia oraz zakrywania. Utworzone pary prostokątów zostaną zapisane do oddzielnych plików, w zależności od ich relacji.
+
+Przygotuj strukturę rectangle_t do przechowywania informacji o prostokącie. Każdy prostokąt opisany jest położeniem lewego dolnego rogu (x, y) oraz szerokości (width) i wysokości (height). Struktura powinna wyglądać następująco:
+
+struct rectangle_t {
+    int x;
+    int y;
+    unsigned int width;
+    unsigned int height;
+};
+Przygotuj funkcje do: odczytu zbioru prostokątów z pliku binarnego, do zapisu prostokątów do pliku binarnego, do sprawdzania, czy dwa prostokąty nachodzą na siebie (mają przynajmniej jeden punkt wspólny) oraz do sprawdzania, czy zawierają się w sobie (wszystkie punktu jednego należą w całości do drugiego).
+
+Funkcje powinny mieć następujące prototypy:
+
+int load_rectangles_b(const char *filename, struct rectangle_t *rectangles, unsigned int size);
+Funkcja wczytuje prostokąty z pliku filename do tablicy rectangles o pojemności size prostokątów.
+
+Parametry:
+
+filename - nazwa pliku, z którego mają zostać wczytane informacje o prostokątach. Struktura pliku wygląda następująco: liczba prostokątów przechowywana w pliku (jako unsigned int), następnie dane poszczególnych prostokątów (sekwencja rectangle_t),
+rectangles - wskaźnik na tablicę prostokątów, do której mają zostać zapisane odczytane prostokąty,
+size - pojemność tablicy rectangles.
+Wartość zwracana:
+
+-1 w przypadku podanie błędnych danych wejściowych,
+-2 w przypadku błędu podczas otwierania pliku,
+-3 w przypadku niepoprawnego formatu pliku lub liczby prostokątów odczytanych z pliku.
+> 0 - w przypadku sukcesów, liczba prostokątów wczytanych do tablicy rectangles.
+W przypadku kiedy w pliku znajduje się więcej danych niż można zapisać do tablicy, funkcja powinna zapisać do niej tyle danych ile jest możliwe.
+
+int save_rectangles_b(const char *filename, const struct rectangle_t **rectangles, unsigned int size);
+Funkcja zapisuje size prostokątów, danych wskaźnikiem na tablicę wskaźników rectangles do pliku filename w formacie binarnym. Format pliku z prostokątami podano przy opisie funkcji wczytującej.
+
+Parametry:
+
+filename - nazwa pliku, do którego mają zostać zapisane informacje o prostokątach. Struktura pliku wygląda następująco: liczba prostokątów przechowywana w pliku (jako unsigned int), następnie dane poszczególnych prostokątów,
+rectangles - wskaźnik na tablicę wskaźników, przechowującą informacje o prostokątach, które mają zostać zapisane do pliku,
+size - liczba prostokątów do zapisania.
+Wartość zwracana:
+
+-1 - w przypadku przekazania błędnych parametrów,
+-2 - w przypadku niemożliwości utworzenia bliku,
+-3 - w przypadku niemożliwości zapisania wszystkich danych do pliku (liczby prostokątów/samych prostokątów)
+>0 - liczba size prostokątów pomyślnie zapisanych do pliku.
+int rectangle_intersection(const struct rectangle_t * r1, const struct rectangle_t * r2);
+Funkcja sprawdza, czy prostokąt r1 posiada przynajmniej jeden punkt wspólny z r2.
+
+Funkcja zwraca
+
+1 jeżeli dwa prostokąty mają przynajmniej jeden punkt wspólny,
+0 jeżeli nie nachodzą na siebie,
+-1 w przypadku błędnych danych wejściowych.
+Funkcja sprawdza, czy prostokąt r2 znajduje się całkowicie wewnątrz prostokąta r1 - prostokąty nie mogą mieć punktów wspólnych na krawędziach.
+
+int rectangle_contains(const struct rectangle_t * r1, const struct rectangle_t * r2);
+Funkcja zwraca
+
+1 jeżeli prostokąt r2 znajduje się całkowicie wewnątrz prostokąta r1,
+0 w przeciwnym przypadku,
+-1 w przypadku błędnych danych wejściowych.
+Napisz program, który pobierze od użytkownika nazwę pliku, a następnie odczyta zawarte w nim prostokąty. Z pliku wczytaj nie więcej niż 100 pierwszych prostokątów.
+
+W przypadku, kiedy nie można otworzyć pliku program powinien wyświetlić komunikat Couldn't open file i zakończyć działanie z kodem błędu 4. W przypadku wykrycia, iż dane w pliku są zapisane niepoprawnie, program powinien wyświetlić komunikat File corrupted i zakończyć działanie z kodem błędu 6.
+
+W przypadku poprawnego odczytania pliku, program powinien wyznaczyć wszystkie pary prostokątów, w których pierwszy zawiera w sobie drugi oraz wszystkie pary prostokątów nachodzących na siebie. Po wyznaczeniu program powinien wyświetlić na ekranie, w osobnych liniach: liczbę par prostokątów zawierających się oraz liczbę par prostokątów nachodzących na siebie.
+
+Dane o prostokątach zawierających się w sobie powinny zostać zapisane do pliku contain.bin, w takiej samej kolejności w jakiej były odczytane z pliku, przy czym w każdej parze jako pierwszy ma zostać zapisany większy prostokąt.
+
+Dane o prostokątach nachodzących na siebie powinny zostać zapisane do pliku intersect.bin, w takiej samej kolejności, jak w pliku wejściowym.
+
+Jeżeli w którejś z kategorii nie będzie żadnych par to program nie powinien tworzyć odpowiedniego pliku.
+
+Jeżeli nie uda się zapisać danych do pliku program powinien wyświetlić komunikat Couldn't create file i niezwłocznie zakończyć działanie z kodem błędu 5.
+
+Przykładowa interakcja z programem -- sukces (wejście: science.txt, wyjście: intersect.bin, contain.bin)
+
+Enter file name: science.txt⏎
+5⏎
+5
+Przykład interakcji z programem - błąd wejścia/wyjścia:
+
+Enter a file name: tell.bin⏎
+Couldn't open file
+Enter a file name: his.bin⏎
+21⏎
+21⏎
+Couldn't create file⏎
+Przykład interakcji z programem - uszkodzony plik wejściowy:
+
+Enter a file name: that.bin⏎
+File corrupted
+Uwagi
+Pamiętaj, że relacja nachodzenia jest relacją symetryczną (jeżeli x nachodzi na y to y nachodzi na x) podczas gdy relacja zawierania się jest asymetryczna (jeżeli x zawiera y to y nie może zawierać x).
+Wszystkie operacje na tablicach powinny być wykonywane za pomocą wskaźników, a nie operatora [].
