@@ -1,0 +1,56 @@
+Napisz program sortujący liczby całkowite, wczytane z dysku, a następnie zapisujący je ponownie.
+
+W tym celu przygotuj strukturę przechowującą tablicę maks. 100 liczb całkowitych oraz liczbę elementów zapisanych w tej tablicy. Struktura powinna wyglądać następująco:
+
+struct array_t
+{
+    int size;
+    int array[100];
+};
+Zadaniem struktury array_t będzie przechowywanie maks. 100 liczb całkowitych. Ich dokładną liczbę w danej strukturze będzie określała zawartość pola size.
+
+Przygotuje funkcje do: odczytu struktury array_t z pliku binarnego, do zapisu struktury do pliku binarnego, oraz do sortowania rosnąco elementów tablicy, znajdujących się w strukturze array_t. Funkcje powinny mieć następujące prototypy:
+
+int save_array_b(const char *filename, const struct array_t *arr);
+int load_array_b(const char *filename, struct array_t *arr);
+Wartość zwracana:
+
+1 - w przypadku podania błędnych danych podczas wywołania funkcji,
+2 - w przypadku porażki podczas operacji wejścia/wyjścia:
+load_array_b - podczas otwierania pliku
+save_array_b - tworzenia nowego pliku.
+3 - w przypadku błędu zapisu/odczytu danych do/z pliku:
+load_array_b - uszkodzony plik wejściowy (brak kompletu danych)
+save_array_b - błąd podczas próby zapisu danych na dysk.
+0 - kiedy zapis/odczyt zakończył się sukcesem.
+int sort(struct array_t *arr);
+Funkcja sort ma posortować elementy w tablicy danej wskaźnikiem arr rosnąco.
+
+Wartość zwracana:
+
+0 - W przypadku myślnego zakończenia operacji.
+1 - W przypadku błędu danych wejściowych. Ponadto funkcja musi sprawdzać czy dane zapisane w strukturze arr mają sens.
+Napisz program, który pobierze od użytkownika nazwę pliku (nie więcej niż 30 znaków), następnie odczyta strukturę zapisaną w pliku, posortuje elementy zapisane w tablicy i zapisze strukturę do pliku o tej samej nazwie. Ostatecznie, po pomyślnym wykonaniu wszystkich operacji program wyświetli komunikat File saved.
+
+W przypadku niemożliwości otworzenia pliku program powinien wyświetlić komunikat Couldn't open file i zwrócić wartość 4,
+Jeżeli nie uda się odczytać danych z pliku program powinien wyświetlić komunikat File corrupted i zwrócić wartość 6.
+Jeżeli dane w strukturze będą nieprawidłowe program powinien wyświetlić komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+Jeżeli niepowiedzie się zapis danych do pliku program powinien wyświetlić komunikat Couldn't create file i zakończyć działanie z kodem błędu 5.
+Przykład interakcji z programem -- sukces (wejście: test2417_in.bin, wyjście: test2417_out.bin):
+
+Enter file name: test2417.bin⏎
+File saved
+Przykład interakcji z programem -- błędy wejścia/wyjścia:
+
+Enter file name: head.txt⏎
+Couldn't open file
+Enter file name: spread.bin⏎
+File corrupted
+Enter file name: beat.bin⏎
+Couldn't create file⏎
+Przykład interakcji z programem -- błąd danych w strukturze array_t:
+
+Enter file name: numeral.txt⏎
+Incorrect input data
+Uwagi
+W programie, poza deklaracją tablic, nie wolno używać operatora [].
