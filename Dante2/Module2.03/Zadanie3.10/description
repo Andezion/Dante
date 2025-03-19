@@ -1,0 +1,141 @@
+Napisz program do przechowywania informacji o figurach geometrycznych w tablicy unii i wyświetlajacy je po ich uprzednim posortowaniu.
+
+W tym celu przygotuj następujący zestaw typów danych:
+
+struct point_t
+{
+  int x;
+  int y;
+};
+Struktura point_t odpowiada za przechowywanie współrzędnych x oraz y jednego punktu na płaszczyźnie.
+
+struct rectangle_t
+{
+  struct point_t p;
+  int width;
+  int height;
+};
+Struktura rectangle_t opisuje prostokąt o szerokości width i wysokości height posiadający lewy dolny róg zlokalizowany w punkcie p.
+
+struct circle_t
+{
+  struct point_t c;
+  float r;
+};
+Struktura circle_t opisuje koło o promieniu r i środku c.
+
+struct triangle_t
+{
+  struct point_t p1;
+  struct point_t p2;
+  struct point_t p3;
+};
+Struktura triangle_t opisuje dowolny trójkąt, posiadający poszczególne wierzchołki zlokalizowane w punktach p1, p2 oraz p3.
+
+struct figure_t{
+  union
+  {
+    struct rectangle_t rect;
+    struct triangle_t triangle;
+    struct circle_t circ;
+  };
+  enum figure_types type;
+};
+Struktura figure_t łączy w sobie, za pomocą anonimowej unii, opisy trzech różnych figur oraz znacznik type. Znacznik ten pozwala określić, jaka figura (trójkąt, prostokąt, koło) opisany jest daną strukturą figure_t.
+
+Typem znacznika type jest typ wyliczeniowy figure_types dany poniższą definicją:
+
+enum figure_types{
+  TRIANGLE = 1,
+  RECTANGLE,
+  CIRCLE
+};
+Przygotuj funkcje do: obliczania pola powierzchni trójkąta, prostokąta i koła oraz do wyświetlania informacji o tych figurach.
+
+float area_triangle(const struct triangle_t *t);
+float area_rectangle(const struct rectangle_t *r);
+float area_circle(const struct circle_t *c);
+float area_figure(const struct figure_t *f);
+
+void display_rectangle(const struct rectangle_t *rect);
+void display_triangle(const struct triangle_t *t);
+void display_circle(const struct circle_t *circ);
+void display_figure(struct figure_t *f);
+Funkcje area_* obliczają i zwracają powierzchnię figury, które opis przekazano wskaźnikiem w jedynym parametrze. W przypadku braku możliwości wyznaczenia pola powierzchni każda funkcja powinna zwrócić wartość -1.
+
+Funkcja display_rectangle wyświetla opis prostokąta rect w następującej postaci:
+
+Rectangle (-1, 8), width = 10, height = 17
+Funkcja display_triangle wyświetla opis trójkąta t w następującej postaci:
+
+Triangle p1(1, -3), p2(-4, -10), p3(-4, -9)
+Funkcja display_circle wyświetla opis koła circ w następującej postaci:
+
+Circle (-10, 1), radius = 6.921945
+Funkcja display_figure wyświetla dane o przekazanej figurze, w zależności od zawartości poszczególnych pól struktury danej wskaźnikiem f.
+
+Funkcje wyświetlające display_*, w przypadku niemożliwości wyświetlenia opisu figury, nie powinny podejmować jakiejkolwiek akcji.
+
+Dodatkowo przygotuj funkcję, która posortuje figury przekazane w tablicy struktur figures malejąco. Za kryterium przyjmij powierzchnię, jaką dana figura zajmuje. Funkcja powinny mieć następujący prototypy:
+
+int sort_by_area(struct figure_t **figures, int size);
+Podczas sortowania funkcji sort_by_area wolno zamieniać miejscami jedynie wskaźniki w size- elementowej tablicy figures.
+
+Wartość zwracana:
+
+1 - gdy nie jest możliwe posortowanie figur danych tablicą figures,
+0 - w przypadku sukesu.
+Napisz program, który pobierze od użytkownika rodzaj figury, a następnie jej dane. Program powinien pobrać nie więcej niż 50 figur, przy czym użytkownik może wcześniej zakończyć fazę pobierania danych, podając 0 jako rodzaj figury.
+
+Następnie pobrane figury mają zostać posortowane i wyświetlone w kolejności malejących powierzchni.
+
+W przypadku wprowadzenia błędnych znaków program powinien wyświetlić komunikat Incorrect input i bezzwłocznie zakończyć działanie z kodem błędu 1.
+
+W przypadku wykrycia błędnych danych (np. trójkąt o dwóch wierzchołkach w tym samym miejscu) program powinien wyświetlić komunikat Incorrect input data i zakończyć działanie z kodem błędu 2. Walidację opisów figur należy przeprowadzić po zakonczeniu procesu ich wczytywania.
+
+Przykładowa interakcja z programem -- sukces
+
+Enter figure's type: 1⏎
+Enter vertices' coordinates of a triangle (x1 y1 x2 y2 x3 y3): 9 -5 -2 -3 -7 8 ⏎
+Enter figure's type: 2⏎
+Enter coordinates of a rectangle along with its dimensions (x y width height):  5 5 12 11 ⏎
+Enter figure's type: 1⏎
+Enter vertices' coordinates of a triangle (x1 y1 x2 y2 x3 y3): 3 -8 0 5 0 -2 ⏎
+Enter figure's type: 2⏎
+Enter coordinates of a rectangle along with its dimensions (x y width height):  8 -8 44 42 ⏎
+Enter figure's type: 1⏎
+Enter vertices' coordinates of a triangle (x1 y1 x2 y2 x3 y3): 0 -2 3 6 -4 6 ⏎
+Enter figure's type: 0⏎
+Rectangle (8, -8), width = 44, height = 42⏎
+Rectangle (5, 5), width = 12, height = 11⏎
+Triangle p1(9, -5), p2(-2, -3), p3(-7, 8)⏎
+Triangle p1(0, -2), p2(3, 6), p3(-4, 6)⏎
+Triangle p1(3, -8), p2(0, 5), p3(0, -2)⏎
+Przykładowa interakcja z programem -- błąd danych (niewłaściwy typ figury, patrz enum figure_types):
+
+Enter figure's type: 3⏎
+Enter coordinates and radius of a circle: 5 5 1.685268⏎
+Enter figure's type: 4⏎
+Incorrect input data
+Przykładowa interakcja z programem -- błąd danych (dane jednej z figur są niewłaściwe):
+
+Enter coordinates and radius of a circle: 3 6 28.457715⏎
+Enter figure's type: 2⏎
+Enter coordinates of a rectangle along with its dimensions (x y width height):  -5 4 40 -28 ⏎
+Enter figure's type: 3⏎
+Enter coordinates and radius of a circle: 5 -10 1.249228⏎
+Enter figure's type: 0⏎
+Incorrect input data
+Przykładowa interakcja z programem -- błąd danych (próba wprowadzenia nieprawidłowych znaków):
+
+Enter figure's type: 3⏎
+Enter coordinates and radius of a circle: 6 eBPikb 4.000000⏎
+Incorrect input
+Enter figure's type: 2⏎
+Enter coordinates of a rectangle along with its dimensions (x y width height):  8 1 bVsTJzCsdz⏎
+Incorrect input
+Enter figure's type: QvMNVcT⏎
+Incorrect input
+Uwagi
+W programie nie można korzystać z tablic, wyjątek stanowią tablice znakowe do przechowywania figur i wskaźników na figury.
+W programie nie można korzystać z operatora [].
