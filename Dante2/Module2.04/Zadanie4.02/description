@@ -1,0 +1,12 @@
+Zaalokuj pamięć dla liczby typu float. Do zaalokowanej pamięci zapisz liczbe pi. Wyświetl wartość tej pamięci (zaalokowanej zmiennej) oraz jej adres.
+
+W przypadku, kiedy nie uda się zaalokować pamięci program powinien wyświetlić komunikat Failed to allocate memory i zakończyć działanie z kodem błędu 8.
+
+Przykładowa interakcja z programem -- sukces:
+
+3.141593 0x2137010
+Przykładowa interakcja z programem -- brak pamięci:
+
+Limit sterty: 3 bajty
+
+Failed to allocate memory⏎
