@@ -1,0 +1,110 @@
+Przygotuj strukturę, która będzie przechowywała tablicę oraz ilościową informację o jej wypełnieniu oraz pojemności. Struktura powinna wyglądać następująco.
+
+struct array_t{
+	int *ptr;
+	int size;
+	int capacity;
+};
+gdzie:
+
+ptr - wskaźnik do bloku danych tablicy
+size - liczba elementów w tablicy
+capacity - pojemność tablicy
+Napisz funkcję do: alokacji pamięci na tablicę, do dodawania elementu, do dealokacji pamięci oraz do wyświetlania wszystkich elementów tablicy. Funkcje te powinny mieć następujące prototypy:
+
+int array_create(struct array_t *a, int N);
+Funkcja alokuje pamięć na N elementów typu int i przypisuje ją do odpowiedniego pola w strukturze array_t danej wskaźnikiem a a także ustawia odpowiednie wartości w pozostałych polach struktury.
+
+Funkcja powinna zwrócić wartość:
+
+1 w przypadku błędnych danych wejściowych,
+2 - jeżeli nie udało się zaalokować pamięci, lub
+0 w przypadku sukcesu.
+int array_push_back(struct array_t *a, int value);
+Funkcja dodaje element value na koniec tablicy danej wkaźnikiem a i odpowiednio zaktualizuje wartości poszczególnych pól struktury.
+
+Funkcja powinna zwrócić wartość:
+
+1 - w przypadku błędnych danych wejściowych (funkcja powinna sprawdzić czy dane w strukturze nie są uszkodzone),
+2 - jeżeli nie udało się dodać elementu do tablicy, a
+0 - w przypadku sukcesu.
+void array_display(const struct array_t *a);
+Funkcja wyświetla elementy tablicy a w jednej linii i rozdzielone spacjami. W przypadku błędnych danych wejściowych lub nieprawidłowej zawartości struktury a funkcja nie podejmuje żadnych działań.
+
+void array_destroy(struct array_t *a);
+Funkcja zwalnia pamięć przydzieloną na tablicę a.
+
+Napisz program, który pobierze od użytkownika liczbę elementów, na jaką ma zostać zarezerwowana pamięć na tablicę. W przypadku kiedy alokacja pamięci się nie powiedzie program powinien wyświetlić komunikat Failed to allocate memory i zakończyć działanie z kodem błędu 8.
+
+Następnie program pobiera poszczególne wartości, które mają zostać dopisane do tablicy, do chwili podania wartości 0. Jeżeli w trakcie skończy się miejsce w buforze to program powinien wyświetlić komunikat Buffer is full.
+
+Na koniec program powinien wyświetlić zawartość tablicy lub komunikat Buffer is empty jeśli ta jest pusta.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1,
+W przypadku podania danych niezgodnych z treścią zadania komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+Przykładowa interakcja z programem -- sukces:
+
+Podaj rozmiar tablicy: 16⏎
+Podaj liczby do zapisania:⏎
+-8⏎
+1⏎
+2⏎
+5⏎
+-7⏎
+-2⏎
+3⏎
+-8⏎
+6⏎
+-2⏎
+1⏎
+4⏎
+0⏎
+-8 1 2 5 -7 -2 3 -8 6 -2 1 4
+Podaj rozmiar tablicy: 17⏎
+Podaj liczby do zapisania:⏎
+0⏎
+Buffer is empty
+Podaj liczbę elementów tablicy: 10⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: 29⏎
+55⏎
+-51⏎
+64⏎
+-93⏎
+-40⏎
+79⏎
+-40⏎
+38⏎
+52⏎
+-60⏎
+0⏎
+Buffer is full⏎
+29 55 -51 64 -93 -40 79 -40 38 52 ⏎
+Przykładowa interakcja z programem -- brak pamięci:
+
+Limit sterty: 12 bajtów
+
+Podaj liczbę elementów tablicy: 8⏎
+Failed to allocate memory⏎
+Przykładowa interakcja z programem -- błąd danych:
+
+Podaj rozmiar tablicy: -72⏎
+Incorrect input data
+Podaj liczbę elementów tablicy: 13⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: Podaj liczby: 87⏎
+87⏎
+37⏎
+67⏎
+10⏎
+13⏎
+37⏎
+87⏎
+69⏎
+88⏎
+oxRhO⏎
+Incorrect input
+Podaj liczbę elementów tablicy: 11⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: Podaj liczby: jOTtqGTQ⏎
+Incorrect input
+Uwagi
+W programie nie wolno korzystać z operatora []!
+Deklaracje funkcji oraz definicję struktury umieść w pliku nagłówkowym array.h, a definicje funkcji w pliku array.c.
