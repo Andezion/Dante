@@ -1,0 +1,151 @@
+Zmodyfikuj strukturę oraz funkcje z zadania 4.6 Bezpieczna tablica tak, aby struktura przechowywała tablicę liczb float, zamiast int. Struktura powinna wyglądać następująco:
+
+struct array_t
+{
+	float *ptr;
+	int size;
+	int capacity;
+};
+Wykorzystaj funkcje z zadania 4.6 Bezpieczna tablica przy czym zmodyfikuj ich prototypy oraz kod tak, aby poprawnie współpracowały ze zmienioną strukturą:
+
+int array_create_float(struct array_t *a, int N);
+int array_push_back_float(struct array_t *a, float value);
+void array_display_float(const struct array_t *a);
+void array_destroy_float(struct array_t *a);
+void array_destroy_struct_float(struct array_t **a);
+int array_create_struct_float(struct array_t **a, int N);
+Funkcja array_display_float ma wyświetlać liczby wektora a z dokładnością dwóch miejsc po przecinku.
+
+Napisz funkcje do wykonywania podstawowych operacji na wektorach:
+
+dodawania,
+odejmowania,
+wyznaczania iloczynu skalarnego,
+kąta pomiędzy wektorami,
+wyznaczania długości wektora,
+normalizacji wektora.
+Prototypy funkcji powinny wyglądać następująco:
+
+int add_vectors(const struct array_t *a, const struct array_t *b, struct array_t **c);
+int subtract_vectors(const struct array_t *a, const struct array_t *b, struct array_t **c);
+Funkcje wyznaczają sumę oraz różnicę dwóch wektorów (a+b, a-b) a wynik zapisują do wektora c. Funkcje muszą same utworzyć nowy wektor c a pojemność i rozmiar wektora ma odpowiadać rozmiarowi wektorów wejściowych.
+
+Wartość zwracana:
+
+1 - w przypadku błędnych danych wejściowych,
+2 - jeżeli nie uda się zaalokować pamięci na wektor wyjściowy,
+0 - w przypadku powodzenia operacji.
+float dot_product(const struct array_t *a, const struct array_t *b);
+Funkcja wyznacza iloczyn skalarny wektorów a i b.
+
+Wartośc zwracana:
+
+-1 - w przypadku błędnych danych wejściowych lub
+>= 0 - wartość iloczynu skalarnego w przypadku prawidłowego wykonania operacji.
+float angle_between_vectors(const struct array_t *a, const struct array_t *b);
+Funkcja oblicza kąt pomiędzy wektorami a i b i wyraża go w stopniach, w zakresie <0, 180>.
+
+Wartość zwracana:
+
+-1 - w przypadku błędnych danych wejściowych i kiedy nie można wyznaczyć kąta lub
+>= 0 - obliczony wynik w przypadku prawidłowego wykonania operacji.
+float length(const struct array_t *a);
+Funkcja oblicza długość wektora a.
+
+Wartość zwracana:
+
+-1 - w przypadku błędnych danych wejściowych lub
+>= 0 - obliczony wynik w przypadku prawidłowego wykonania operacji.
+int normalize_vector(const struct array_t *a, struct array_t **b);
+Funkcja generuje wektor znormalizowany dla a, czyli taki którego długość wynosi 1. Funkcja musi sama utworzyć nowy wektor b. Pojemność i rozmiar wektora b ma odpowiadać rozmiarowi wektora wejściowego a.
+
+Wartość zwracana:
+
+1 - w przypadku błędnych danych wejściowych,
+2 - jeżeli nie uda się zaalokować pamięci na wektor znormalizowany,
+3 - w przypadku kiedy nie można dokonać normalizacji wektora,
+0 - w przypadku powodzenia operacji.
+Napisz program, który pobierze od użytkownika dwa wektory o wymiarowości (liczbie elementów) nie większej niż 100. Pobranie każdego z wektorów składa się z wczytania jego wymiarowości N a następnie z wczytania N liczb.
+
+Jeżeli nie uda się zaalokować pamięci program powinien wyświetlić komunikat Failed to allocate memory i zwrócić wartość 8.
+W przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+A w przypadku podania błędnej liczby elementów komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+Dla tak wprowadzonych wektorów (N-elementowych) ma obliczyć, a następnie wyświetlić w kolejnych liniach:
+
+sumę wprowadzonych wektorów,
+różnicą wprowadzonych wektorów,
+iloczyn skalarny wprowadzonych wektorów,
+kąt pomiędzy wprowadzonymi wektorami,
+długość pierwszego wektora,
+długość drugiego wektora,
+znormalizowany wektor a,
+znormalizowany wektor b.
+W przypadku niemożliwości wykonania którejś z operacji program powinien w jej miejscu wyświetlić komunikat Operation not permitted lub Failed to allocate memory jeżeli na wynik brakuje pamięci. W drugim przypadku program należy przerwać z kodem błędu 8.
+
+Przykładowa interakcja z programem -- sukces:
+
+Podaj rozmiar tablicy: 13⏎
+Podaj liczby: -6.831955 -3.260630 -9.697652 2.664410 -9.296595 -8.786132 -9.303092 -0.574592 2.663744 -8.159122 9.856406 0.364011 -7.857864 ⏎
+Podaj rozmiar drugiej tablicy: 16⏎
+Podaj liczby: -7.311282 6.024397 -7.995625 -2.444497 3.905762 9.635169 2.405059 7.980735 6.517907 7.092127 4.254312 5.015424 7.325904 -5.061472 0.977497 -0.023261 ⏎
+Operation not permitted⏎
+Operation not permitted⏎
+Operation not permitted⏎
+Operation not permitted⏎
+25.33⏎
+23.53⏎
+-0.27 -0.13 -0.38 0.11 -0.37 -0.35 -0.37 -0.02 0.11 -0.32 0.39 0.01 -0.31 ⏎
+-0.31 0.26 -0.34 -0.10 0.17 0.41 0.10 0.34 0.28 0.30 0.18 0.21 0.31 -0.22 0.04 -0.00 ⏎
+Podaj rozmiar tablicy: 15⏎
+Podaj liczby: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ⏎
+Podaj rozmiar drugiej tablicy: 15⏎
+Podaj liczby: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ⏎
+0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 ⏎
+0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 ⏎
+0.00⏎
+Operation not permitted⏎
+0.00⏎
+0.00⏎
+Operation not permitted⏎
+Operation not permitted⏎
+Przykładowa interakcja z programem -- błąd danych wejściowych:
+
+Podaj rozmiar tablicy: -8⏎
+Incorrect input data
+Podaj rozmiar tablicy: 10⏎
+Podaj liczby: -73.025522 70.136417 57.862439 -8.180659 -1.399505 -82.616412 -56.359380 -54.474591 62.699454 29.881311 ⏎
+Podaj rozmiar drugiej tablicy: 20⏎
+Podaj liczby: -69.911611 -4.459306 6.900856 14.004570 92.622041 -40.967352 34.707757 -36.227699 -98.248611 12.020235 pMQBWLJ⏎
+Incorrect input
+Podaj rozmiar tablicy: 20⏎
+Podaj liczby: -32.399537 66.729080 18.724168 -93.543365 45.028918 -9.800230 7.441733 10.493810 36.137301 12.827980 -87.787144 7.470098 -97.863091 74.442547 -13.873516 -86.413604 -57.300024 67.442762 -3.170273 7.609234 ⏎
+Podaj rozmiar drugiej tablicy: 0⏎
+Incorrect input data
+Podaj rozmiar tablicy: 13⏎
+Podaj liczby: 87.738432 89.660985 50.539510 44.382908 63.411866 -39.669716 39.538873 -92.371474 -53.180715 93.083588 95.965618 12.723431 14.532952 ⏎
+Podaj rozmiar drugiej tablicy: 11⏎
+Podaj liczby: AErgKIG⏎
+Incorrect input
+Podaj rozmiar tablicy: eUREFuRoyd⏎
+Incorrect input
+Przykładowa interakcja z programem -- brak pamięci:
+
+Limit sterty: 37 bajtów
+
+Podaj rozmiar tablicy: 11⏎
+Failed to allocate memory⏎
+Limit sterty: 81 bajtów
+
+Podaj rozmiar tablicy: 11⏎
+Podaj liczby: 21 5 99 36 13 57 24 88 95 -54 -24 ⏎
+Podaj rozmiar drugiej tablicy: 11⏎
+Failed to allocate memory⏎
+Limit sterty: 130 bajtów (brak możliwości wyznaczanie sumy wektorów):
+
+Podaj rozmiar tablicy: 11⏎
+Podaj liczby: 12 -35 85 79 72 -31 -57 16 -57 -70 -9 ⏎
+Podaj rozmiar drugiej tablicy: 11⏎
+Podaj liczby: -33 71 45 16 7 98 -70 24 16 4 62 ⏎
+Failed to allocate memory⏎
+Uwagi
+W programie nie wolno korzystać z operatora []!
