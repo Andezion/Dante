@@ -1,0 +1,93 @@
+Rozbuduj program z zadania 4.6 Bezpieczna tablica o funkcje: do kopiowania tablicy oraz do rozdzielania elementów znajdujących się w niej do dwóch oddzielnych tablic. Funkcje te powinny mieć następujące prototypy:
+
+int array_copy(const struct array_t *src, struct array_t *dest);
+Funkcja wykonuje kopiowanie głębokie struktury src do struktury dest. Zapoznaj się z pojęciami kopiowania płytkiego oraz głębokiego (ang. deep and shallow copy) tutaj.
+
+Wartość zwracana:
+
+1 - w przypadku błędnych danych wejściowych,
+2 - jeżeli nie udało utworzyć się struktury docelowej lub
+0 - w przypadku powodzenia.
+int array_separate(const struct array_t *a, struct array_t *odd, struct array_t *even);
+Funkcja rozdziela liczby zawarte w tablicy a na dwie tablice:
+
+w tablicy odd mają znaleźć się liczby nieparzyste,
+w tablicy even tylko parzyste.
+Pojemność tablic odd oraz even ma być ustalona dokładnie na tyle elementów ile będzie się w nich znajdowało (size == capacity). W przypadku stwierdzenia, że liczby w tablicy a są tylko parzyste bądź tylko nieparzyste skorzystaj z kopiowania głębokiego.
+
+Wartość zwracana -- błędy:
+
+-1 - w przypadku błędnych danych wejściowych (uszkodzone pola, pusta tablica, itd.)
+0 - jeżeli nie uda się utworzyć którejś z tablic. W takim przypadku funkcja powinna zagwarantować, że żadna pamięć nie będzie przydzielona do przekazanych struktur -- nie ma sensu pozostawiać utworzonej tablicy odd jeśli zabrakło jej dla even itp.
+Wartość zwracana w przypadku sukcesu:
+
+Jeżeli tablica liczb nieparzystych zostanie wypełniona liczbami to ostatni (najmłodszy) bit wartości zwracanej powinien być ustawiony (bit o wadze 1).
+Jeżeli tablica liczb parzystych zostanie wypełniona liczbami to przedostatni bit wartości zwracanej powinien zostać ustawiony (bit o wadze 2).
+W przypadku gdy zarówno tablica liczb parzystych jak i nieparzystych zostanie wypełniona to w wartości zwracanej przeze funkcję oba bity powinny być ustawione.
+Pozostałe bity pozostają wyzerowane.
+Napisz program, który pobierze od użytkownika liczbę elementów, na jaką ma zostać zarezerwowana pamięć na tablicę. W przypadku kiedy alokacja pamięci się nie powiedzie program powinien wyświetlić komunikat Failed to allocate memory i zakończyć działanie z kodem błędu 8.
+
+Następnie program pobiera poszczególne wartości, które mają zostać dopisane do tablicy, aż do podania przez użytkownika 0. Jeśli w trakcie skończy się miejsce w tablicy to program powinien wyświetlić komunikat Buffer is full. Jeżeli użytkownik nie podał żadnych danych (od razu wpisał 0) to program powinien wyświetlić komunikat Not enough data available i zakończyć się z kodem błędu 3.
+
+Na koniec program powinien wyświetlić w osobnych liniach: wszystkie liczby podane przez użytkownika, wszystkie liczby nieparzyste podane przez użytkownika, wszystkie liczby parzyste podane przez użytkownika.
+
+W przypadku, kiedy któraś z tablic jest pusta, program ma wyświetlić w jej miejsce komunikat Buffer is empty.
+
+Jeżeli natomiast nie udało się utworzyć żadnej z tych dwóch tablic program powinien wywietlić komunikat Failed to allocate memory.
+
+W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+
+W przypadku podania danych niezgodnych z treścią zadania komunikat Incorrect input data i zakończyć działanie z kodem błędu 2.
+
+Przykładowa interakcja z programem -- sukces:
+
+Podaj liczbę elementów tablicy: 19⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: 32 99 -71 59 55 -75 80 -48 -42 18 62 12 47 -14 81 -85 -98 36 66 0⏎
+99 -71 59 55 -75 47 81 -85 ⏎
+32 80 -48 -42 18 62 12 -14 -98 36 66 ⏎
+Podano za dużo liczb:
+
+Podaj liczbę elementów tablicy: 10⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: Podaj liczby: 8 -16 -43 -66 44 -59 -40 -35 19 32 82 0⏎
+Buffer is full⏎
+-43 -59 -35 19 ⏎
+8 -16 -66 44 -40 32 ⏎
+Podano tylko parzyste:
+
+Podaj liczbę elementów tablicy: 17⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: 60 70 -40 54 -58 -4 -18 -78 64 -8 -48 -86 -54 -64 -66 -44 -38 0⏎
+Buffer is empty⏎
+60 70 -40 54 -58 -4 -18 -78 64 -8 -48 -86 -54 -64 -66 -44 -38 ⏎
+Podano tylko nieparzyste:
+
+Podaj liczbę elementów tablicy: 20⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: Podaj liczby: 79 47 91 35 63 91 3 69 67 91 33 23 19 101 93 53 95 27 63 75 0⏎
+79 47 91 35 63 91 3 69 67 91 33 23 19 101 93 53 95 27 63 75 ⏎
+Buffer is empty⏎
+Podaj liczbę elementów tablicy: 15⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: 0⏎
+Not enough data available
+Przykładowa interakcja z programem -- błąd danych:
+
+Podaj liczbę elementów tablicy: GAQSPU⏎
+Incorrect input
+Podaj liczbę elementów tablicy: 13⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy: 95 86 11 66 9 99 tFhWBSR⏎
+Incorrect input
+Podaj liczbę elementów tablicy: 0⏎
+Incorrect input data
+Przykładowa interakcja z programem -- brak pamięci:
+
+Limit sterty - 9 bajtów:
+
+Podaj liczbę elementów tablicy: 8⏎
+Failed to allocate memory⏎
+Limit sterty - 63 bajty:
+
+Podaj liczbę elementów tablicy: 8⏎
+Podaj kolejne liczby, które mają zostać dodane do tablicy:
+95 1 90 29 49 80 8 11 0⏎
+Failed to allocate memory⏎
+Uwagi
+W programie nie wolno korzystać z operatora []!
+Wytłumacz w komentarzu na początku kodu co oznacza kopiowanie głębokie.
