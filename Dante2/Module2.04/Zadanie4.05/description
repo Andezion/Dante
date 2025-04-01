@@ -1,0 +1,41 @@
+Przygotuj funkcje do tworzenia, wyświetlania i kopiowania tablicy typu int. Funkcje powinny mieć następujące prototypy:
+
+int* create_array_int(int N);
+int* copy_array_int(const int* ptr, int N);
+void display_array_int(const int* ptr, int N);
+Funkcja create_array_int przyjmuje rozmiar N tablicy, która ma zostać utworzona. Zwraca wskaźnik na zaalokowany obszar pamięci lub NULL w przypadku niepowodzenia.
+
+Funkcja copy_array_int przyjmuje wskaźnik ptr na tablicę o liczbie N elementów do skopiowania. Zwraca wskaźnik na zaalokowanej kopii tablicy lub NULL w przypadku niepowodzenia.
+
+Funkcja display_array_int przyjmuje wskaźnik ptr na tablicę oraz liczbę N jej elementów i wyświetla te elementy rozdzielone spacjami. W przypadku przekazania niepoprawnych wartości funkcja display_array_int nie podajmuje żadnej akcji.
+
+Napisz program, który pobierze od użytkownika żądany rozmiar tablicy, a następnie zarezerwuje pamięć na tę tablicę i pobierze elementy od użytkownika.
+
+Następnie program tworzy kopię tablicyi wyświetlia w oddzielnych wierszach tablicę oryginalną oraz skopiowaną.
+
+W przypadku podania błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
+W przypadku podania danych niezgodnych z treścią zadania program powinien wyświetlić komunikat Incorrect input data i zakończyć działanie z kodem błęd 2.
+Jeżeli nie uda się zarezerwować żądanego obszaru pamięci program powinien wyświetlić komunikat Failed to allocate memory i zakończyć działanie z kodem błędu 8.
+Przykładowa interakcja z programem -- sukces:
+
+Podaj rozmiar tablicy: 20⏎
+Podaj liczby: -35 69 -46 -21 -4 27 8 -69 12 -53 -39 78 72 -42 -4 -98 -51 -12 16 -41
+-35 69 -46 -21 -4 27 8 -69 12 -53 -39 78 72 -42 -4 -98 -51 -12 16 -41 ⏎
+-35 69 -46 -21 -4 27 8 -69 12 -53 -39 78 72 -42 -4 -98 -51 -12 16 -41 ⏎
+Przykładowa interakcja z programem -- brak pamięci:
+
+Limit sterty: 12 bajtów
+
+Podaj rozmiar tablicy: 10⏎
+Failed to allocate memory⏎
+Podaj rozmiar tablicy: 10⏎
+Podaj liczby: -9 7 5 10 -8 -7 8 -6 -5 3 ⏎
+Failed to allocate memory⏎
+Przykładowa interakcja z programem -- błędy danych:
+
+Podaj liczbe: hsfxkn
+Incorrect input
+Podaj liczbe: 0⏎
+Incorrect input data
+Uwagi
+W programie nie wolno korzystać z operatora []!
