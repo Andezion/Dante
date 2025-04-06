@@ -1,6 +1,0 @@
-Dana jest liczba PI:
-
-float fPI = 3.14159265359;
-double dPI = 3.14159265359;
-Wartości z zadania 1.6 Wyświetl liczbę I wyświetl (każdą w osobnej linii) za pomocą jednego wywołania funkcji printf.
-W programie możesz zadeklarować tylko 2 zmienne.
