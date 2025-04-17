@@ -1,6 +1,0 @@
-
-Napisz program o funkcjonalności programu z zadania 2.11 Liczby słownie z użyciem instrukcji switch...case.
-
-W przypadku podania przez użytkownika błędnych danych wejściowych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
-Uwagi
-W programie nie używaj instrukcji warunkowej if.
