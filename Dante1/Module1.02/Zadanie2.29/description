@@ -1,5 +1,0 @@
-
-Napisz program wyświetlający na podstawie liczby całkowitej (z zakresu 1 - 7) pobranej od użytkownika słowną nazwę odpowiadającego jej dnia tygodnia. Dzień tygodnia powinien być wypisany bez polskich znaków. Podanie innej wartości powinno skutkować wypisaniem komunikatu Incorrect input i zwróceniem wartości 1.
-
-Uwagi
-W programie nie używaj instrukcji warunkowej if.
