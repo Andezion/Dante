@@ -1,8 +1,0 @@
-Napisz program, który pobiera od użytkownika 5 liter i wyświetla je na ekranie. Jeżeli dana litera jest mała, to należy w jej miejscu wyświetlić jej duży odpowiednik.
-
-Przykłady
-podaj 5 liter: DaNtE⏎
-DANTE⏎
-Uwagi
-W programie nie wolno korzystać z instrukcji switch.
-W programie nie wolno używać pętli.
