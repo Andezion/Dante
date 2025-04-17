@@ -1,7 +1,0 @@
-
-Napisz program, który na podstawie zmiennej całkowitej, pobranej od użytkownika (z zakresu 1-7), określa czy jest to dzień roboczy czy weekend. Program powinien wyświetlać komunikat Dzien roboczy, bądź Weekend.
-
-Podanie innej wartości powinno skutkować wypisaniem komunikatu Incorrect input i zakończeniem programu z kodem błędu 1.
-
-Uwagi
-W programie nie używaj instrukcji warunkowej if.
