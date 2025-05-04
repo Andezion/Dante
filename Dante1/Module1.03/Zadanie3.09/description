@@ -1,5 +1,0 @@
-Wykorzystując dwie pętle, napisz program do automatycznego sprawdzania tożsamości:
-
-(a+b)(a−b)=a2+b2
-Przyjmij zakres parametrów a oraz b: <-10 .. 10>. W konsoli wyświetl listę par a i b, dla których podana tożsamość jest spełniona. Każda para powinna być zapisana w osobnej linii.
-
