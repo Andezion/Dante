@@ -1,7 +1,0 @@
-Napisz program, który obliczy i wyświetli sumę wartości bezwzględnych dziesięciu wprowadzonych przez użytkownika liczb zmiennoprzecinkowych z dokładnością dwóch miejsc po przecinku. Liczby będą wprowadzane po spacji.
-
-W przypadku podania przez użytkownika nieprawidłowych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1.
-Przykłady
-Podaj 10 liczb:
-7.867386 -9.524391 -0.342958 -7.501451 -7.722001 -3.914809 2.275167 7.557442 -0.712904 -8.869478
-56.29
