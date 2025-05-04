@@ -1,6 +1,0 @@
-Napisz program, który pobiera od użytkownika dowolną liczbę liczb zmiennoprzecinkowych, aż do momentu podania przez użytkownika wartości -1 (nie wliczanej do zbioru liczb) 
-lub wprowadzenia błędnych danych, a które program ma zareagować komunikatem Incorrect input i zwrócić wartość 1.
-
-Dla podanych liczb znajdź wartość maksymalną, minimalną oraz średnią, a następnie, w kolejnych wierszach, wyświetl wartość najmniejszą, największą oraz wartość średnią (z dokładnością do dwóch miejsc po przecinku).
-
-W przypadku niemożliwości wyznaczenie którejkolwiek wartości program ma wyświetlić komunikat Incorrect input i zwrócić wartość 1.
