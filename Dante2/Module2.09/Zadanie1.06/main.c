@@ -1,69 +1,87 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int count_bits(const void *ptr, size_t offset, size_t count);
+unsigned int swap_bits(unsigned int * pvalue, int b1, int b2);
 
-int main()
+unsigned int swap_bits(unsigned int * pvalue, int b1, int b2)
 {
-    char filename[101];
-    printf("Enter your filename: ");
-    scanf("%100[^\n]", filename);
-
-    FILE *file = fopen(filename, "rb");
-    if(file == NULL)
+    if(pvalue == NULL || b1 > 31 || b2 > 32 || b1 < 0 || b2 < 0)
     {
-        printf("Unable to open the file");
         return 1;
     }
 
-    char storage[1000];
-    int letter;
-    int iterator = 0;
-    while((letter = fgetc(file)) != EOF)
-    {
-        *(storage + iterator) = letter;
-        iterator++;
-    }
-    *(storage + iterator) = '\0';
-    fclose(file);
+    int number = 1;
 
-    int result = count_bits(storage, 0, iterator);
-    if(result == -1)
+    if(!(!((*pvalue) & number << b1) || (*pvalue) & number << b2))
     {
-        printf("Incorrect input");
-        return 1;
+        (* pvalue) = (* pvalue) | number << b2;
+        (* pvalue) = (* pvalue) & ~(number << b1);
+    }
+    if(!(!((*pvalue) & number << b2) || (*pvalue) & number << b1))
+    {
+        (* pvalue) = (* pvalue) | number << b1;
+        (* pvalue) = (* pvalue) & ~(number << b2);
     }
 
-    printf("%i\n", result);
     return 0;
 }
 
-int count_bits(const void* ptr, size_t offset, size_t count)
+int main()
 {
-    if(ptr == NULL)
+    int error;
+
+    uint32_t value;
+    printf("Enter number: ");
+    error = scanf("%u", &value);
+    if (error != 1)
     {
-        return -1;
+        printf("\nIncorrect input");
+        return 1;
     }
 
-    int result = 0;
-    const uint8_t *array = (const uint8_t *) ptr;
-
-    size_t i = offset;
-    while(i < count + offset)
+    int index1;
+    printf("\nEnter 1st: ");
+    error = scanf("%i", &index1);
+    if (error != 1)
     {
-        int some_variable = 0;
-        uint8_t var = *(array + i);
-        while(var > 0)
-        {
-            if(var % 2 == 1)
-            {
-                some_variable++;
-            }
-            var = var / 2;
-        }
-        result = result + some_variable;
-        i++;
+        printf("\nIncorrect input");
+        return 1;
+    }
+    if(index1 < 0 || index1 > 32)
+    {
+        printf("\nIncorrect input");
+        return 1;
     }
 
-    return result;
+    int index2;
+    printf("\nEnter 2nd: ");
+    error = scanf("%i", &index2);
+    if (error != 1)
+    {
+        printf("\nIncorrect input");
+        return 1;
+    }
+    if(index2 < 0 || index2 > 32)
+    {
+        printf("\nIncorrect input");
+        return 1;
+    }
+
+    if(index1 == index2)
+    {
+        printf("\nIncorrect input");
+        return 1;
+    }
+
+    uint32_t bit1 = (value >> index1) & 1;
+    uint32_t bit2 = (value >> index2) & 1;
+
+    if (bit1 != bit2)
+    {
+        value ^= (1 << index1) | (1 << index2);
+    }
+
+    printf("\nResult: %u", value);
+
+    return 0;
 }
