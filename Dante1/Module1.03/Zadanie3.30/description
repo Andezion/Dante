@@ -1,5 +1,0 @@
-Napisz program do sumowania n<=10 losowych liczb rzeczywistych z zakresu <-5,5>. Wartość n ma być podawana przez użytkownika.
-
-Wydrukuj na konsoli po kolei wszystkie wylosowane liczby, z dokładnością do 6 miejsc dziesiętnych, oraz wynik sumowania z dokładnością do 4 miejsc dziesiętnych. Każdy wydruk zakończ znakiem nowej linii.
-
-W przypadku błędnych danych program ma wyświetlić komunikat o błędzie Improper input data, zwrócić wartość 1 i zakończyć działanie.
