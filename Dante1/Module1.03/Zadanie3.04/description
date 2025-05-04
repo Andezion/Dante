@@ -1,3 +1,0 @@
-Napisz program, który pobierze od użytkownika liczbę typu unsigned long long, a następnie w osobnych liniach wyświetli jej pierwszą i ostatnią cyfrę.
-
-W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat incorrect input i zakończyć działanie z kodem błędu 1.
