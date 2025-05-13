@@ -1,2 +1,0 @@
-Zainicjuj w programie, podczas deklaracji, tablicę liczb całkowitych wartościami od 0 do 10 włącznie. Wyświetl wszystkie elementy tablicy bez użycia pętli, przy pomocy jednej instrukcji wydruku, a póżniej wyświetl je pojedyńczo w pętli stosując po jednym wywołaniu instrukcji na element tablicy. 
-Każdą instrukcję wydruku zakończ przejściem do nowej linii.
