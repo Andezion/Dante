@@ -1,7 +1,0 @@
-Napisz program, który pobierze od użytkownika ciąg liczb (nie więcej niż 100), a następnie wypisze wartości wszystkich elementów, których wartość jest oddalona od średniej wartości elementów ciągu o więcej niż o wartość odchylenia standardowego tego ciągu. Elementy mają być wypisane po spacji.Jeżeli nie wystąpi żaden taki element program ma wypisać komunikat Nothing to show. Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
-
-Przykładowe wejście:
-
-podaj liczby: 
-8 -3 9 2 4 0
-Przykładowe wyjście: -3 9
