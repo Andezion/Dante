@@ -1,9 +1,0 @@
-Napisz program, który pobierze od użytkownika dwa ciągi liczb (nie więcej niż 100 elementów w każdym). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Program ma wyświetlić, po spacjach, wszystkie elementy, które wystąpiły przynajmniej raz w obu ciągach (w kolejności w jakiej wystąpiły w pierwszym z ciągów). Jeżeli nie będzie takich elementów program ma wypisać wartość komunikat Nothing to show. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
-
-Przykładowe wejście:
-
-podaj liczby: 
-7 -6 -9 -10 -1 -5 -7 -6 4 -6 -10 -10 0
-5 -4 1 -1 3 7 1 3 -3 -6 7 -9 7 -2 0
-Przykładowe wyjście: 7 -6 -9 -1
-
