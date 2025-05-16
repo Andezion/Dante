@@ -1,4 +1,0 @@
-
-Napisz program pobierający od użytkownika 10 liczb całkowitych, po dwie naraz, który zapisuje je do kolejnych elementów tablicy. Po pobraniu tych liczb wyświetl je na ekranie, każdą w osobnym wierszu razem z informacją o jej parzystości w formie opisu even albo odd. Każdy opis (wyrównany do lewej) musi być poprzedzony odpowiadającą mu wartością liczbową w danym wierszu. Wszystkie wiersze zakończ znakiem nowej linii.
-
-W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat: Input data type error i zakończyć działanie z kodem błędu 1
