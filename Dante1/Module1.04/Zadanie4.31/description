@@ -1,9 +1,0 @@
-
-Napisz program, który pobierze od użytkownika dwa ciągi liczb (nie więcej niż 100 elementów w każdym, wszystko powyżej 100 elementów należy zignorować). Pojawienie się wartości 0 na wejściu będzie oznaczało zakończenie ciągu. Dla każdych dwóch kolejnych elementów pierwszego ciągu program ma wyświetlić (po spacjach) ile elementów w drugim ciągu ma wartość znajdującą się w przedziale otwartym pomiędzy nimi. W przypadku wprowadzenia przez użytkownika błędnych danych program powinien wyświetlić komunikat Incorrect input i zakończyć działanie z kodem błędu 1. W przypadku podania zbyt małej liczby danych program powinien wyświetlić komunikat not enough data available i zakończyć działanie z kodem błędu 2.
-
-Przykładowe wejście:
-
-podaj liczby:
--3 9 -4 -9 9 -2 4 9 -5 -7 -7 -9 2 0
-1 1 4 7 1 -2 0
-Przykładowe wyjście: 6 6 0 6 5 3 1 6 0 0 0 4
