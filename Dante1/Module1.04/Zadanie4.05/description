@@ -1,6 +1,0 @@
-Napisz program pobierający od użytkownika 10 wartości zmiennoprzecinkowych pojedynczej precyzji po dwie naraz 
-(za pomocą jednego wywołania funkcji 'scanf'), który zapisze je do kolejnych elementów tablicy. 
-Po pobraniu wartości wyświetl je na ekranie, każdą w osobnym wierszu wraz z poprzedzającym ją indeksem odpowiedniego elementu tablicy. 
-Wszystkie wydruki zakończ znakiem nowej linii.
-
-W przypadku podania przez użytkownika błędnych danych program powinien wyświetlić komunikat: Input data type error i zakończyć działanie z kodem błędu 1.
