@@ -1,4 +1,0 @@
-Dana jest tablica:
-
-char tekst[] = {'T','o',' ','j','e','s','t',' ','t','e','k','s','t','\x0'};
-Wyświetl elementy tej tablicy w kolejnych liniach, oddzielone spacjami, jako: znak (za pomocą pojedynczego wywołania funkcji putc) a następnie kod ASCII oraz znak (wykorzystując pojedyncze wywołanie funkcji printf).
