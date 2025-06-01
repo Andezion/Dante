@@ -1,9 +1,0 @@
-Napisz program, który pobierze od użytkownika łańcuch tekstowy składający się wyłącznie z liter i białych znaków i zrobi statystykę pod kątem liczby samogłosek występujących w wyrazie (bez rozróżniania pomiędzy dużymi i małymi literami). Program ma wypisać w konsoli wynik w postaci liczba samogłosek - liczba wyrazów, w których się znajduje tyle samogłosek, każda para ma być wypisana w osobnej linii. Długość ciągu wejściowego nie przekroczy 1000 znaków.
-
-Przykładowe wejście:
-Podaj tekst:
-To jest przykladowe zdanie testowe
-Przykładowe wyjście:
-1 - 2
-3 - 2
-4 - 1
