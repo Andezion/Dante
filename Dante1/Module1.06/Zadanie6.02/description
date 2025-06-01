@@ -1,3 +1,0 @@
-Wykonaj tablicowanie funkcji sin(x) z krokiem ℼ/100 w zakresie <0; 2ℼ>. Utwórz tablicę o zadanej liczbie wierszy i dwóch kolumnach. W pierwszej kolumnie umieść wartość argumentu x, a w drugiej wartość funkcji sin(x). Wartość argumentu x zwiększaj od 0 o zadany krok.
-
-Liczbę wierszy określ na podstawie szerokości zakresu i kroku tablicowania. Wartości z wygenerowanej tablicy wyświetl na ekranie, podając wartość x oraz wartość funkcji z dokładnością do 4 miejsc po przecinku. Dane z kolejnych wierszy tablicy wyświetlaj w kolejnych wierszach na ekranie.
