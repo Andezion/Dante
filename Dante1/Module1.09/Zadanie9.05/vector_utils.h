@@ -1,7 +1,8 @@
-#ifndef INC_9_MODUL_VECTOR_UTILS_H
-#define INC_9_MODUL_VECTOR_UTILS_H
+#ifndef INC_9_MODUL_TYPES_UTILS_H
+#define INC_9_MODUL_TYPES_UTILS_H
 
-int read_vector(int *tab, int size, int stop_value);
-void display_vector(const int* tab, int size);
+enum algorithm {BUBBLE_SORT = 1, SELECTION_SORT = 2, INSERTION_SORT = 3};
+enum direction {ASCENDING = 1, DESCENDING = 2};
+int sort(int tab[], int size, enum direction dir, enum algorithm alg);
 
-#endif //INC_9_MODUL_VECTOR_UTILS_H
+#endif //INC_9_MODUL_TYPES_UTILS_H
