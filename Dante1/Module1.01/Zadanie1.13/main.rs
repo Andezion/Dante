@@ -16,7 +16,7 @@ fn main()
     println!("{number_one} + {number_two} = {}", number_one + number_two);
     println!("{number_one} - {number_two} = {}", number_one + number_two);
     println!("{number_one} * {number_two} = {}", number_one + number_two);
-    println!("{number_one} / {number_two} = {:.4}", number_one as f32 / number_two as f32);
+    println!("{number_one} / {number_two} = {}", number_one  / number_two);
     
     return;
 }
