@@ -4,7 +4,7 @@ fn main()
     let d_pi: f64 = 3.141592653589793f64;
     
     println!("
-    pi is {}
+    f_pi is {}
     d_pi is {}", f_pi, d_pi);
     
     return;
