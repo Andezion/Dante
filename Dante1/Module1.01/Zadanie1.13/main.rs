@@ -14,9 +14,9 @@ fn main()
     let number_two: i32 = number_two.trim().parse().expect("Invalid number");
     
     println!("{number_one} + {number_two} = {}", number_one + number_two);
-    println!("{number_one} - {number_two} = {}", number_one + number_two);
-    println!("{number_one} * {number_two} = {}", number_one + number_two);
-    println!("{number_one} / {number_two} = {}", number_one  / number_two);
+    println!("{number_one} - {number_two} = {}", number_one - number_two);
+    println!("{number_one} * {number_two} = {}", number_one * number_two);
+    println!("{number_one} / {number_two} = {}", number_one  / number_two );
     
     return;
 }
