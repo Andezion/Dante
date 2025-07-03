@@ -32,7 +32,10 @@ fn main()
                         continue;
                     }
 
-                    if array[i][j] < array[i + a][j + b]
+                    let index_a = i as isize + a;
+                    let index_b = j as isize + b;
+
+                    if array[i][j] < array[index_a as usize][index_b as usize]
                     {
                         counter += 1;
                     }
@@ -45,7 +48,7 @@ fn main()
             }
         }
     }
-    
+
     if result == 0
     {
         panic!("Nothing to show");
@@ -70,7 +73,10 @@ fn main()
                         continue;
                     }
 
-                    if array[i][j] < array[i + a][j + b]
+                    let index_a = i as isize + a;
+                    let index_b = j as isize + b;
+
+                    if array[i][j] < array[index_a as usize][index_b as usize]
                     {
                         counter += 1;
                     }
