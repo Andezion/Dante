@@ -1,5 +1,4 @@
 use std::mem::swap;
-use std::ptr;
 
 fn read_vector(array: &mut [i32; 501], size: i32, stop_value: i32) -> i32
 {
