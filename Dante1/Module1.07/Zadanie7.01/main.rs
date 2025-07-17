@@ -1,3 +1,5 @@
+mod tests;
+
 fn test1(a: i32) -> i32
 {
     a
