@@ -37,10 +37,10 @@ fn main() {
         if input.chars().nth(i) == Option::from('(') {
             value += 1;
             if helper == max_number {
-                print!("{} ", input.f)
+                print!("{} ", i)
             }
         }
-        if input.chars().nth(i) == Option::from('(') {
+        if input.chars().nth(i) == Option::from(')') {
             value -= 1;
         }
     }
