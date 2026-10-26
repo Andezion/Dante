@@ -26,11 +26,11 @@ int bubble_sort_asc_rec(int tab[], int size) {
     }
 
     int swapped = bubble_pass_asc_rec(tab, size, 0);
-    display_vector(tab, size);
-
     if (!swapped) {
         return 0;
     }
+
+    display_vector(tab, size);
 
     bubble_sort_asc_rec(tab, size - 1);
 
@@ -63,11 +63,11 @@ int bubble_sort_desc_rec(int tab[], int size) {
     }
 
     int swapped = bubble_pass_desc_rec(tab, size, 0);
-    display_vector(tab, size);
-
     if (!swapped) {
         return 0;
     }
+
+    display_vector(tab, size);
 
     bubble_sort_desc_rec(tab, size - 1);
 

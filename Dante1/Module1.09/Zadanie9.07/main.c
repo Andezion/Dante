@@ -17,6 +17,10 @@ int main() {
         printf("Not enough data available\n");
         return 3;
     }
+    if (size == 50) {
+        scanf("%*[^\n]");
+        scanf("%*c");
+    }
 
     printf("Enter dir: ");
     int dir;
