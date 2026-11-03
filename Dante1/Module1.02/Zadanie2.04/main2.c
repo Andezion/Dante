@@ -6,7 +6,7 @@ int main()
     char oper;
 
     printf("Enter something: ");
-    if (scanf("%d%ci%d",&num1,&oper,&num2) != 3)
+    if (scanf("%d%ci%d",&num1,&oper,&num2) != 3 || num2 < 0)
     {
         printf("Incorrect input");
         return 1;
