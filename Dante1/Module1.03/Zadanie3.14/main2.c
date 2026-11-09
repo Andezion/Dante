@@ -5,7 +5,7 @@
 int main()
 {
     float temp;
-    float max = FLT_MIN;
+    float max = -FLT_MAX;
     float min = FLT_MAX;
     float sum = 0;
 
